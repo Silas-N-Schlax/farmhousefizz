@@ -14,8 +14,8 @@ export function Footer () {
         <a href="/polls/soda-poll">Soda Poll</a>
       </span>
       <span className="socials">
-        <a href=""><img height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
-        <a href=""><img height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
+        <a href="https://www.instagram.com/farmhousefizz/"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
+        <a href="https://www.facebook.com/profile.php?id=61584818212570"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
         <a href="https://streetfoodfinder.com/farmhousefizz"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
         <a href=""><img height={height} width={width} src={ 'https://cdn.simpleicons.org/googlecalendar/' + color } /></a>
       </span>
