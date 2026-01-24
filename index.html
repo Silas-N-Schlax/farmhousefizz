@@ -4,14 +4,59 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-react-app</title>
+    <title>Farmhouse Fizz Soda Bar</title>
   </head>
   <body>
     <div id="root"></div>
     <script prerender type="module" src="/src/main.jsx"></script>
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
+    <script>
+      (function () {
+        function cleanse(el) {
+          if (!el || !el.parentNode) return;
+          try {
+            // try to unwrap the element: move children before it then remove
+            while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el);
+            el.parentNode.removeChild(el);
+          } catch (e) {
+            // fallback: neutralize inline styles
+            try {
+              el.style.display = 'contents';
+              el.style.height = '';
+              el.style.margin = '0';
+              el.style.padding = '0';
+            } catch (e) {}
+          }
+        }
 
+        function scan(root) {
+          if (!root) return;
+          // match tag name and classname patterns
+          const list = Array.from(
+            (root.querySelectorAll && root.querySelectorAll('pwa-container-wrapper, [class*="pwa-container"], .pwa-root')) || []
+          );
+          // include root itself if it matches
+          if (root.matches && (root.matches('pwa-container-wrapper') || root.className?.includes('pwa-container') || root.classList?.contains('pwa-root'))) list.unshift(root);
+          list.forEach(cleanse);
+        }
+
+        const obs = new MutationObserver((muts) => {
+          muts.forEach((m) => {
+            m.addedNodes.forEach((n) => {
+              if (n.nodeType === 1) scan(n);
+            });
+          });
+        });
+
+        obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          scan(document);
+        });
+        window.addEventListener('load', function () { scan(document); });
+      })();
+    </script>
 
   </body>
 </html>

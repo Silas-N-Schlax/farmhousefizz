@@ -1,0 +1,42 @@
+/* Define global CSS variables, like main colors and body stuff that should be present as a default */
+
+:root {
+  /* gb = global, specific to this project */
+  --gb-primary-color: var(--molten-lava);
+  --gb-secondary-color: var(--steel-blue);
+  --gb-background: var(--almond-cream);
+  --gb-text-color: var(--carbon-black);
+  --gb-text-alt-color: var(--almond-cream);
+  --gb-accent-color: var(--deep-walnut);
+}
+
+html, body {
+  /* overflow-x: hidden; */
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--gb-background);
+  color: var(--gb-text-color);
+  overflow-y: auto;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}

@@ -1,0 +1,90 @@
+/* define large scope patterns and layouts i.e. containers, stacks, max-widths, etc. */
+
+.cr-sm {
+  /*small circle  */
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 8px;
+  background-color: var(--gb-text-color);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.cr-li::before {
+  content: "•";
+  display: inline-block;
+  margin: 0 0.5rem;
+  opacity: 0.6;
+  color: #f0ede0;
+}
+
+
+.cr-li {
+  /* lighter color circle */
+  background-color: var(--gb-text-alt-color);
+}
+
+.bnr {
+  /* screen width banner, with text centered */
+  padding: 80px;
+  color: var(--gb-text-alt-color);
+  margin: 15px 0 15px 0;
+  h2 {
+    font-weight: bolder;
+    font-size: 28px;
+    margin-top: 30px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.bnr.ctr {
+  /* center text in banner */
+  text-align: center;
+}
+
+.bnr.lf {
+  /* align on left in banner */
+  padding-left: 40px;
+  text-align: left;
+}
+
+
+.bnr.rg {
+  /* align on right in banner */
+  padding-right: 40px;
+  text-align: right;
+}
+
+.google-form {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .bnr.lf, .bnr.rg {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/* Runtime wrappers injected by some PWA tooling can introduce extra wrappers
+   that affect layout. Collapse them visually so they don't add spacing. */
+[class*="pwa-container"], .pwa-container, .pwa-root {
+  display: contents !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fallback if browser doesn't support display:contents. This ensures minimal visual impact. */
+@supports not (display: contents) {
+  [class*="pwa-container"], .pwa-container, .pwa-root {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}

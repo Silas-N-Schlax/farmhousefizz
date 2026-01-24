@@ -1,0 +1,66 @@
+.fqa-cards {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.fqa-card {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 15px;
+  border: 2px solid var(--deep-walnut);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fqa-que {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.46);
+  color: var(--deep-walnut);
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  text-align: left;
+  font-size: 22px;
+  align-items: center;
+  padding: 16px 18px;
+  gap: 12px;
+}
+
+.arrow {
+  color: var(--deep-walnut);
+  min-height: 33px;
+  min-width: 33px;
+  transition: transform 0.43s ease;
+}
+
+.fqa-que.active .arrow {
+  transform: rotate(180deg)
+}
+
+.fqa-que:hover, .fqa-que:focus-visible {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.fqa-ans {
+  max-height: 0;
+  background-color: rgba(255, 255, 255, 0.76);
+  padding: 0 15px;
+  text-wrap: inherit;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  p {
+    padding-bottom: 7px;
+  }
+}
+
+.fqa-ans.active {
+  max-height: 300px;
+  padding: 15px;
+}
+
+
+
+
+

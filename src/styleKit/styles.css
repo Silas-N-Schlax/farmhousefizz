@@ -1,0 +1,31 @@
+/*^ Core */ 
+@import "./core/reset.css";
+@import "./core/globals.css";
+@import "./core/layout.css";
+
+/*^ Tokens */
+@import "./tokens/colors.css";
+
+/*^ Components */
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/forms.css";
+@import "./components/home.css";
+@import "./components/cards.css";
+@import "./components/cards-half.css";
+@import "./components/legal.css";
+@import "./components/about-content.css";
+@import "./components/fqa.css";
+
+/*^ Utils */
+
+
+/* 
+contains gluten: wheat
+vegan: vegan
+sugar free: candy-off
+contains dyes: flask-conical-off (change once icon is created??)
+clean (no fake stuff): leaf
+dairy free: milk-off
+
+*/
