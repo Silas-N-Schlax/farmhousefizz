@@ -16,7 +16,7 @@ export function Header() {
   return (
     <header>
       <div className="head">
-        <a className="logo" href="/"><img src="/src/assets/images/logo.png" alt="Farmhouse Fizz Logo" /></a>
+        <a className="logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
 
         <button
           className={`burger ${open ? 'open' : ''}`}
