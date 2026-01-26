@@ -130,7 +130,7 @@ export function QuestionsAndAnswers() {
     <>
       <Helmet>
         <title>FQA - Farmhouse Fizz</title>
-        <meta name="description" content="Farmhouse Fizz Q&A" />
+        <meta name="description" content="Have questions? Find answers about booking, events, pricing, and how Farmhouse Fizz Soda Bar operates across North Carolina." />
       </Helmet>
 
       <div className="fqa-cards">

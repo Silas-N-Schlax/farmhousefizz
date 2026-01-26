@@ -6,7 +6,7 @@ export function SodaPoll() {
     <>
       <Helmet>
         <title>Soda Poll - Farmhouse Fizz</title>
-        <meta name="description" content="View our menu at Farmhouse Fizz." />
+        <meta name="description" content="Help shape our menu. Vote on flavors, mixes, and new ideas for Farmhouse Fizz dirty sodas and see what others are loving." />
       </Helmet>
       <div className="google-form">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScThzWyGxWcOiXeR-cwvaDxOL3L5--JaY5LjoK0c8hvIGHVAg/viewform?embedded=true" width="640" height="1403" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

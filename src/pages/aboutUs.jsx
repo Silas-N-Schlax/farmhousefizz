@@ -6,7 +6,7 @@ export function AboutUs() {
     <>
       <Helmet>
         <title>About Us - Farmhouse Fizz</title>
-        <meta name="description" content="Learn more about Farmhouse Fizz and our story." />
+        <meta name="description" content="Learn how Farmhouse Fizz Soda Bar began as a family dream and grew into a mobile dirty soda trailer serving central North Carolina events." />
       </Helmet>
       <div className="about-content">
         <h2>Who we are</h2>

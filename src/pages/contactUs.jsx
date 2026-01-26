@@ -50,7 +50,7 @@ export function ContactUs() {
     <>
       <Helmet>
         <title>Contact Us - Farmhouse Fizz</title>
-        <meta name="description" content="Get in touch with Farmhouse Fizz Soda Bar." />
+        <meta name="description" content="Get in touch with Farmhouse Fizz to book our soda trailer, ask questions, or find out where we’ll be serving next in North Carolina." />
       </Helmet>
       <form ref={formRef} className='contact-form' action="" onSubmit={handleSubmit}>
         <p className="form-note">Required fields have a subtle accent; optional fields are dimmed.</p>

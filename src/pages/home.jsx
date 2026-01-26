@@ -9,7 +9,7 @@ export function Home() {
     <>
       <Helmet>
         <title>Farmhouse Fizz</title>
-        <meta name="description" content="Farmhouse Fizz Home Page" />
+        <meta name="description" content="Handcrafted dirty sodas served from our mobile soda trailer across central North Carolina. Family built, event ready, and always refreshing." />
       </Helmet>
       <div className="content">
         <div className="image-banner">

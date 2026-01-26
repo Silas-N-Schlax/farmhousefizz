@@ -25,10 +25,10 @@ function App() {
               <Route path="/about-us" element={<AboutUs/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
               <Route path="/menu" element={<Menu/>} />
-              <Route path="/privacy-policy" element={<Privacy/>} />
-              <Route path="/questions-and-answers" element={<QuestionsAndAnswers/>} />
               <Route path="/terms-and-conditions" element={<Terms/>} />
               <Route path="/polls/soda-poll" element={<SodaPoll/>} />
+              <Route path="/privacy-policy" element={<Privacy/>} />
+              <Route path="/questions-and-answers" element={<QuestionsAndAnswers/>} />
             </Routes>
           </Router>
         </main>
