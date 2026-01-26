@@ -25,7 +25,7 @@ export function AboutUs() {
         <p>Guests order directly from our menu at the service window, where a team member is always ready to help guide them through our customization process. Just give us a little patience if we are busy. Every drink is made to order, because guessing what you want would end poorly for everyone.</p>
 
         <h2>Where You’ll Find Us</h2>
-        <p>We move, it is kind of our thing. To keep up with us, follow Farmhouse Fizz on Instagram, Facebook, and or StreetFoodFinder. We also offer a Google Calendar you can subscribe to if you are a die-hard fan.</p>
+        <p>We move, it is kind of our thing. To keep up with us, follow Farmhouse Fizz on Instagram, Facebook, and or StreetFoodFinder. We also offer a Google Calendar (coming soon!) you can subscribe to if you are a die-hard fan.</p>
         <p>You will find us at a wide variety of public events like fairs and festivals, as well as private catered events including weddings, corporate gatherings, parties, and more.</p>
 
         <h2>Ready to Fizz Things Up?</h2>

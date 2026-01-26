@@ -9,7 +9,7 @@ export function Footer () {
       <span className="footer-links">
         <a href="/menu">Menu</a> <span className="cr-sm cr-li"></span>
         <a href="/privacy-policy">Privacy Policy</a> <span className="cr-sm cr-li"></span>
-        <a href="/terms-of-service">Terms of Service</a> <span className="cr-sm cr-li"></span>
+        <a href="/terms-and-conditions">Terms of Service</a> <span className="cr-sm cr-li"></span>
         <a href="/questions-and-answers">FAQ</a> <span className="cr-sm cr-li"></span>
         <a href="/polls/soda-poll">Soda Poll</a>
       </span>

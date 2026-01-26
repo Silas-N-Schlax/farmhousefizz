@@ -37,7 +37,7 @@ export function Home() {
               },
               {
                 title: "Handcrafted Drinks",
-                desc: "Every drink is made to order with custom flavors, real ingredients, and no shortcuts. Only delicious drinks"
+                desc: "Every drink is made to order with custom flavors, and no shortcuts. Only delicious drinks."
               },
               {
                 title: "On The Move",

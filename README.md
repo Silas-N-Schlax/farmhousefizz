@@ -2,6 +2,8 @@
 
 **Handcrafted Dirty Sodas • Family-run • Built with care**
 
+[Farmhouse Fizz Website](https://farmhousefizz.com)
+
 Farmhouse Fizz Soda Bar is a mobile soda bar based in North Carolina, serving handcrafted Dirty Sodas and specialty non-alcoholic drinks at events, festivals, and private gatherings. This repository contains the source code for the official Farmhouse Fizz website.
 
 The site is designed to be simple, fast, and informative, giving customers an easy way to learn who we are, what we serve, and where to find us next.
