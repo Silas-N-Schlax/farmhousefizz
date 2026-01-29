@@ -1,4 +1,6 @@
 
+import { Star } from 'lucide-react'
+
 export function Footer () {
   const height = 32; const width = 32; 
   const computedStyles = window.getComputedStyle(document.documentElement)
@@ -14,10 +16,10 @@ export function Footer () {
         <a href="/polls/soda-poll">Soda Poll</a>
       </span>
       <span className="socials">
-        <a href="https://www.instagram.com/farmhousefizz/"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
-        <a href="https://www.facebook.com/profile.php?id=61584818212570"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
-        <a href="https://streetfoodfinder.com/farmhousefizz"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
-        {/* <a href=""><img height={height} width={width} src={ 'https://cdn.simpleicons.org/googlecalendar/' + color } /></a> */}
+        <a target={"_blank"} href="https://www.instagram.com/farmhousefizz/"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
+        <a target={"_blank"} href="https://www.facebook.com/profile.php?id=61584818212570"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
+        <a target={"_blank"} href="https://streetfoodfinder.com/farmhousefizz"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
+        <a target={"_blank"} href="https://g.page/r/CShnusOMQkBTEAE/review"><Star style={{color: "var(--almond-cream)"}} /></a>
       </span>
 
       <p>© 2025-{currentYear} Farmhouse Fizz Soda Bar. All rights reserved.</p>

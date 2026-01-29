@@ -79,7 +79,6 @@ Follow us to see where we’ll be next or to get in touch:
 - 📸 Instagram: [https://www.instagram.com/farmhousefizz/](https://www.instagram.com/farmhousefizz/) 
 - 📘 Facebook: [https://www.facebook.com/profile.php?id=61584818212570](https://www.facebook.com/profile.php?id=61584818212570)
 - 🗺️ StreetFoodFinder: [https://streetfoodfinder.com/farmhouseFizz](https://streetfoodfinder.com/farmhouseFizz ) 
-- 📅 Google Calendar: (coming soon)  
 
 ---
 
