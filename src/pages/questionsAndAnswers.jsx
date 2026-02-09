@@ -55,7 +55,7 @@ export function QuestionsAndAnswers() {
     {
       question: "Do you have dairy-free options?",
       answer: [
-        "Yes! You can skip the cream entirely or choose a dairy-free alternative. We also carry Lactaid if that’s your thing."
+        "Yes! You can skip the cream entirely or choose a dairy-free alternative."
       ]
     },
     {
