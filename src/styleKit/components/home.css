@@ -31,8 +31,8 @@
 .title {
   text-align: center;
   padding-top: 250px;
-  color: var(--gb-text-alt-color);
   font-size: 70px;
+  color: var(--gb-text-alt-color);
 }
 
 .tags {
@@ -41,9 +41,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border-radius: 16px;
 }
 
 .tags p {
+  background-color: rgba(207, 203, 203, 0.493);
   text-decoration: none;
   color: var(--gb-primary-color);
   font-size: 30px;

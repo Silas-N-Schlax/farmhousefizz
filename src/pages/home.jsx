@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Cards } from '../components/cards'
 import { CardHalf } from '../components/card-half'
@@ -13,7 +12,7 @@ export function Home() {
       </Helmet>
       <div className="content">
         <div className="image-banner">
-          {/* <img src="/src/assets/images/banner-img.jpg" alt="" /> */}
+          <img src="/banner-image.jpg" alt="" />
           <div className="blur"></div>
           <div className="info">
             <h1 className="title">Farmhouse Fizz Soda Bar</h1>
