@@ -11,7 +11,7 @@
   vertical-align: middle;
 }
 
-.cr-li::before {
+.cr-li::before, .cr-dk::before {
   content: "•";
   display: inline-block;
   margin: 0 0.5rem;
@@ -19,10 +19,13 @@
   color: #f0ede0;
 }
 
-
 .cr-li {
   /* lighter color circle */
   background-color: var(--gb-text-alt-color);
+}
+
+.cr-dk {
+  background-color: var(--deep-walnut);
 }
 
 .bnr {
