@@ -98,7 +98,7 @@ export function ContactUs() {
         </label>
         <label className="checkbox-label">
           <input name="confirmContact" type="checkbox" className="custom-checkbox" required />
-          <span className="checkbox-text">I herby agree that all contact information is accurate and I will be contacted via the provided email or phone number.</span>
+          <span className="checkbox-text">I hereby agree that all contact information is accurate and I will be contacted via the provided email or phone number.</span>
         </label>
         <div>
           <button type="submit">Submit</button>

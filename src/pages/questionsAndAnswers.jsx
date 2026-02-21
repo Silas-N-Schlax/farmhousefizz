@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { DropdownCards } from '../components/dropdown-cards'
 
 export function QuestionsAndAnswers() {
-  const fqa = [
+  const faq = [
     {
       question: "Do Dirty Sodas have alcohol?",
       answer: [
@@ -144,12 +144,12 @@ export function QuestionsAndAnswers() {
   return (
     <>
       <Helmet>
-        <title>FQA - Farmhouse Fizz</title>
+        <title>FAQ - Farmhouse Fizz</title>
         <meta name="description" content="Have questions? Find answers about booking, events, pricing, and how Farmhouse Fizz Soda Bar operates across North Carolina." />
       </Helmet>
 
-      <div className="fqa-cards">
-        {fqa.map((item, index) => (<DropdownCards data={item} index={index} />))}
+      <div className="faq-cards">
+        {faq.map((item, index) => (<DropdownCards data={item} index={index} />))}
       </div>
     </>
   )

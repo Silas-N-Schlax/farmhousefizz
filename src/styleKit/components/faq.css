@@ -1,10 +1,10 @@
-.fqa-cards {
+.faq-cards {
   display: flex;
   flex-direction: column;
   padding: 15px;
 }
 
-.fqa-card {
+.faq-card {
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-.fqa-que {
+.faq-que {
   width: 100%;
   border: none;
   background-color: rgba(255, 255, 255, 0.46);
@@ -36,15 +36,15 @@
   transition: transform 0.43s ease;
 }
 
-.fqa-que.active .arrow {
+.faq-que.active .arrow {
   transform: rotate(180deg)
 }
 
-.fqa-que:hover, .fqa-que:focus-visible {
+.faq-que:hover, .faq-que:focus-visible {
   background-color: rgba(255, 255, 255, 0.65);
 }
 
-.fqa-ans {
+.faq-ans {
   max-height: 0;
   background-color: rgba(255, 255, 255, 0.76);
   padding: 0 15px;
@@ -55,7 +55,7 @@
   }
 }
 
-.fqa-ans.active {
+.faq-ans.active {
   max-height: 300px;
   padding: 15px;
 }
