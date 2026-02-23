@@ -72,7 +72,7 @@ export function ContactUs() {
         {selectedOption === 'Booking Events' ? (
           <>
           {/* location, date(s), start time, end time, number of guests, type of event (dropdown: wedding, party, cooperate, more if you can think of them),  */}
-          <Input name="eventLocation" type="text" placeholder="Event Location" required={true} />
+          <Input name="eventLocation" type="text" placeholder="Event Address (We Only Cater to NC)" required={true} />
           <Input name="eventDate" type="date" required={true} min={new Date().toISOString().split('T')[0]} />
           <div className="form-row">
             <Input name="startTime" type="time" required={true} half={true} step={900} />
