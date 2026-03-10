@@ -212,16 +212,16 @@ export function Menu() {
             sizes: ["sm", "lg"],
             notices: [7], 
             id: "0021",
-            active: true
+            active: false
           },
           {
             name: "Your Way Cocoa",
-            desc: "Whole Milk Hot Chocolate • Whipped Cream • 1 topping • 3-4 pumps of syrup",
+            desc: "Whole Milk Hot Chocolate • Whipped Cream • 1 Topping (Rotating selection) • 3-4 pumps of syrup",
             lq_type: 1,
             sizes: ["sm", "lg"],
             notices: [7], 
             id: "00",
-            active: true
+            active: false
           },
           {
             name: "",
