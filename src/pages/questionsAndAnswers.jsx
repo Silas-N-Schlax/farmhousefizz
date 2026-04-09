@@ -30,14 +30,6 @@ export function QuestionsAndAnswers() {
       ]
     },
     {
-      "question": "Why don’t you accept digital tips?",
-      "answer": [
-        "We want checkout to be comfortable and pressure-free for everyone, including our cashiers. No awkward tip prompts during payment.",
-        "We’ve all experienced tip screens in places where tipping doesn’t always feel appropriate, and that’s not the experience we want to create.",
-        "If someone chooses to tip, we want it to be because they genuinely want to. We’ll always have a tip jar available, but tips are never expected, only appreciated."
-      ]
-    },
-    {
       question: "Are your drinks kid-friendly?",
       answer: [
         "Absolutely! As a family-run business, we love serving kids of all ages."
