@@ -7,6 +7,7 @@ import { ContactUs } from './pages/contactUs'
 import { Menu } from './pages/menu'
 import { Privacy } from './pages/privacy'
 import { QuestionsAndAnswers } from './pages/questionsAndAnswers'
+import { EnergyDrinkNotice } from './pages/energyDrinkNotice'
 import { Terms } from './pages/terms'
 import { Header } from './components/header'
 import { Footer } from './components/footer'
@@ -29,6 +30,7 @@ function App() {
               <Route path="/polls/soda-poll" element={<SodaPoll/>} />
               <Route path="/terms-and-conditions" element={<Terms/>} />
               <Route path="/privacy-policy" element={<Privacy/>} />
+              <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
             </Routes>
           </Router>
         </main>
