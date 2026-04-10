@@ -50,7 +50,7 @@ export function Menu() {
             sizes: ["sm", "md", "lg"],
             notices: [1, ], 
             id: "0003",
-            active: true
+            active: false
           },
           {
             name: "Coconut Tide",
@@ -108,7 +108,7 @@ export function Menu() {
           },
           {
             name: "Cherry Island Punch",
-            desc: "Pepsi/Coke • Cherry • Lime • Coconut Cream",
+            desc: "Pepsi/Coke/Sprite • Cherry • Lime • Coconut Cream",
             lq_type: 0,
             sizes: ["sm", "md", "lg"],
             notices: [1, 5], 
@@ -203,7 +203,7 @@ export function Menu() {
             sizes: ["sm", "md", "lg"],
             notices: [5], 
             id: "0020",
-            active: true
+            active: false
           },
           {
             name: "Classic Hot Chocolate",
