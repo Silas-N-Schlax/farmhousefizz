@@ -20,7 +20,7 @@ export function Menu() {
             name: "Test drink #1",
             desc: "Sprite with blue raspberry and vanilla cream",
             lq_type: 0, // 0 = cold, 1 = hot
-            sizes: ["sm", "md", "lg"],
+            sizes: ["sm", "rg", "lg"],
             notices: [1, 0, 1], // sugar-free, has dyes, etc...
             id: "0000", // used for images, and div id for now
             active: false
@@ -29,7 +29,7 @@ export function Menu() {
             name: "Ruby Riot",
             desc: "Mt. Dew • Raspberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0001",
             active: true
@@ -38,7 +38,7 @@ export function Menu() {
             name: "Solar Flare",
             desc: "Mt. Dew • Candied Orange • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0002",
             active: true
@@ -47,7 +47,7 @@ export function Menu() {
             name: "Electric Charm",
             desc: "Sprite • Cherry • Lime • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, ], 
             id: "0003",
             active: false
@@ -56,7 +56,7 @@ export function Menu() {
             name: "Coconut Tide",
             desc: "Sprite • Blue Raspberry • Coconut Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 0, 5], 
             id: "0004",
             active: true
@@ -65,7 +65,7 @@ export function Menu() {
             name: "Creamy Root",
             desc: "Root Beer • Vanilla • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0005",
             active: true
@@ -74,7 +74,7 @@ export function Menu() {
             name: "Blissful Butterbeer",
             desc: "Root Beer • Butterscotch • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0006",
             active: true
@@ -83,7 +83,7 @@ export function Menu() {
             name: "Caramel S'mores",
             desc: "Root Beer • Marshmallow • Caramel • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0007",
             active: true
@@ -92,7 +92,7 @@ export function Menu() {
             name: "Dr. C. Cherry",
             desc: "Dr. Pepper • Cherry • Choc. Syrup • Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0008",
             active: true
@@ -101,16 +101,16 @@ export function Menu() {
             name: "Dr. Fizzberry",
             desc: "Dr. Pepper • Strawberry • Blackberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0009",
             active: true
           },
           {
             name: "Cherry Island Punch",
-            desc: "Pepsi/Coke/Sprite • Cherry • Lime • Coconut Cream",
+            desc: "Pepsi/Coke/Sprite  • Cherry • Lime • Coconut Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0010",
             active: true
@@ -119,7 +119,7 @@ export function Menu() {
             name: "Razzle Cola",
             desc: "Pepsi/Coke • Blue Raspberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 0, 5], 
             id: "0011",
             active: true
@@ -128,7 +128,7 @@ export function Menu() {
             name: "Berry Truffle",
             desc: "Cheerwine • Strawberry • Choc. Syrup • Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 5], 
             id: "0012",
             active: true
@@ -137,7 +137,7 @@ export function Menu() {
             name: "Peach Paradise",
             desc: "Sparkling Water • Peach • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0013",
             active: true
@@ -146,7 +146,7 @@ export function Menu() {
             name: "Strawberry Bliss",
             desc: "Sparkling Water • Strawberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0014",
             active: true
@@ -155,7 +155,7 @@ export function Menu() {
             name: "Midnight Bloom",
             desc: "Sparkling Water • Black Raspberry • Blackberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0015",
             active: true
@@ -164,7 +164,7 @@ export function Menu() {
             name: "Sunrise Brew",
             desc: "Cold Brew Coffee • Lemonade • Coconut Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0016",
             active: true
@@ -173,7 +173,7 @@ export function Menu() {
             name: "Berry Bean",
             desc: "Cold Brew Coffee • Strawberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0017",
             active: true
@@ -182,7 +182,7 @@ export function Menu() {
             name: "Winter Sunset",
             desc: "Lemonade • Winter Citrus • Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0018",
             active: true
@@ -191,7 +191,7 @@ export function Menu() {
             name: "Sunburst",
             desc: "Lemonade • Yuzu Pineapple Citrus • Cream",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "0019",
             active: true
@@ -200,7 +200,7 @@ export function Menu() {
             name: "Almost Float",
             desc: "Root Beer/Dr. Pepper/Pepsi/Coke • Vanilla • Sweetened Condensed Milk",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [5], 
             id: "0020",
             active: false
@@ -220,14 +220,41 @@ export function Menu() {
             lq_type: 1,
             sizes: ["sm", "lg"],
             notices: [7], 
-            id: "00",
+            id: "0022",
             active: false
+          },
+          {
+            name: "Peach Panic",
+            desc: "Orange Horror Liquid Death/Orange Celsius/Orange Kiss Alani • Preach • Vanilla Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 8], 
+            id: "0023",
+            active: true
+          },
+          {
+            name: "Berry Meltdown",
+            desc: "Scary Strawberry Liquid Death/Murder Mystery Liquid Death/Pink Slush Alani • Strawberry • Vanilla Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 8], 
+            id: "0024",
+            active: true
+          },
+          {
+            name: "Citrus Overload",
+            desc: "Tropical Terror Liquid Death/Sparkling Tropical Vibe Celsius • Yuzu Pineapple Citrus • Vanilla Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 8], 
+            id: "0025",
+            active: true
           },
           {
             name: "",
             desc: "",
             lq_type: 0,
-            sizes: ["sm", "md", "lg"],
+            sizes: ["rg", "lg"],
             notices: [1, 2], 
             id: "00",
             active: false // Template DO NOT DELETE, just hide.
