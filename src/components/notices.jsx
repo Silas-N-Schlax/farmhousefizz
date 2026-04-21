@@ -6,6 +6,7 @@ import { WheatOff } from "lucide-react"
 import { FlaskConical } from "lucide-react"
 import { ShieldCheck } from "lucide-react"
 import { Flower2 } from "lucide-react"
+import { IdCardLanyard } from "lucide-react"
 
 export function Notices({notice, openTooltip, setOpenTooltip, id}) {
   const isOpen = openTooltip === id
@@ -24,6 +25,7 @@ export function Notices({notice, openTooltip, setOpenTooltip, id}) {
     5: "Contains Artificial Dyes",
     6: "Halal",
     7: "Seasonal Item!",
+    8: "18+ or parental consent"
   }
 
   return (
@@ -56,6 +58,8 @@ function getIcon(notice) {
       return <ShieldCheck className="notice halal"/>
     case 7:
       return <Flower2 className="notice season"/>
+    case 8:
+      return <IdCardLanyard className="notice id-card"/>
     default:
   }
 }
