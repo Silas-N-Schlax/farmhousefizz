@@ -11,7 +11,7 @@ export function SizeComponentSoda({size, openTooltip, setOpenTooltip, id}) {
 
   const msgs = {
     sm: "Small",
-    md: "Regular",
+    rg: "Regular",
     lg: "Large"
   }
 
