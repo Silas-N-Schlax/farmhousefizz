@@ -227,7 +227,7 @@ export function Menu() {
             name: "Peach Panic",
             desc: "Orange Horror Liquid Death/Orange Celsius/Orange Kiss Alani • Preach • Vanilla Cream",
             lq_type: 0,
-            sizes: ["rg", "lg"],
+            sizes: ["rg"],
             notices: [1, 8], 
             id: "0023",
             active: true
@@ -236,7 +236,7 @@ export function Menu() {
             name: "Berry Meltdown",
             desc: "Scary Strawberry Liquid Death/Murder Mystery Liquid Death/Pink Slush Alani • Strawberry • Vanilla Cream",
             lq_type: 0,
-            sizes: ["rg", "lg"],
+            sizes: ["rg"],
             notices: [1, 8], 
             id: "0024",
             active: true
@@ -245,7 +245,7 @@ export function Menu() {
             name: "Citrus Overload",
             desc: "Tropical Terror Liquid Death/Sparkling Tropical Vibe Celsius • Yuzu Pineapple Citrus • Vanilla Cream",
             lq_type: 0,
-            sizes: ["rg", "lg"],
+            sizes: ["rg"],
             notices: [1, 8], 
             id: "0025",
             active: true
