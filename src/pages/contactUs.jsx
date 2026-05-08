@@ -35,6 +35,7 @@ export function ContactUs() {
         
         setStatus({ ok: true, message: `Submitted — thank you! (Redirecting in 5 seconds...)` })
         sendDiscordNot()
+        alert("Thank you for your inquiry! We have received your email, and will get back to you within 3 business days. Please check your spam folder if you do not see it.")
       setTimeout(() => {
         window.location.reload()
       }, 5000)
