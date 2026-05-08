@@ -22,42 +22,47 @@ export function Menu() {
             lq_type: 0, // 0 = cold, 1 = hot
             sizes: ["sm", "rg", "lg"],
             notices: [1, 0, 1], // sugar-free, has dyes, etc...
+            category: 'dirty-soda',
             id: "0000", // used for images, and div id for now
             active: false
           },
           {
             name: "Ruby Riot",
-            desc: "Mt. Dew • Raspberry • Vanilla Cream",
+            desc: "Mt. Dew, or Sprite • Raspberry • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0001",
             active: true
           },
           {
             name: "Solar Flare",
-            desc: "Mt. Dew • Candied Orange • Vanilla Cream",
+            desc: "Mt. Dew, or Sprite • Candied Orange • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0002",
             active: true
           },
           {
             name: "Electric Charm",
-            desc: "Sprite • Cherry • Lime • Vanilla Cream",
+            desc: "Sprite, or Mt. Dew • Cherry • Lime • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, ], 
+            category: 'dirty-soda',
             id: "0003",
-            active: false
+            active: false //^ Old menu item, now combined with Cherry Island Punch
           },
           {
             name: "Coconut Tide",
-            desc: "Sprite • Blue Raspberry • Coconut Cream",
+            desc: "Sprite, or Mt. Dew • Blue Raspberry • Coconut Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 0, 5], 
+            category: 'dirty-soda',
             id: "0004",
             active: true
           },
@@ -67,6 +72,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0005",
             active: true
           },
@@ -76,6 +82,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0006",
             active: true
           },
@@ -85,15 +92,17 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0007",
             active: true
           },
           {
             name: "Dr. C. Cherry",
-            desc: "Dr. Pepper • Cherry • Choc. Syrup • Cream",
+            desc: "Dr. Pepper, or Cheerwine • Cherry • Choc. Syrup • Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0008",
             active: true
           },
@@ -103,33 +112,37 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0009",
             active: true
           },
           {
             name: "Cherry Island Punch",
-            desc: "Pepsi/Coke/Sprite  • Cherry • Lime • Coconut Cream",
+            desc: "Pepsi, Coke, or Sprite  • Cherry • Lime • Coconut Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0010",
             active: true
           },
           {
             name: "Razzle Cola",
-            desc: "Pepsi/Coke • Blue Raspberry • Vanilla Cream",
+            desc: "Pepsi, or Coke • Blue Raspberry • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 0, 5], 
+            category: 'dirty-soda',
             id: "0011",
             active: true
           },
           {
             name: "Berry Truffle",
-            desc: "Cheerwine • Strawberry • Choc. Syrup • Cream",
+            desc: "Cheerwine, or Dr. Pepper • Strawberry • Choc. Syrup • Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 5], 
+            category: 'dirty-soda',
             id: "0012",
             active: true
           },
@@ -139,6 +152,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'italian-water',
             id: "0013",
             active: true
           },
@@ -148,6 +162,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'italian-water',
             id: "0014",
             active: true
           },
@@ -157,6 +172,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'italian-water',
             id: "0015",
             active: true
           },
@@ -166,6 +182,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'dirty-coffee',
             id: "0016",
             active: true
           },
@@ -175,6 +192,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'dirty-coffee',
             id: "0017",
             active: true
           },
@@ -184,6 +202,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'dirty-lemonade',
             id: "0018",
             active: true
           },
@@ -193,6 +212,7 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
+            category: 'dirty-lemonade',
             id: "0019",
             active: true
           },
@@ -202,8 +222,9 @@ export function Menu() {
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [5], 
+            category: 'dirty-soda',
             id: "0020",
-            active: false
+            active: false //^ Removed menu item, permanent!
           },
           {
             name: "Classic Hot Chocolate",
@@ -211,6 +232,7 @@ export function Menu() {
             lq_type: 1,
             sizes: ["sm", "lg"],
             notices: [7], 
+            category: 'seasonal',
             id: "0021",
             active: false
           },
@@ -220,46 +242,90 @@ export function Menu() {
             lq_type: 1,
             sizes: ["sm", "lg"],
             notices: [7], 
+            category: 'seasonal',
             id: "0022",
             active: false
           },
           {
             name: "Peach Panic",
-            desc: "Orange Horror Liquid Death/Orange Celsius/Orange Kiss Alani • Preach • Vanilla Cream",
+            desc: "Orange Horror Liquid Death, Orange Celsius, or Orange Kiss Alani • Preach • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg"],
             notices: [1, 8], 
+            category: 'dirty-energy-drink',
             id: "0023",
             active: true
           },
           {
             name: "Berry Meltdown",
-            desc: "Scary Strawberry Liquid Death/Murder Mystery Liquid Death/Pink Slush Alani • Strawberry • Vanilla Cream",
+            desc: "Scary Strawberry Liquid Death, or Murder Mystery Liquid Death, Pink Slush Alani • Strawberry • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg"],
             notices: [1, 8], 
+            category: 'dirty-energy-drink',
             id: "0024",
             active: true
           },
           {
             name: "Citrus Overload",
-            desc: "Tropical Terror Liquid Death/Sparkling Tropical Vibe Celsius • Yuzu Pineapple Citrus • Vanilla Cream",
+            desc: "Tropical Terror Liquid Death, or Sparkling Tropical Vibe Celsius • Yuzu Pineapple Citrus • Vanilla Cream",
             lq_type: 0,
             sizes: ["rg"],
             notices: [1, 8], 
+            category: 'dirty-energy-drink',
             id: "0025",
             active: true
           },
           {
-            name: "",
-            desc: "",
+            name: "Caramelaholic",
+            desc: "Cold Brew •Salted Caramel• Vanilla Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 5], 
+            category: 'dirty-coffee',
+            id: "0026",
+            active: true
+          },
+          {
+            name: "Simply Sweet",
+            desc: "Cold Brew • Cane Sugar • Sweet Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 0, 2], 
+            category: 'dirty-coffee',
+            id: "0027",
+            active: true
+          },
+          {
+            name: "Fireside Brew",
+            desc: "Cold Brew • Chocolate• Toasted Marshmallow • Coconut Cream",
             lq_type: 0,
             sizes: ["rg", "lg"],
             notices: [1, 2], 
-            id: "00",
-            active: false // Template DO NOT DELETE, just hide.
+            category: 'dirty-coffee',
+            id: "0028",
+            active: true
+          },
+          {
+            name: "Summer Split Tea",
+            desc: "Tea • Lemonade • Strawberry, Cherry, or Raspberry • Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 2], 
+            category: 'dirty-tea-&-Lemonade',
+            id: "0029",
+            active: true
+          },
+          {
+            name: "Violet Horizon",
+            desc: "Lemonade • Cherry • Strawberry• Cream",
+            lq_type: 0,
+            sizes: ["rg", "lg"],
+            notices: [1, 2], 
+            category: 'dirty-lemonade',
+            id: "0030",
+            active: true
           }
-          
         ]} />
       </div>
     </>
