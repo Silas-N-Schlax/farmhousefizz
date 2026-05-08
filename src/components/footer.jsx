@@ -1,5 +1,6 @@
 
 import { Star } from 'lucide-react'
+import { Building} from 'lucide-react'
 
 export function Footer () {
   const height = 32; const width = 32; 
@@ -19,6 +20,7 @@ export function Footer () {
       <span className="socials">
         <a target={"_blank"} href="https://www.instagram.com/farmhousefizz/"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
         <a target={"_blank"} href="https://www.facebook.com/profile.php?id=61584818212570"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
+        <a target={"_blank"} href="https://www.linkedin.com/company/farmhouse-fizz-soda-bar/"><Building style={{color: "var(--almond-cream)"}} /></a>
         <a target={"_blank"} href="https://streetfoodfinder.com/farmhousefizz"><img height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
         <a target={"_blank"} href="https://g.page/r/CShnusOMQkBTEAE/review"><Star style={{color: "var(--almond-cream)"}} /></a>
       </span>
