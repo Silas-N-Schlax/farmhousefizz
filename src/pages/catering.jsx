@@ -14,7 +14,7 @@ export function Catering() {
         <div className="info-content">
 
           <h2>Bring Something Unforgettable</h2>
-          <p>Farmhouse Fizz provides mobile beverage catering across the Raleigh-Durham area and beyond, serving handcrafted dirty sodas, Italian waters, dirty lemonades, dirty cold brew coffee, dirty teat & lemonade, dirty energy drinks (18+), and specialty drinks from our self-contained farmhouse-style trailer.</p>
+          <p>Farmhouse Fizz provides mobile beverage catering across the Raleigh-Durham area and beyond, serving handcrafted dirty sodas, Italian waters, dirty lemonades, dirty cold brew coffee, dirty tea & lemonade, dirty energy drinks (18+), and specialty drinks from our self-contained farmhouse-style trailer.</p>
           <p>Whether you are planning a wedding, corporate event, church gathering, graduation party, festival, or private celebration, our goal is simple. Deliver high-quality drinks, friendly service, and an experience your guests will actually remember.</p>
 
           <h2>Events We Serve</h2>
