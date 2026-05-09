@@ -1,9 +1,9 @@
-.about-content {
+.info-content {
   max-width: 900px;
   margin: auto;
   padding: 20px;
   p {
-    font-size: 16px;
+    font-size: 1.1em;
     padding-bottom: 10px;
     line-height: 1.6;
   }
@@ -11,8 +11,16 @@
     margin-top: 10px;
   }
   h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
   }
 }
+
+/* ! 
+- Fix font sizing
+- Add catering to header,
+- update meta
+- have google crawl
+- update keywords to include other beverages
+*/
