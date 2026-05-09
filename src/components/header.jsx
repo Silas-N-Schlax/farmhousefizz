@@ -32,6 +32,7 @@ export function Header() {
         <nav className={`navbar ${open ? 'open' : ''}`}>
           <a href="/contact-us" className="lk" onClick={handleLinkClick}>Contact Us</a>
           <a href="/about-us" className="lk" onClick={handleLinkClick}>About Us</a>
+          <a href="/catering" className="lk" onClick={handleLinkClick}>Catering</a>
           <a href="/menu" className="lk" onClick={handleLinkClick}>Menu</a>
           <a href="/questions-and-answers" className="lk" onClick={handleLinkClick}>FAQ</a>
         </nav>
