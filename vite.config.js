@@ -12,9 +12,11 @@ export default defineConfig({
         "/",
         "/about-us",
         "/contact-us",
+        "/catering",
         "/menu",
         "/polls/soda-poll",
         "/questions-and-answers",
+        "/energy-drink-notice"
       ],
       exclude: [
         "/terms-and-conditions", 
