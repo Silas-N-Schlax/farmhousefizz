@@ -10,7 +10,7 @@ export function Menu() {
         <meta name="description" content="Explore our menu of handcrafted dirty sodas, custom flavors, and classic favorites, made fresh and served from our mobile soda trailer." />
       </Helmet>
       <div className="menu-title">
-        <h1>Our Menu</h1>
+        <h1 className='page-title'>Catering with Farmhouse Fizz</h1>
         <p>Subject to change and limited availability</p>
         <p><i>Drink images will be uploaded soon!</i></p>
       </div>

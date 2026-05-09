@@ -8,7 +8,8 @@ export function AboutUs() {
         <title>About Us - Farmhouse Fizz</title>
         <meta name="description" content="Learn how Farmhouse Fizz Soda Bar began as a family dream and grew into a mobile dirty soda trailer serving central North Carolina events." />
       </Helmet>
-      <div className="about-content">
+      <h1 className='page-title'>Who is Farmhouse Fizz?</h1>
+      <div className="info-content">
         <h2>Who we are</h2>
         <p>Farmhouse Fizz Soda Bar began as a simple dream, an idea rooted in the desire to build something meaningful together as a family. In late 2025, John (father) and Silas (son) Schlax began turning that vision into reality, laying the foundation for what would soon become Farmhouse Fizz.</p>
         <p>At its core, Farmhouse Fizz was created to give the seven Schlax kids a place to learn real-world skills before stepping fully into adulthood. From teamwork and responsibility to customer service and work ethic, the business was designed to be both an opportunity and a training ground. Alongside that mission came a second passion, bringing classic dirty sodas and handcrafted non-alcoholic drinks to the streets and events of central North Carolina and beyond.</p>

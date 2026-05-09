@@ -7,8 +7,8 @@ export function Home() {
   return (
     <>
       <Helmet>
-        <title>Farmhouse Fizz</title>
-        <meta name="description" content="Handcrafted dirty sodas served from our mobile soda trailer across central North Carolina. Family built, event ready, and always refreshing." />
+        <title>Farmhouse Fizz - Dirty Sodas & More!</title>
+        <meta name="description" content="Handcrafted dirty sodas, italian waters, dirty lemonades, dirty cold brew, and more, served from our mobile soda trailer across central North Carolina. Family built, event ready, and always refreshing." />
       </Helmet>
       <div className="content">
         <div className="image-banner">
@@ -17,7 +17,7 @@ export function Home() {
           <div className="info">
             <h1 className="title">Farmhouse Fizz Soda Bar</h1>
             <span className="tags">
-              <p>Custom Crafted Dirty Sodas</p> <span className="cr-sm cr-li"></span>
+              <p>Dirty Sodas</p> <span className="cr-sm cr-li"></span>
               <p>Mobile</p> <span className="cr-sm cr-li"></span>
               <p>Non-Alcoholic</p>
             </span>

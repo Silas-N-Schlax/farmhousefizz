@@ -11,7 +11,7 @@ export function ContactUs() {
   const formRef = useRef(null)
   const [status, setStatus] = useState(null)
 
-  // TODO: replace with your deployed Google Apps Script URL (This is the outdated functional code, the news ones don't send the email for whatever reason)
+  // TODO: replace with your deployed Google Apps Script URL (This is the outdated functional code, the new ones don't send the email for whatever reason)
   const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNSjYkZt6BCAhkOUKIDTCPx2vs7Fl-FdwB8UblplOodX5AOvuwDkk-MbK-iXKJwmPY/exec'
 
   async function handleSubmit(e) {
@@ -53,6 +53,7 @@ export function ContactUs() {
         <title>Contact Us - Farmhouse Fizz</title>
         <meta name="description" content="Get in touch with Farmhouse Fizz to book our soda trailer, ask questions, or find out where we’ll be serving next in North Carolina." />
       </Helmet>
+      <h1 className='page-title'>Contact Us</h1>
       <form ref={formRef} className='contact-form' action="" onSubmit={handleSubmit}>
         <p className="form-note">Required fields have a subtle accent; optional fields are dimmed.</p>
         <div className="form-row">
