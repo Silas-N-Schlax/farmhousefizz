@@ -36,6 +36,13 @@ body {
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
 }
 
+a {
+  text-decoration: none;
+  color: var(--molten-lava)
+}
+
+a:hover { text-decoration: underline; }
+
 #root {
   display: flex;
   flex-direction: column;
