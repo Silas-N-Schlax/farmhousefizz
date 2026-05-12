@@ -1,0 +1,442 @@
+[
+  {
+    "path": "/catering",
+    "main": true,
+    "metaTitle": "Mobile Beverage Catering NC",
+    "metaDesc": "Farmhouse Fizz provides mobile beverage catering across Raleigh-Durham and Central North Carolina. We serve handcrafted dirty sodas, organic dirty lemonades, Italian waters, dirty cold brew, and custom energy drinks for weddings and events.",
+    "title": "Mobile Beverage Catering in Raleigh-Durham, NC",
+    "primaryKeyword": "mobile beverage catering nc",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar",
+      "Event Beverage Service"
+    ],
+    "areaServed": [
+      "Raleigh",
+      "Durham",
+      "Cary",
+      "Chapel Hill",
+      "Wake Forest",
+      "Holly Springs",
+      "Fuquay-Varina",
+      "North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering across Raleigh-Durham and Central North Carolina, serving handcrafted dirty sodas, organic dirty lemonades, Italian waters, dirty cold brews, and dirty energy drinks (18+) from our self-contained farmhouse-style trailer.",
+      "Whether you are planning a wedding, corporate event, church gathering, graduation party, festival, or private celebration, our goal is simple: deliver high-quality drinks, friendly service, and an experience your guests will actually remember.",
+      "Serving Raleigh, Durham, Cary, Chapel Hill, Wake Forest, Holly Springs, Fuquay-Varina, and surrounding North Carolina areas."
+    ]
+  },
+  {
+    "path": "/catering/raleigh",
+    "metaTitle": "Raleigh Beverage Catering",
+    "metaDesc": "Mobile beverage catering in Raleigh, NC featuring dirty sodas, organic dirty lemonades, and custom drink experiences for weddings and events.",
+    "title": "Raleigh Beverage Catering",
+    "primaryKeyword": "raleigh beverage catering",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "areaServed": [
+      "Raleigh, North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering in Raleigh, NC with handcrafted dirty sodas, organic dirty lemonades, Italian waters, and dirty tea & lemonade.",
+      "Our fully equipped trailer brings a premium drink experience directly to weddings, corporate events, and private celebrations across the City of Oaks.",
+      "We proudly serve the greater Raleigh area and surrounding communities with unique, customizable beverage menus."
+    ],
+    "locationName": "Raleigh",
+    "locationFocus": [
+      "Serving events throughout Raleigh including Downtown Raleigh, North Hills, Brier Creek, and surrounding neighborhoods.",
+      "Our mobile setup works for both indoor venues and outdoor event spaces across the city."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/durham",
+    "metaTitle": "Durham Beverage Catering",
+    "metaDesc": "Mobile beverage catering in Durham, NC with dirty sodas, Italian waters, organic dirty lemonades, and custom drink experiences for weddings and events.",
+    "title": "Durham Beverage Catering",
+    "primaryKeyword": "durham beverage catering",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "areaServed": [
+      "Durham, North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz brings mobile beverage catering to Durham, NC, serving handcrafted Italian waters, dirty sodas, organic dirty lemonades, and dirty coffee.",
+      "We cater weddings, corporate events, festivals, and private parties across Bull City and the surrounding Triangle area.",
+      "Every event is fully customized to match your specific guest experience and style."
+    ],
+    "locationName": "Durham",
+    "locationFocus": [
+      "Serving Downtown Durham, Southpoint, RTP, Duke University area, and surrounding neighborhoods.",
+      "Ideal for both indoor venues and outdoor events across Durham."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/cary",
+    "metaTitle": "Cary Beverage Catering",
+    "metaDesc": "Mobile beverage catering in Cary, NC for weddings and corporate events featuring organic dirty lemonade bars and dirty sodas.",
+    "title": "Cary Beverage Catering",
+    "primaryKeyword": "cary beverage catering",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "areaServed": [
+      "Cary, North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering in Cary, NC with handcrafted drinks including dirty sodas, organic dirty lemonades, and custom cold brews.",
+      "We serve weddings, corporate gatherings, and private events across Cary and surrounding areas.",
+      "Our mobile trailer brings a unique and memorable drink experience to your Cary event."
+    ],
+    "locationName": "Cary",
+    "locationFocus": [
+      "Serving Downtown Cary, West Cary, and RTP-adjacent areas.",
+      "Flexible for residential and corporate venues."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/chapel-hill",
+    "metaTitle": "Chapel Hill Beverage Catering",
+    "metaDesc": "Mobile beverage catering in Chapel Hill, NC featuring dirty sodas, organic dirty lemonades, and dirty coffee by Farmhouse Fizz.",
+    "title": "Chapel Hill Beverage Catering",
+    "primaryKeyword": "chapel hill beverage catering",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "areaServed": [
+      "Chapel Hill, North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz delivers mobile beverage catering to Chapel Hill, NC for university events, weddings, and private celebrations.",
+      "We serve handcrafted dirty sodas, organic dirty lemonades, and specialty coffee drinks from our mobile trailer.",
+      "Perfect for both intimate gatherings and large-scale Orange County events."
+    ],
+    "locationName": "Chapel Hill",
+    "locationFocus": [
+      "Serving UNC Chapel Hill, downtown Chapel Hill, and surrounding Orange County.",
+      "Ideal for campus and outdoor venues."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/wake-forest",
+    "metaTitle": "Wake Forest Beverage Catering",
+    "metaDesc": "Mobile beverage catering in Wake Forest, NC with dirty sodas, Italian waters, and organic dirty lemonades for weddings and events.",
+    "title": "Wake Forest Beverage Catering",
+    "primaryKeyword": "wake forest beverage catering",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "areaServed": [
+      "Wake Forest, North Carolina"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering in Wake Forest, NC for parties, weddings, and corporate events.",
+      "We bring a fully equipped mobile trailer to your location with handcrafted drink service, including dirty energy drinks and organic dirty lemonades.",
+      "Every setup is tailored to your event style and guest experience."
+    ],
+    "locationName": "Wake Forest",
+    "locationFocus": [
+      "Serving Wake Forest neighborhoods and surrounding Franklin County.",
+      "Works for both backyard and venue-based events."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/weddings",
+    "metaTitle": "Wedding Catering NC",
+    "metaDesc": "Wedding beverage catering in North Carolina with dirty sodas, Italian waters, and organic dirty lemonades for receptions and celebrations.",
+    "title": "Wedding Beverage Catering",
+    "primaryKeyword": "wedding beverage catering nc",
+    "serviceTypes": [
+      "Wedding Beverage Catering",
+      "Reception Drink Service",
+      "Cocktail Hour Beverage Service"
+    ],
+    "eventTypeHeader": "Wedding Catering",
+    "eventTypeDetails": [
+      "Farmhouse Fizz specializes in wedding beverage catering across North Carolina, creating fully customized drink experiences for your reception, cocktail hour, and celebration.",
+      "We can design signature drinks, including 'his and hers' custom beverages, seasonal specialties, and themed menus tailored to your wedding style.",
+      "Custom drink creations are available upon request. Some specialty ingredients may include additional charges depending on sourcing and availability.",
+      "Our mobile trailer or our indoor popup works perfectly for cocktail hour, reception bars, and late-night service, both with a rustic farmhouse vibe (contact us for photos, or check our socials)."
+    ],
+    "firstSection": [
+      "Wedding beverage catering designed to elevate your reception, cocktail hour, and celebration with unique options like dirty sodas and organic dirty lemonades."
+    ],
+    "locationName": "Weddings",
+    "locationFocus": [
+      "Serving wedding venues across North Carolina including barns, estates, churches, and outdoor venues.",
+      "Flexible setup for indoor and outdoor weddings."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/corporate",
+    "metaTitle": "Corporate Beverage Catering NC",
+    "metaDesc": "Corporate beverage catering in North Carolina for office events and team gatherings with custom dirty soda and coffee experiences.",
+    "title": "Corporate Beverage Catering",
+    "primaryKeyword": "corporate beverage catering nc",
+    "serviceTypes": [
+      "Corporate Beverage Catering",
+      "Office Event Catering",
+      "Brand Activation Beverage Service"
+    ],
+    "eventTypeHeader": "Corporate Event Beverage Catering",
+    "eventTypeDetails": [
+      "Farmhouse Fizz provides corporate beverage catering across North Carolina for office events, company celebrations, and brand activations.",
+      "We specialize in employee appreciation, client events, and corporate parties featuring dirty cold brews and organic dirty lemonades.",
+      "Our trailer handles both large and small corporate groups efficiently and professionally."
+    ],
+    "firstSection": [
+      "Professional mobile beverage catering for corporate events and office gatherings across the Triangle."
+    ],
+    "locationName": "Corporate",
+    "locationFocus": [
+      "Serving corporate offices across Raleigh, Durham, RTP, and surrounding business districts.",
+      "Ideal for indoor or parking-lot setups."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/private-events",
+    "metaTitle": "Private Event Catering NC",
+    "metaDesc": "Private event beverage catering in North Carolina with organic dirty lemonades, dirty sodas, and dirty coffee for custom celebrations.",
+    "title": "Private Event Catering",
+    "primaryKeyword": "private event catering nc",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Event Beverage Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides private event beverage catering across North Carolina for birthdays, anniversaries, and celebrations.",
+      "Treat your guests to something different with our Italian waters, dirty sodas, and organic dirty lemonades."
+    ],
+    "locationName": "Private Events",
+    "locationFocus": [
+      "Serving homes, venues, and private properties across North Carolina."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/parties",
+    "metaTitle": "Party Beverage Catering NC",
+    "metaDesc": "Party beverage catering in North Carolina with dirty sodas, organic dirty lemonades, and mobile drink bar experiences.",
+    "title": "Party Catering",
+    "primaryKeyword": "party beverage catering nc",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Mobile Soda Bar"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering for parties across North Carolina, featuring customizable drink menus.",
+      "A minimum event size applies for party bookings to ensure the best possible experience."
+    ],
+    "locationName": "Parties",
+    "locationFocus": [
+      "Serving birthday parties, graduations, and private celebrations statewide."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/schools",
+    "metaTitle": "School Event Catering NC",
+    "metaDesc": "School event beverage catering in North Carolina for fundraisers, sports events, and teacher appreciation.",
+    "title": "School Catering",
+    "primaryKeyword": "school event catering nc",
+    "serviceTypes": [
+      "Beverage Catering",
+      "Event Beverage Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides mobile beverage catering for school events across North Carolina.",
+      "We serve staff appreciation events, fundraisers, and campus celebrations with a variety of dirty sodas and organic dirty lemonades."
+    ],
+    "locationName": "Schools",
+    "locationFocus": [
+      "Serving schools, districts, and campus events across North Carolina."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/dirty-soda",
+    "metaTitle": "Dirty Soda Catering NC",
+    "metaDesc": "Dirty soda catering across North Carolina with customizable soda creations and mobile beverage service.",
+    "title": "Dirty Soda Catering",
+    "primaryKeyword": "dirty soda catering nc",
+    "serviceTypes": [
+      "Dirty Soda Catering",
+      "Custom Soda Bar"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz offers specialized dirty soda catering across North Carolina.",
+      "In addition to our famous sodas, we offer organic dirty lemonade, tea, and coffee-based options depending on your event needs."
+    ],
+    "locationName": "Dirty Soda",
+    "locationFocus": [
+      "Serving all major North Carolina event regions."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/lemonade",
+    "metaTitle": "Dirty Lemonade Catering NC",
+    "metaDesc": "Organic dirty lemonade catering in North Carolina for weddings, parties, festivals, and corporate events.",
+    "title": "Lemonade Catering",
+    "primaryKeyword": "lemonade catering nc",
+    "serviceTypes": [
+      "Lemonade Catering",
+      "Fresh Beverage Bar"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides organic dirty lemonade catering across North Carolina. What is a dirty lemonade? It's organic lemonade with custom flavors and cream on top.",
+      "Try a signature creation like the Winter Sunset: organic lemonade, yuzu pineapple, and cream. We also offer additional beverage options for full event customization."
+    ],
+    "locationName": "Lemonade",
+    "locationFocus": [
+      "Serving events statewide across North Carolina."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/cold-brew",
+    "metaTitle": "Dirty Cold Brew Catering NC",
+    "metaDesc": "Dirty cold brew catering in North Carolina for weddings, corporate events, and private gatherings.",
+    "title": "Dirty Cold Brew Catering",
+    "primaryKeyword": "cold brew catering nc",
+    "serviceTypes": [
+      "Cold Brew Catering",
+      "Dirty Cold Brew Catering",
+      "Cold Coffee Beverage Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides dirty cold brew catering across North Carolina. What is a dirty coffee? We take unsweetened cold brew coffee, add custom flavors, and top it with cream.",
+      "Try the Fireside Brew: cold brew, chocolate syrup, toasted marshmallow, and coconut cream. We also offer organic dirty lemonades, teas, and sodas."
+    ],
+    "locationName": "Dirty Cold Brew",
+    "locationFocus": [
+      "Serving statewide events across North Carolina."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/mobile-soda-bar",
+    "metaTitle": "Mobile Soda Bar NC",
+    "metaDesc": "Mobile soda bar experience across North Carolina with dirty sodas, organic dirty lemonades, and Italian waters.",
+    "title": "Mobile Soda Bar Experience",
+    "primaryKeyword": "mobile soda bar nc",
+    "serviceTypes": [
+      "Mobile Soda Bar",
+      "Beverage Catering Experience"
+    ],
+    "firstSection": [
+      "Our mobile soda bar brings a full beverage trailer experience to your event, serving up dirty sodas, organic dirty lemonades, and more."
+    ],
+    "locationName": "Mobile Soda Bar",
+    "locationFocus": [
+      "Serving all major North Carolina regions."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/mobile-trailer",
+    "metaTitle": "Mobile Beverage Trailer NC",
+    "metaDesc": "Mobile beverage trailer service across North Carolina for weddings, festivals, and corporate events.",
+    "title": "Mobile Beverage Trailer",
+    "primaryKeyword": "mobile beverage trailer nc",
+    "serviceTypes": [
+      "Mobile Beverage Trailer",
+      "Event Beverage Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz operates a fully mobile beverage trailer. Our primary setup is our black farmhouse-style beverage trailer. The trailer is approximately 17 feet long and 8 feet wide, featuring an 11-foot concession window along the passenger side.",
+      "The trailer is fully equipped with an internal potable water system along with both internal and external power capabilities, allowing us to serve dirty sodas and organic dirty lemonades anywhere."
+    ],
+    "locationName": "Mobile Trailer",
+    "locationFocus": [
+      "Serving events across North Carolina."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/event-drinks",
+    "metaTitle": "Event Drink Catering NC",
+    "metaDesc": "Event drink catering in North Carolina for weddings, parties, and corporate events with custom beverage service.",
+    "title": "Event Drink Catering",
+    "primaryKeyword": "event drink catering nc",
+    "serviceTypes": [
+      "Event Beverage Catering",
+      "Custom Drink Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz provides flexible event drink catering across North Carolina, featuring a rotating menu of dirty sodas and organic dirty lemonades."
+    ],
+    "locationName": "Event Drinks",
+    "locationFocus": [
+      "Serving all event types statewide."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  },
+  {
+    "path": "/catering/corporate-coffee",
+    "metaTitle": "Corporate Coffee Catering NC",
+    "metaDesc": "Corporate coffee catering in North Carolina with dirty cold brew and specialty coffee drinks for office events.",
+    "title": "Corporate Coffee Catering",
+    "primaryKeyword": "corporate coffee catering nc",
+    "serviceTypes": [
+      "Corporate Coffee Catering",
+      "Cold Coffee Beverage Service"
+    ],
+    "firstSection": [
+      "Farmhouse Fizz offers corporate coffee catering across North Carolina. We serve custom dirty cold brew creations like the Sunrise Brew (cold brew and organic lemonade with coconut cream) and the Fireside Brew (chocolate syrup, toasted marshmallow, and coconut cream)."
+    ],
+    "locationName": "Corporate Coffee",
+    "locationFocus": [
+      "Serving corporate offices statewide. We offer unique cold brew experiences featuring flavors like toasted marshmallow, chocolate, and coconut cream."
+    ],
+    "ctaNote": [
+      "View full catering services and booking details on our main catering page."
+    ]
+  }
+]
