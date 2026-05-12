@@ -7,7 +7,7 @@ import { ContactUs } from './pages/contactUs'
 import { Catering } from './pages/catering'
 import { Menu } from './pages/menu'
 import { Privacy } from './pages/privacy'
-import { QuestionsAndAnswers } from './pages/questionsAndAnswers'
+import { FQA } from './pages/FQA'
 import { EnergyDrinkNotice } from './pages/energyDrinkNotice'
 import { Terms } from './pages/terms'
 import { Header } from './components/header'
@@ -33,7 +33,7 @@ function App() {
                 )
               })}
               <Route path="/menu" element={<Menu/>} />
-              <Route path="/questions-and-answers" element={<QuestionsAndAnswers/>} />
+              <Route path="/fqa" element={<FQA/>} />
               <Route path="/polls/soda-poll" element={<SodaPoll/>} />
               <Route path="/terms-and-conditions" element={<Terms/>} />
               <Route path="/privacy-policy" element={<Privacy/>} />

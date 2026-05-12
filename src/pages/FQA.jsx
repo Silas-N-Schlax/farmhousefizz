@@ -2,7 +2,7 @@
 import { Helmet } from 'react-helmet-async'
 import { DropdownCards } from '../components/dropdown-cards'
 
-export function QuestionsAndAnswers() {
+export function FQA() {
   const faq = [
     {
       question: "Do Dirty Sodas have alcohol?",

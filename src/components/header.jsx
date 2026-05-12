@@ -34,7 +34,7 @@ export function Header() {
           <a href="/about-us" className="lk" onClick={handleLinkClick}>About Us</a>
           <a href="/catering" className="lk" onClick={handleLinkClick}>Catering</a>
           <a href="/menu" className="lk" onClick={handleLinkClick}>Menu</a>
-          <a href="/questions-and-answers" className="lk" onClick={handleLinkClick}>FAQ</a>
+          <a href="/fqa" className="lk" onClick={handleLinkClick}>FAQ</a>
         </nav>
       </div>
     </header>
