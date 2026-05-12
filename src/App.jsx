@@ -13,6 +13,7 @@ import { Terms } from './pages/terms'
 import { Header } from './components/header'
 import { Footer } from './components/footer'
 import { SodaPoll } from './pages/sodaPoll'
+import cateringData from './assets/data/cateringPages.json'
 
 
 function App() {
@@ -26,7 +27,11 @@ function App() {
               <Route path="/*" element={<NotFound/>} />
               <Route path="/about-us" element={<AboutUs/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
-              <Route path="/catering" element={<Catering/>} />
+              {cateringData.map((page, i) => {
+                return (
+                  <Route path={page.path} key={i} element={<Catering data={page} />} />
+                )
+              })}
               <Route path="/menu" element={<Menu/>} />
               <Route path="/questions-and-answers" element={<QuestionsAndAnswers/>} />
               <Route path="/polls/soda-poll" element={<SodaPoll/>} />
