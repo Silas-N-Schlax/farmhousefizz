@@ -1,25 +1,45 @@
 
 import { Helmet } from 'react-helmet-async'
 
-export function Catering() {
+export function Catering({ data }) {
   return (
     <>
       <Helmet>
-        <title>About Us - Farmhouse Fizz</title>
-        <meta name="description" content="Learn how Farmhouse Fizz Soda Bar began as a family dream and grew into a mobile dirty soda trailer serving central North Carolina events." />
+        <title>{data.metaTitle || "Mobile Beverage Catering Across NC"} | Farmhouse Fizz</title>
+        <meta
+          name="description"
+          content={data.metaDesc || "Farmhouse Fizz provides mobile beverage catering across Raleigh-Durham and Central North Carolina, serving dirty sodas, handcrafted lemonades, and custom drink experiences for weddings, corporate events, and celebrations."}
+        />
       </Helmet>
       <>
-        <h1 className='page-title'>Catering with Farmhouse Fizz</h1>
+        <h1 className='page-title'>{data.title || "Mobile Beverage Catering in Raleigh-Durham, NC"}</h1>
 
         <div className="info-content">
 
           <h2>Bring Something Unforgettable</h2>
-          <p>Farmhouse Fizz provides mobile beverage catering across the Raleigh-Durham area and beyond, serving handcrafted dirty sodas, Italian waters, dirty lemonades, dirty cold brew coffee, dirty tea & lemonade, dirty energy drinks (18+), and specialty drinks from our self-contained farmhouse-style trailer.</p>
-          <p>Whether you are planning a wedding, corporate event, church gathering, graduation party, festival, or private celebration, our goal is simple. Deliver high-quality drinks, friendly service, and an experience your guests will actually remember.</p>
+          {data.firstSection.map((item, i) => {
+            return (
+              <p key={i}>{item}</p>
+            )
+          })}
 
-          <h2>Events We Serve</h2>
-          <p>We cater a wide range of private and public events, including weddings and receptions, corporate gatherings, church events, school functions, graduation parties, birthday celebrations, festivals, community events, and private parties.</p>
-          <p>If your event brings people together, there is a good chance Farmhouse Fizz Soda Bar can serve it.</p>
+          {!data.eventTypeHeader && (
+            <>
+              <h2>Events We Serve</h2>
+              <p>We cater a wide range of private and public events, including weddings and receptions, corporate gatherings, church events, school functions, graduation parties, birthday celebrations, festivals, community events, and private parties.</p>
+              <p>If your event brings people together, there is a good chance Farmhouse Fizz Soda Bar can serve it.</p>
+            </>
+          )}
+
+          {data.eventTypeHeader && (
+            <>
+              <h2>{data.eventTypeHeader}</h2>
+              {data.eventTypeDetails.map((item, i) => {
+                return (<p key={i}>{item}</p>)
+              })}
+            </>
+          )}
+
 
           <h2>Catering Options</h2>
           <p>We currently offer flexible service options to fit your event needs.</p>
