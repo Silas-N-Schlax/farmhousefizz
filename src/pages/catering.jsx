@@ -75,7 +75,7 @@ export function Catering({ data }) {
             <p>Whether you are planning an intimate gathering or a large-scale celebration, Farmhouse Fizz is ready to bring handcrafted drinks and memorable service to your guests.</p>
             <p>Reach out today to check availability and start planning your event.</p>
 
-            <details open>
+            <details>
               <summary>More Pages on Catering</summary>
               <ul className='content'>
                 {cateringLinks().map((URL, i) => {
