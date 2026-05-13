@@ -1,6 +1,6 @@
 
 
-export function Dropdown({ options = [], onSelect, name, required = false }) {
+export function Dropdown({ options = [], onSelect, name, label, required = false }) {
   return (
     <div className="select-wrap">
       <select
@@ -11,7 +11,7 @@ export function Dropdown({ options = [], onSelect, name, required = false }) {
         {...(required ? { required: true } : {})}
       >
         <option value="" disabled>
-          Select an option
+         {label || "Select an Option"}
         </option>
         {options.map((option, index) => (
           <option key={index} value={option}>
