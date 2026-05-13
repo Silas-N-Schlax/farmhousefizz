@@ -6,31 +6,34 @@ import { Textarea } from '../components/textarea.jsx'
 import { useState, useRef } from 'react'
 
 export function ContactUs() {
-  // track the value of the dropdown and display a different set of fields based on selection
   const [selectedOption, setSelectedOption] = useState('')
   const formRef = useRef(null)
   const [status, setStatus] = useState(null)
+  const [buttonDisabled, setButtonDisabled] = useState(false)
 
   // TODO: replace with your deployed Google Apps Script URL (This is the outdated functional code, the new ones don't send the email for whatever reason)
-  const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNSjYkZt6BCAhkOUKIDTCPx2vs7Fl-FdwB8UblplOodX5AOvuwDkk-MbK-iXKJwmPY/exec'
+  // const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNSjYkZt6BCAhkOUKIDTCPx2vs7Fl-FdwB8UblplOodX5AOvuwDkk-MbK-iXKJwmPY/exec'
+  const GOOGLE_APPS_SCRIPT_ID = 'AKfycbw3-tnKOo8ezBtWOX2TiZ9nkIkNBWXvcEGO54XRr61ZvTk-aL3fFBN1zxMCFxReoD7n'
 
   async function handleSubmit(e) {
     e.preventDefault()
     setStatus({ loading: true })
+    setButtonDisabled(true)
     try {
       const fd = new FormData(formRef.current)
       const params = new URLSearchParams()
       for (const [k, v] of fd.entries()) params.append(k, v)
 
-        const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        const res = await fetch(`https://script.google.com/macros/s/${GOOGLE_APPS_SCRIPT_ID}/exec`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-          body: params.toString(),
+          body: params
         })
+        let response = await res.json()
         
-        if (!res.ok) {
-          const txt = await res.text().catch(() => '')
-          throw new Error(`Request failed: ${res.status} ${txt}`)
+        if (!response.ok) {
+          setButtonDisabled(false)
+          return setStatus({ok: false, message: response.errors[0] || "Submission Failed, please check your inputs."})
         }
         
         setStatus({ ok: true, message: `Submitted — thank you! (Redirecting in 5 seconds...)` })
@@ -38,6 +41,7 @@ export function ContactUs() {
         alert("Thank you for your inquiry! We have received your email, and will get back to you within 3 business days. Please check your spam folder if you do not see it.")
       setTimeout(() => {
         window.location.reload()
+        setButtonDisabled(false)
       }, 5000)
     } catch (err) {
       setStatus({ ok: false, message: err.message || 'Submission failed' })
@@ -66,6 +70,7 @@ export function ContactUs() {
           name="inquiryType"
           options={["General Inquiry", "Feedback", "Booking Events", "Other"]}
           onSelect={(value) => setSelectedOption(value)}
+          label="Select A Inquiry Type..."
           required={true}
         />
         {selectedOption === 'General Inquiry' || selectedOption === 'Feedback' || selectedOption === 'Other' ? (
@@ -73,17 +78,26 @@ export function ContactUs() {
         ) : null}
         {selectedOption === 'Booking Events' ? (
           <>
-          {/* location, date(s), start time, end time, number of guests, type of event (dropdown: wedding, party, cooperate, more if you can think of them),  */}
           <Input name="eventLocation" type="text" placeholder="Event Address (We Only Cater to NC)" required={true} />
           <Input name="eventDate" type="date" required={true} min={new Date().toISOString().split('T')[0]} />
           <div className="form-row">
             <Input name="startTime" type="time" required={true} half={true} step={900} />
             <Input name="endTime" type="time" required={true} half={true} step={900} />
           </div>
-          <Input name="guests" type="number" placeholder="Number of Guests" required={true} min={1} max={10000} inputMode="numeric" />
+          <Dropdown 
+            name="serviceType"
+            options={['Unlimited Drinks', 'Set Amount of Drinks', 'Eaters Pay']}
+            label="Select A Service Type..."
+            required={true}
+          />
+          <div className="form-row">
+            <Input name="guestsMin" type="number" placeholder='Min number of guests' required={true} half={true} min={50} max={10000}></Input>
+            <Input name="guestsMax" type="number" placeholder='Max number of guests' required={true} half={true} min={50} max={10000}></Input>
+          </div>
           <Dropdown
             name="eventType"
-            options={["Wedding", "Party", "Corporate Event", "Other (please specify in Additional Details)"]}
+            options={["Wedding", "Party", "Corporate Event", "School Event", "Festival", "Other (please specify in Additional Details)"]}
+            label="Select A Event Type..."
             required={true}
           />
           <Textarea name="additionalDetails" placeholder="Additional Details" rows={4} />
@@ -103,7 +117,7 @@ export function ContactUs() {
           <span className="checkbox-text">I hereby agree that all contact information is accurate and I will be contacted via the provided email or phone number.</span>
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={buttonDisabled}>Submit</button>
           {status && (
             <span style={{ marginLeft: 12 }}>
               {status.loading ? 'Sending…' : status.message}
