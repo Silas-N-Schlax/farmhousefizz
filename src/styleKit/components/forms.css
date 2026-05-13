@@ -200,6 +200,10 @@
   box-shadow: 0 8px 20px rgba(74,123,157,0.08);
 }
 
+.contact-form button[type="submit"]:disabled {
+  background-color: rgba(74, 123, 157, 0.6);
+}
+
 @media (max-width: 520px) {
   .contact-form { max-width: 92%; gap: 0.6rem; }
   .custom-input, .custom-textarea, .custom-dropdown { font-size: 0.95rem; padding: 0.5rem 0.75rem; }
