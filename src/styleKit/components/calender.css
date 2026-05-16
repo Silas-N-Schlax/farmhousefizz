@@ -1,0 +1,11 @@
+.iframe-ctr.mobile { display: none; }
+.iframe-ctr.desktop { display: flex;}
+
+@media (max-width: 765px) {
+  .iframe-ctr.mobile { display: flex; }
+  .iframe-ctr.desktop { display: none;}
+}
+
+.iframe-ctr {
+  justify-content: center;
+}

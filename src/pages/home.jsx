@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { Cards } from '../components/cards'
 import { CardHalf } from '../components/card-half'
+import { Calender } from '../components/calender'
 
 export function Home() {
 
@@ -85,12 +86,19 @@ export function Home() {
               },
               {
                 title: "Find Us Today",
-                desc: "Check our social media or StreetFoodFinder to see where we’re serving next.",
+                desc: "Check our social media, StreetFoodFinder, or below to see where we’re serving next.",
                 url: "https://streetfoodfinder.com/farmhousefizz",
                 text: "Farmhouse Fizz Locator"
               },
             ]
           } link={true}></Cards>
+        </div>
+        <div className="section bnr ctr" style={{backgroundColor: "var(--deep-walnut)"}}>
+          <h2>Catch the Fizz on the Road</h2>
+          <p>See our upcoming public events, pop-ups, and markets across Central North Carolina on our live calendar.</p>
+        </div>
+        <div className="section">
+          <Calender/>
         </div>
       </div>
     </>
