@@ -60,5 +60,6 @@ footer {
 @media (max-width: 765px) {
   .page-title {
     font-size: 2em;
+    padding: 0 15px;
   }
 }
