@@ -86,7 +86,7 @@ export function ContactUs() {
           </div>
           <Dropdown 
             name="serviceType"
-            options={['Unlimited Drinks', 'Set Amount of Drinks', 'Eaters Pay']}
+            options={['Set Amount of Drinks', 'Eaters Pay']}
             label="Select A Service Type..."
             required={true}
           />
