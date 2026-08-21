@@ -26,7 +26,7 @@ body {
   color: var(--gb-text-color);
   overflow-y: auto;
   height: auto;
-  font-family: 'Lora', 'Times New Roman', Times, Arial, Helvetica, serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .page-title {
