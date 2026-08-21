@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmhouse Fizz &times; Optics theme preview</title>
+
+    <!-- Optics, from CDN (no build step) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.4.0/dist/css/optics.min.css"
+    />
+
+    <!-- Fonts used by the Farmhouse Fizz theme (Optics ships Noto Sans/Serif
+         by default; the theme file below points --op-font-family at these
+         instead) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Special+Elite&display=swap"
+    />
+
+    <!-- The real theme file, loaded from disk (relative link, not a copy) so
+         editing src/styleKit/theme/farmhouse-fizz.css and reloading this
+         page shows the change immediately. -->
+    <link rel="stylesheet" href="./src/styleKit/theme/farmhouse-fizz.css" />
+
+    <style>
+      /* Preview-page chrome only. Everything brand-related lives in
+         farmhouse-fizz.css - this block never sets a brand color. */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding-bottom: var(--op-space-4x-large);
+      }
+
+      .op-preview-header {
+        position: sticky;
+        top: 0;
+        z-index: var(--op-z-index-header);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--op-space-medium);
+        padding: var(--op-space-medium) var(--op-space-x-large);
+        background: var(--op-color-background);
+        border-bottom: var(--op-border-width) solid var(--op-color-border);
+      }
+
+      .op-preview-header h1 {
+        font-family: var(--op-font-family-alt);
+        font-size: var(--op-font-2x-large);
+        margin: 0;
+      }
+
+      .mode-switch {
+        display: inline-flex;
+        border: var(--op-border-width) solid var(--op-color-border);
+        border-radius: var(--op-radius-pill);
+        overflow: hidden;
+      }
+
+      .mode-switch button {
+        font: inherit;
+        font-size: var(--op-font-small);
+        border: 0;
+        background: transparent;
+        color: var(--op-color-on-background);
+        padding: var(--op-space-x-small) var(--op-space-medium);
+        cursor: pointer;
+      }
+
+      .mode-switch button[aria-pressed='true'] {
+        background: var(--op-color-primary-original);
+        color: var(--op-color-primary-on-base);
+      }
+
+      main {
+        padding: 0 var(--op-space-x-large);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      section {
+        margin-top: var(--op-space-4x-large);
+      }
+
+      section > h2 {
+        font-family: var(--op-font-family-alt);
+        font-size: var(--op-font-3x-large);
+        border-bottom: var(--op-border-width-large) solid var(--op-color-primary-original);
+        padding-bottom: var(--op-space-x-small);
+        margin-bottom: var(--op-space-medium);
+      }
+
+      section > p.section-note {
+        color: var(--op-color-on-background-alt);
+        max-width: 70ch;
+        margin-top: 0;
+      }
+
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: var(--op-space-small);
+      }
+
+      .swatch {
+        border-radius: var(--op-radius-medium);
+        border: var(--op-border-width) solid var(--op-color-border);
+        overflow: hidden;
+        font-size: var(--op-font-x-small);
+      }
+
+      .swatch .fill {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: var(--op-font-weight-semi-bold);
+      }
+
+      .swatch .meta {
+        padding: var(--op-space-2x-small) var(--op-space-x-small);
+        background: var(--op-color-background);
+        color: var(--op-color-on-background);
+      }
+
+      .swatch .meta code {
+        display: block;
+        font-size: 1.1rem;
+        opacity: 0.7;
+        word-break: break-all;
+      }
+
+      .swatch .meta .value {
+        display: block;
+        font-size: 1.1rem;
+        opacity: 0.55;
+      }
+
+      .ramp-block {
+        margin-bottom: var(--op-space-2x-large);
+      }
+
+      .ramp-block h3 {
+        font-size: var(--op-font-large);
+        margin: 0 0 var(--op-space-x-small);
+      }
+
+      .audit-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: var(--op-font-small);
+      }
+
+      .audit-table th,
+      .audit-table td {
+        text-align: left;
+        padding: var(--op-space-x-small) var(--op-space-small);
+        border-bottom: var(--op-border-width) solid var(--op-color-border);
+      }
+
+      .audit-table .preview-cell {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--op-space-2x-small);
+      }
+
+      .swatch-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: var(--op-radius-circle);
+        border: var(--op-border-width) solid var(--op-color-border);
+        display: inline-block;
+      }
+
+      .badge-pass {
+        display: inline-block;
+        padding: 2px var(--op-space-x-small);
+        border-radius: var(--op-radius-pill);
+        font-size: var(--op-font-2x-small);
+        font-weight: var(--op-font-weight-bold);
+        color: #fff;
+      }
+      .badge-pass[data-level='AAA'] { background: #1e7a34; }
+      .badge-pass[data-level='AA'] { background: #3f8f4f; }
+      .badge-pass[data-level='AA-large'] { background: #b98900; }
+      .badge-pass[data-level='FAIL'] { background: #b0192a; }
+
+      .gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--op-space-medium);
+        align-items: center;
+        margin-bottom: var(--op-space-medium);
+      }
+
+      .type-scale-row {
+        display: flex;
+        align-items: baseline;
+        gap: var(--op-space-medium);
+        margin-bottom: var(--op-space-x-small);
+      }
+
+      .type-scale-row code {
+        color: var(--op-color-on-background-alt);
+        font-size: var(--op-font-x-small);
+        min-width: 140px;
+      }
+
+      .bar-row {
+        display: flex;
+        align-items: center;
+        gap: var(--op-space-medium);
+        margin-bottom: var(--op-space-x-small);
+      }
+
+      .bar-row code {
+        min-width: 160px;
+        font-size: var(--op-font-x-small);
+        color: var(--op-color-on-background-alt);
+      }
+
+      .bar {
+        background: var(--op-color-primary-original);
+        height: 20px;
+      }
+
+      .shadow-box {
+        width: 120px;
+        height: 80px;
+        border-radius: var(--op-radius-medium);
+        background: var(--op-color-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--op-font-2x-small);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--op-space-medium);
+      }
+
+      footer.preview-footer {
+        text-align: center;
+        color: var(--op-color-on-background-alt);
+        font-size: var(--op-font-x-small);
+        margin-top: var(--op-space-4x-large);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="op-preview-header">
+      <h1>Farmhouse Fizz &times; Optics</h1>
+      <div class="mode-switch" role="group" aria-label="Color scheme">
+        <button type="button" data-mode="auto" aria-pressed="true">Auto</button>
+        <button type="button" data-mode="light" aria-pressed="false">Light</button>
+        <button type="button" data-mode="dark" aria-pressed="false">Dark</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="palette">
+        <h2>Brand palette</h2>
+        <p class="section-note">
+          The five source hexes from <code>src/styleKit/tokens/colors.css</code>,
+          unchanged. Everything else on this page derives from these via the
+          Optics theme file.
+        </p>
+        <div class="swatch-grid" id="brand-swatches"></div>
+      </section>
+
+      <section id="ramps">
+        <h2>Full color ramps</h2>
+        <p class="section-note">
+          Every Optics scale, all 19 derived steps, plus the two
+          project-prefixed custom scales (<code>--ff-color-secondary-*</code>
+          for steel blue, <code>--ff-color-accent-*</code> for deep walnut)
+          that fill in for Optics' missing secondary/accent scales. Switch
+          modes above to see these re-derive live via CSS
+          <code>light-dark()</code>.
+        </p>
+        <div id="ramps-container"></div>
+      </section>
+
+      <section id="audit">
+        <h2>Live contrast audit</h2>
+        <p class="section-note">
+          Computed WCAG contrast ratios for the foreground/background pairs
+          that matter most, read directly from
+          <code>getComputedStyle</code> so the numbers always match what's
+          actually rendering &mdash; not what the theme file intends.
+          Recomputes on every mode switch.
+        </p>
+        <table class="audit-table">
+          <thead>
+            <tr>
+              <th>Pair</th>
+              <th>Preview</th>
+              <th>Ratio</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody id="audit-body"></tbody>
+        </table>
+      </section>
+
+      <section id="semantic">
+        <h2>Semantic tokens</h2>
+        <p class="section-note">
+          The tokens components actually consume:
+          <code>--op-color-background</code>,
+          <code>--op-color-on-background</code>,
+          <code>--op-color-on-background-alt</code>,
+          <code>--op-color-border</code>.
+        </p>
+        <div class="swatch-grid" id="semantic-swatches"></div>
+      </section>
+
+      <section id="type">
+        <h2>Typography</h2>
+        <p class="section-note">
+          <code>--op-font-family</code> (Lora) and
+          <code>--op-font-family-alt</code> (Special Elite &mdash;
+          referenced by <code>core/globals.css</code>'s <code>.page-title</code>
+          today but never actually loaded anywhere in the app).
+        </p>
+        <div id="type-scale"></div>
+        <p style="font-family: var(--op-font-family-alt); font-size: var(--op-font-2x-large); margin-top: var(--op-space-large);">
+          Special Elite &mdash; Farmhouse Fizz Soda Bar
+        </p>
+      </section>
+
+      <section id="scales">
+        <h2>Spacing, radius &amp; shadow</h2>
+        <div id="space-scale"></div>
+        <div class="gallery-row" id="radius-scale" style="margin-top: var(--op-space-large);"></div>
+        <div class="gallery-row" id="shadow-scale" style="margin-top: var(--op-space-large);"></div>
+      </section>
+
+      <section id="components">
+        <h2>Optics components, themed</h2>
+        <p class="section-note">
+          Optics' own components rendered under the Farmhouse Fizz theme
+          &mdash; production components are untouched by this change; this
+          is only to see the palette on real UI.
+        </p>
+
+        <h3 style="font-size: var(--op-font-large);">Buttons</h3>
+        <div class="gallery-row">
+          <button class="btn btn--primary">Primary</button>
+          <button class="btn">Default</button>
+          <button class="btn btn--destructive">Destructive</button>
+          <button class="btn btn--warning">Warning</button>
+          <button class="btn btn--primary btn--pill">Pill</button>
+          <button class="btn btn--primary btn--small">Small</button>
+          <button class="btn btn--primary btn--large">Large</button>
+          <button class="btn btn--primary btn--disabled" disabled>Disabled</button>
+        </div>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Cards</h3>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card__header"><strong>Seasonal Sip</strong></div>
+            <div class="card__body">
+              <p>Almond cream base, steel blue soda water, a float of deep walnut bitters.</p>
+            </div>
+            <div class="card__footer"><span>$6.50</span></div>
+          </div>
+          <div class="card card--shadow-medium">
+            <div class="card__header"><strong>Molten Lava Float</strong></div>
+            <div class="card__body">
+              <p>Our house red, finished with cream. Card with <code>--shadow-medium</code>.</p>
+            </div>
+            <div class="card__footer"><span>$7.00</span></div>
+          </div>
+        </div>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Alerts</h3>
+        <div class="gallery-row" style="flex-direction: column; align-items: stretch;">
+          <div class="alert alert--info">
+            <div class="alert__title">Info</div>
+            <div class="alert__description">Steel blue stands in for Optics' info scale.</div>
+          </div>
+          <div class="alert alert--notice">
+            <div class="alert__title">Notice</div>
+            <div class="alert__description">Optics' "notice" is its success/positive color.</div>
+          </div>
+          <div class="alert alert--warning">
+            <div class="alert__title">Warning</div>
+            <div class="alert__description">Warmed toward amber to sit with the palette.</div>
+          </div>
+          <div class="alert alert--danger">
+            <div class="alert__title">Danger</div>
+            <div class="alert__description">Shifted off primary's exact hue so the two reds stay distinguishable.</div>
+          </div>
+        </div>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Badges &amp; tags</h3>
+        <div class="gallery-row">
+          <span class="badge badge--primary">Primary</span>
+          <span class="badge badge--info">Info</span>
+          <span class="badge badge--notice">Notice</span>
+          <span class="badge badge--warning">Warning</span>
+          <span class="badge badge--danger">Danger</span>
+          <span class="tag tag--primary"><span class="tag__label">gluten free</span></span>
+          <span class="tag tag--info"><span class="tag__label">dairy free</span></span>
+          <span class="tag tag--danger"><span class="tag__label">contains dyes</span></span>
+        </div>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Form controls</h3>
+        <div class="card" style="max-width: 420px;">
+          <div class="card__body">
+            <div class="form-group">
+              <label class="form-label" for="preview-name">Name</label>
+              <input class="form-control" id="preview-name" type="text" placeholder="Farmhouse regular" />
+              <span class="form-hint">Shown on your order.</span>
+            </div>
+            <div class="form-group form-group--error">
+              <label class="form-label" for="preview-email">Email</label>
+              <input class="form-control" id="preview-email" type="text" value="not-an-email" />
+              <span class="form-error">Enter a valid email.</span>
+            </div>
+            <div class="form-group">
+              <div class="switch">
+                <input type="checkbox" id="preview-switch" checked />
+                <label for="preview-switch">Text me when it's ready</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Table</h3>
+        <table class="table table--container table--odd-striped">
+          <thead>
+            <tr><th>Drink</th><th>Size</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Molten Lava Float</td><td>16oz</td><td>$7.00</td></tr>
+            <tr><td>Seasonal Sip</td><td>16oz</td><td>$6.50</td></tr>
+            <tr><td>Steel Blue Fizz</td><td>20oz</td><td>$7.50</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="font-size: var(--op-font-large); margin-top: var(--op-space-large);">Misc</h3>
+        <div class="gallery-row">
+          <div class="text-pair">
+            <div class="text-pair__title">24</div>
+            <div class="text-pair__subtitle">flavors on tap</div>
+          </div>
+          <div class="avatar">FF</div>
+          <div class="spinner" aria-label="Loading"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="preview-footer">
+      Farmhouse Fizz &mdash; Optics theme proof of concept. Not linked from
+      the production app.
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var root = document.documentElement;
+        var STORAGE_KEY = 'ff-optics-preview-mode';
+
+        function applyMode(mode) {
+          if (mode === 'light' || mode === 'dark') {
+            root.setAttribute('data-theme-mode', mode);
+          } else {
+            root.removeAttribute('data-theme-mode');
+          }
+          document.querySelectorAll('.mode-switch button').forEach(function (btn) {
+            btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
+          });
+          // Re-render everything that reads computed colors.
+          renderRamps();
+          renderAudit();
+        }
+
+        function initModeSwitch() {
+          var saved = 'auto';
+          try {
+            saved = localStorage.getItem(STORAGE_KEY) || 'auto';
+          } catch (e) {
+            /* private mode / storage blocked - fall back to auto, no crash */
+          }
+          document.querySelectorAll('.mode-switch button').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var mode = btn.dataset.mode;
+              try {
+                localStorage.setItem(STORAGE_KEY, mode);
+              } catch (e) {}
+              applyMode(mode);
+            });
+          });
+          applyMode(saved);
+        }
+
+        function cssVar(name) {
+          return getComputedStyle(root).getPropertyValue(name).trim();
+        }
+
+        // ---- color math -------------------------------------------------
+        function parseToRgb(colorString) {
+          var probe = document.createElement('span');
+          probe.style.color = colorString;
+          probe.style.display = 'none';
+          document.body.appendChild(probe);
+          var resolved = getComputedStyle(probe).color;
+          document.body.removeChild(probe);
+          var m = resolved.match(/rgba?\(([^)]+)\)/);
+          if (!m) return null;
+          var parts = m[1].split(',').map(function (n) {
+            return parseFloat(n);
+          });
+          return { r: parts[0], g: parts[1], b: parts[2] };
+        }
+
+        function relLuminance(rgb) {
+          function lin(c) {
+            c = c / 255;
+            return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+          }
+          return 0.2126 * lin(rgb.r) + 0.7152 * lin(rgb.g) + 0.0722 * lin(rgb.b);
+        }
+
+        function contrastRatio(fg, bg) {
+          var l1 = relLuminance(fg);
+          var l2 = relLuminance(bg);
+          var lighter = Math.max(l1, l2);
+          var darker = Math.min(l1, l2);
+          return (lighter + 0.05) / (darker + 0.05);
+        }
+
+        function ratioLevel(ratio) {
+          if (ratio >= 7) return 'AAA';
+          if (ratio >= 4.5) return 'AA';
+          if (ratio >= 3) return 'AA-large';
+          return 'FAIL';
+        }
+
+        // ---- brand swatches (static, doesn't need mode re-render) -------
+        function renderBrandSwatches() {
+          var el = document.getElementById('brand-swatches');
+          var brand = [
+            ['--ff-brand-carbon-black', 'carbon-black'],
+            ['--ff-brand-molten-lava', 'molten-lava'],
+            ['--ff-brand-almond-cream', 'almond-cream'],
+            ['--ff-brand-steel-blue', 'steel-blue'],
+            ['--ff-brand-deep-walnut', 'deep-walnut'],
+          ];
+          el.innerHTML = brand
+            .map(function (pair) {
+              var val = cssVar(pair[0]);
+              return (
+                '<div class="swatch"><div class="fill" style="background:var(' +
+                pair[0] +
+                ')"></div><div class="meta"><code>' +
+                pair[1] +
+                '</code><span class="value">' +
+                val +
+                '</span></div></div>'
+              );
+            })
+            .join('');
+        }
+
+        function renderSemanticSwatches() {
+          var el = document.getElementById('semantic-swatches');
+          var tokens = [
+            ['--op-color-background', 'var(--op-color-on-background)'],
+            ['--op-color-on-background', 'var(--op-color-background)'],
+            ['--op-color-on-background-alt', 'var(--op-color-background)'],
+            ['--op-color-border', 'var(--op-color-on-background)'],
+          ];
+          el.innerHTML = tokens
+            .map(function (pair) {
+              return (
+                '<div class="swatch"><div class="fill" style="background:var(' +
+                pair[0] +
+                ');color:' +
+                pair[1] +
+                '">Aa</div><div class="meta"><code>' +
+                pair[0] +
+                '</code></div></div>'
+              );
+            })
+            .join('');
+        }
+
+        // ---- ramps (re-rendered on mode switch to show resolved values) -
+        var SCALES = [
+          ['primary', '--op-color-primary'],
+          ['neutral', '--op-color-neutral'],
+          ['alerts-info (secondary-ish)', '--op-color-alerts-info'],
+          ['alerts-notice (success)', '--op-color-alerts-notice'],
+          ['alerts-warning', '--op-color-alerts-warning'],
+          ['alerts-danger', '--op-color-alerts-danger'],
+          ['ff secondary (steel blue, custom)', '--ff-color-secondary'],
+          ['ff accent (deep walnut, custom)', '--ff-color-accent'],
+        ];
+
+        var FULL_STEPS = [
+          'plus-max', 'plus-eight', 'plus-seven', 'plus-six', 'plus-five',
+          'plus-four', 'plus-three', 'plus-two', 'plus-one', 'base',
+          'minus-one', 'minus-two', 'minus-three', 'minus-four', 'minus-five',
+          'minus-six', 'minus-seven', 'minus-eight', 'minus-max',
+        ];
+        var CUSTOM_STEPS = ['plus-five', 'base'];
+
+        function renderRamps() {
+          var container = document.getElementById('ramps-container');
+          container.innerHTML = SCALES.map(function (scale) {
+            var label = scale[0];
+            var prefix = scale[1];
+            var isCustom = prefix.indexOf('--ff-') === 0;
+            var steps = isCustom ? CUSTOM_STEPS : FULL_STEPS;
+            var swatches = steps
+              .map(function (step) {
+                var varName = prefix + '-' + step;
+                var onVarName = prefix + '-on-' + step;
+                var value = cssVar(varName);
+                if (!value) return '';
+                return (
+                  '<div class="swatch"><div class="fill" style="background:var(' +
+                  varName +
+                  ');color:var(' +
+                  onVarName +
+                  ', currentColor)">Aa</div><div class="meta"><code>' +
+                  step +
+                  '</code></div></div>'
+                );
+              })
+              .join('');
+            return (
+              '<div class="ramp-block"><h3>' +
+              label +
+              ' <code style="font-size:1.1rem;opacity:.6;">(' +
+              prefix +
+              '-*)</code></h3><div class="swatch-grid">' +
+              swatches +
+              '</div></div>'
+            );
+          }).join('');
+        }
+
+        // ---- contrast audit ----------------------------------------------
+        var AUDIT_PAIRS = [
+          ['Body text on background', '--op-color-on-background', '--op-color-background'],
+          ['Muted text on background', '--op-color-on-background-alt', '--op-color-background'],
+          ['Primary link/button on background', '--op-color-primary-original', '--op-color-background'],
+          ['Primary button text on primary', '--op-color-primary-on-base', '--op-color-primary-base'],
+          ['Secondary (steel blue) on background', '--ff-color-secondary-original', '--op-color-background'],
+          ['Secondary button text on secondary', '--ff-color-secondary-on-base', '--ff-color-secondary-base'],
+          ['Accent (deep walnut) on background', '--ff-color-accent-original', '--op-color-background'],
+          ['Accent button text on accent', '--ff-color-accent-on-base', '--ff-color-accent-base'],
+          ['Danger text on background', '--op-color-alerts-danger-base', '--op-color-background'],
+          ['Warning text on background', '--op-color-alerts-warning-base', '--op-color-background'],
+          ['Notice (success) text on background', '--op-color-alerts-notice-base', '--op-color-background'],
+          ['Info text on background', '--op-color-alerts-info-base', '--op-color-background'],
+          ['Border vs. background (decorative, 3:1 target)', '--op-color-border', '--op-color-background'],
+        ];
+
+        function renderAudit() {
+          var body = document.getElementById('audit-body');
+          body.innerHTML = AUDIT_PAIRS.map(function (pair) {
+            var label = pair[0];
+            var fgVar = pair[1];
+            var bgVar = pair[2];
+            var fgVal = cssVar(fgVar);
+            var bgVal = cssVar(bgVar);
+            var fgRgb = parseToRgb('var(' + fgVar + ')');
+            var bgRgb = parseToRgb('var(' + bgVar + ')');
+            var ratio = fgRgb && bgRgb ? contrastRatio(fgRgb, bgRgb) : NaN;
+            var level = isNaN(ratio) ? 'FAIL' : ratioLevel(ratio);
+            var ratioText = isNaN(ratio) ? 'n/a' : ratio.toFixed(2) + ':1';
+            return (
+              '<tr><td>' +
+              label +
+              '</td><td><span class="preview-cell"><span class="swatch-dot" style="background:' +
+              bgVal +
+              '"></span><span style="color:' +
+              fgVal +
+              ';background:' +
+              bgVal +
+              ';padding:2px 6px;border-radius:4px;">Aa</span></span></td><td>' +
+              ratioText +
+              '</td><td><span class="badge-pass" data-level="' +
+              level +
+              '">' +
+              level +
+              '</span></td></tr>'
+            );
+          }).join('');
+        }
+
+        // ---- typography / spacing / radius / shadow scales ---------------
+        function renderTypeScale() {
+          var sizes = [
+            '2x-small', 'x-small', 'small', 'medium', 'large',
+            'x-large', '2x-large', '3x-large', '4x-large', '5x-large', '6x-large',
+          ];
+          document.getElementById('type-scale').innerHTML = sizes
+            .map(function (size) {
+              var varName = '--op-font-' + size;
+              return (
+                '<div class="type-scale-row"><code>' +
+                varName +
+                '</code><span style="font-size:var(' +
+                varName +
+                ')">Farmhouse Fizz</span></div>'
+              );
+            })
+            .join('');
+        }
+
+        function renderSpaceScale() {
+          var sizes = [
+            '3x-small', '2x-small', 'x-small', 'small', 'medium',
+            'large', 'x-large', '2x-large', '3x-large', '4x-large',
+          ];
+          document.getElementById('space-scale').innerHTML = sizes
+            .map(function (size) {
+              var varName = '--op-space-' + size;
+              return (
+                '<div class="bar-row"><code>' +
+                varName +
+                '</code><div class="bar" style="width:var(' +
+                varName +
+                ')"></div></div>'
+              );
+            })
+            .join('');
+        }
+
+        function renderRadiusScale() {
+          var sizes = ['small', 'medium', 'large', 'x-large', '2x-large', 'pill', 'circle'];
+          document.getElementById('radius-scale').innerHTML = sizes
+            .map(function (size) {
+              var varName = '--op-radius-' + size;
+              return (
+                '<div class="shadow-box" style="border-radius:var(' +
+                varName +
+                ');border:var(--op-border-width) solid var(--op-color-border);">' +
+                size +
+                '</div>'
+              );
+            })
+            .join('');
+        }
+
+        function renderShadowScale() {
+          var sizes = ['x-small', 'small', 'medium', 'large', 'x-large'];
+          document.getElementById('shadow-scale').innerHTML = sizes
+            .map(function (size) {
+              var varName = '--op-shadow-' + size;
+              return (
+                '<div class="shadow-box" style="box-shadow:var(' +
+                varName +
+                ');">' +
+                size +
+                '</div>'
+              );
+            })
+            .join('');
+        }
+
+        renderBrandSwatches();
+        renderSemanticSwatches();
+        renderTypeScale();
+        renderSpaceScale();
+        renderRadiusScale();
+        renderShadowScale();
+        initModeSwitch(); // also triggers first renderRamps()/renderAudit()
+      })();
+    </script>
+  </body>
+</html>
