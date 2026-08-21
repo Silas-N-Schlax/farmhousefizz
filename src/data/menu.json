@@ -1,0 +1,419 @@
+[
+  {
+    "name": "Test drink #1",
+    "desc": "Sprite with blue raspberry and vanilla cream",
+    "lq_type": 0,
+    "sizes": ["sm", "rg", "lg"],
+    "notices": [1, 0, 1],
+    "category": "dirty-soda",
+    "id": "test_drink_1",
+    "active": false
+  },
+
+
+  {
+    "name": "Ruby Riot",
+    "desc": "Mt. Dew, or Sprite • Raspberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "ruby_riot",
+    "active": true
+  },
+  {
+    "name": "Solar Flare",
+    "desc": "Mt. Dew, or Sprite • Candied Orange • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "solar_flare",
+    "active": true
+  },
+  {
+    "name": "Electric Charm",
+    "desc": "Sprite, or Mt. Dew • Cherry • Lime • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1],
+    "category": "dirty-soda",
+    "id": "electric_charm",
+    "active": false
+  },
+  {
+    "name": "Coconut Tide",
+    "desc": "Sprite, or Mt. Dew • Blue Raspberry • Coconut Flavored Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 0, 5],
+    "category": "dirty-soda",
+    "id": "coconut_tide",
+    "active": true
+  },
+  {
+    "name": "Lemon Mist",
+    "desc": "Sprite • Lemon • Raspberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5, 7],
+    "category": "seasonal",
+    "id": "lemon_mist",
+    "active": true
+  },
+  {
+    "name": "Shirley Temple",
+    "desc": "Sprite, or Ginger Ale • Grenadine • Lime Juice",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5, 9],
+    "category": "dirty-soda",
+    "id": "shirley_temple",
+    "active": true
+  },
+  {
+    "name": "Shirley Delight",
+    "desc": "Sprite, or Ginger Ale • Grenadine • Lime Juice • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "shirley_delight",
+    "active": true
+  },
+  {
+    "name": "Cherry Island Punch",
+    "desc": "Pepsi, Coke, or Sprite  • Cherry • Lime • Coconut Flavored Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "cherry_island_punch",
+    "active": true
+  },
+  {
+    "name": "Razzle Cola",
+    "desc": "Pepsi, or Coke • Blue Raspberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 0, 5],
+    "category": "dirty-soda",
+    "id": "razzle_cola",
+    "active": true
+  },
+  {
+    "name": "Dr. C. Cherry",
+    "desc": "Dr. Pepper, or Cheerwine • Cherry • Choc. Syrup • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "dr_c_cherry",
+    "active": true
+  },
+  {
+    "name": "Dr. Fizzberry",
+    "desc": "Dr. Pepper • Strawberry • Blackberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "dr_fizzberry",
+    "active": true
+  },
+  {
+    "name": "Berry Truffle",
+    "desc": "Cheerwine, or Dr. Pepper • Strawberry • Choc. Syrup • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "berry_truffle",
+    "active": true
+  },
+
+  {
+    "name": "Creamy Root",
+    "desc": "Root Beer • Vanilla • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "creamy_root",
+    "active": true
+  },
+  {
+    "name": "Blissful Butterbeer",
+    "desc": "Root Beer • Butterscotch • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "blissful_butterbeer",
+    "active": true
+  },
+  {
+    "name": "Caramel S'mores",
+    "desc": "Root Beer • Marshmallow • Caramel • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-soda",
+    "id": "caramel_smores",
+    "active": true
+  },
+  {
+    "name": "Apple Orchard",
+    "desc": "Ginger Ale • Apple • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 7],
+    "category": "seasonal",
+    "id": "apple_orchard",
+    "active": true
+  },
+
+
+
+
+  {
+    "name": "Peach Paradise",
+    "desc": "Sparkling Water • Peach • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "peach_paradise",
+    "active": true
+  },
+  {
+    "name": "Strawberry Bliss",
+    "desc": "Sparkling Water • Strawberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "strawberry_bliss",
+    "active": true
+  },
+  {
+    "name": "Midnight Bloom",
+    "desc": "Sparkling Water • Black Raspberry • Blackberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "midnight_bloom",
+    "active": true
+  },
+  {
+    "name": "Velvet Sky",
+    "desc": "Sparkling Water • Grenadine • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "velvet_sky",
+    "active": true
+  },
+  {
+    "name": "Paradise Lost",
+    "desc": "Sparkling Water • Yuzu Pineapple • Coconut Flavored Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "paradise_lost",
+    "active": true
+  },
+  {
+    "name": "Twilight Passion",
+    "desc": "Sparkling Water • Passion Fruit • Wild Blackberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "italian-water",
+    "id": "twilight_passion",
+    "active": true
+  },
+
+
+  {
+    "name": "Sunrise Brew",
+    "desc": "Cold Brew Coffee • Lemonade • Coconut Flavored Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-coffee",
+    "id": "sunrise_brew",
+    "active": true
+  },
+  {
+    "name": "Berry Bean",
+    "desc": "Cold Brew Coffee • Strawberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-coffee",
+    "id": "berry_bean",
+    "active": true
+  },
+  {
+    "name": "Caramelaholic",
+    "desc": "Cold Brew •Salted Caramel• Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-coffee",
+    "id": "caramelaholic",
+    "active": true
+  },
+  {
+    "name": "Simply Sweet",
+    "desc": "Cold Brew • Cane Sugar • Sweet Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 0, 2],
+    "category": "dirty-coffee",
+    "id": "simply_sweet",
+    "active": true
+  },
+  {
+    "name": "Fireside Brew",
+    "desc": "Cold Brew • Chocolate• Toasted Marshmallow • Coconut Flavored Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-coffee",
+    "id": "fireside_brew",
+    "active": true
+  },
+  {
+    "name": "Pumpkin Patch",
+    "desc": "Cold Brew • Pumpkin Spice • Sweet Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2, 7],
+    "category": "seasonal",
+    "id": "pumpkin_patch",
+    "active": true
+  },
+
+
+
+  {
+    "name": "Winter Sunset",
+    "desc": "Lemonade • Winter Citrus • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-lemonade",
+    "id": "winter_sunset",
+    "active": true
+  },
+  {
+    "name": "Sunburst",
+    "desc": "Lemonade • Yuzu Pineapple • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-lemonade",
+    "id": "sunburst",
+    "active": false
+  },
+  {
+    "name": "Violet Horizon",
+    "desc": "Lemonade • Cherry • Strawberry • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-lemonade",
+    "id": "violet_horizon",
+    "active": true
+  },
+  {
+    "name": "Blue Lagoon",
+    "desc": "Lemonade • Blue Raspberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-lemonade",
+    "id": "blue_lagoon",
+    "active": true
+  },
+  {
+    "name": "Golden Passion",
+    "desc": "Lemonade • Passion Fruit • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 5],
+    "category": "dirty-lemonade",
+    "id": "golden_passion",
+    "active": true
+  },
+
+
+  {
+    "name": "Summer Split Tea",
+    "desc": "Tea • Lemonade • Strawberry, Cherry, or Raspberry • Cream",
+    "lq_type": 0,
+    "sizes": ["rg", "lg"],
+    "notices": [1, 2],
+    "category": "dirty-tea-&-Lemonade",
+    "id": "summer_split_tea",
+    "active": true
+  },
+
+
+
+  {
+    "name": "Classic Hot Chocolate",
+    "desc": "Whole Milk Hot Chocolate • Whipped Cream • 1 Topping (Rotating selection)",
+    "lq_type": 1,
+    "sizes": ["sm", "lg"],
+    "notices": [7],
+    "category": "seasonal",
+    "id": "classic_hot_chocolate",
+    "active": false
+  },
+  {
+    "name": "Your Way Cocoa",
+    "desc": "Whole Milk Hot Chocolate • Whipped Cream • 1 Topping (Rotating selection) • 3-4 pumps of syrup",
+    "lq_type": 1,
+    "sizes": ["sm", "lg"],
+    "notices": [7],
+    "category": "seasonal",
+    "id": "your_way_cocoa",
+    "active": false
+  },
+  {
+    "name": "Peach Panic",
+    "desc": "Orange Horror Liquid Death, Orange Celsius, or Orange Kiss Alani • Preach • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg"],
+    "notices": [1, 8],
+    "category": "dirty-energy-drink",
+    "id": "peach_panic",
+    "active": false
+  },
+  {
+    "name": "Berry Meltdown",
+    "desc": "Scary Strawberry Liquid Death, or Murder Mystery Liquid Death, Pink Slush Alani • Strawberry • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg"],
+    "notices": [1, 8],
+    "category": "dirty-energy-drink",
+    "id": "berry_meltdown",
+    "active": false
+  },
+  {
+    "name": "Citrus Overload",
+    "desc": "Tropical Terror Liquid Death, or Sparkling Tropical Vibe Celsius • Yuzu Pineapple • Vanilla Cream",
+    "lq_type": 0,
+    "sizes": ["rg"],
+    "notices": [1, 8],
+    "category": "dirty-energy-drink",
+    "id": "citrus_overload",
+    "active": false
+  }
+]
