@@ -12,17 +12,17 @@ export function ItemCard({name, desc, lq_type, sizes, notices, id}) {
     document.addEventListener("click", closeAll);
     return () => document.removeEventListener("click", closeAll);
   }, [])
-  
+
   return (
     <div id={id} className="item">
-      <img src={"/menu/" + id + ".png" } alt={"picture of " + name} />
+      <img src={"/menu/" + id + ".jpg" } alt={"picture of " + name} />
       <div className="content">
         <h2>{name}</h2>
         <p>{desc}</p>
         <span className="sizes-container">
           {sizes.map((sz, ix) => {
             if (lq_type === 0) {
-              return <SizeComponentSoda 
+              return <SizeComponentSoda
                 size={sz}
                 openTooltip={openTooltip}
                 setOpenTooltip={setOpenTooltip}
@@ -30,7 +30,7 @@ export function ItemCard({name, desc, lq_type, sizes, notices, id}) {
                 key={ix}
               />
             } else {
-              return <SizeComponentCoffee 
+              return <SizeComponentCoffee
                 size={sz}
                 openTooltip={openTooltip}
                 setOpenTooltip={setOpenTooltip}
@@ -45,8 +45,8 @@ export function ItemCard({name, desc, lq_type, sizes, notices, id}) {
           if (not === null) {
             return
           } else {
-            return <Notices 
-              notice={not} 
+            return <Notices
+              notice={not}
               openTooltip={openTooltip}
               setOpenTooltip={setOpenTooltip}
               id={`${ix}.notice`}

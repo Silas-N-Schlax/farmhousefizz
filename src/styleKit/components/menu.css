@@ -47,19 +47,6 @@
   pointer-events: none;
 }
 
-.category.title::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  right: 24px;
-  width: 38px;
-  height: 18px;
-  background: var(--molten-lava);
-  border-radius: 6px 6px 0 0;
-  transform: skewX(-28deg);
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.18);
-}
-
 .category.title:hover {
   transform: translate(-4px, -4px);
 
@@ -285,32 +272,32 @@
 .notice-icon-pop {
   display: none;
   position: absolute;
-  
+
   bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) scale(0.96);
-  
+
   background: linear-gradient(
     180deg,
     rgba(60, 60, 60, 0.98),
     rgba(35, 35, 35, 0.98)
     );
-    
+
     color: var(--gb-text-alt-color);
-    
+
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  
+
   padding: 10px 14px;
   border-radius: 12px;
   line-height: 1.35;
   text-align: center;
-  
+
   min-width: max-content;
   white-space: normal;
   overflow-wrap: break-word;
-  
+
   pointer-events: none;
 
   box-shadow:
@@ -338,7 +325,7 @@
   .item { width: 400px; }
   .item img { height: 125px; width: 125px; }
   .sign-drinks .content { min-height: 150px; }
-  
+
   .size-icon-pop,
   .notice-icon-pop { min-width: 0; }
 
