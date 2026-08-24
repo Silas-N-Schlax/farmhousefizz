@@ -59,7 +59,7 @@
     "notices": [1, 5, 7],
     "category": "seasonal",
     "id": "lemon_mist",
-    "active": true
+    "active": false
   },
   {
     "name": "Shirley Temple",
@@ -69,7 +69,7 @@
     "notices": [1, 5, 9],
     "category": "dirty-soda",
     "id": "shirley_temple",
-    "active": true
+    "active": false
   },
   {
     "name": "Shirley Delight",
@@ -79,7 +79,7 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "shirley_delight",
-    "active": true
+    "active": false
   },
   {
     "name": "Cherry Island Punch",
@@ -170,7 +170,7 @@
     "notices": [1, 7],
     "category": "seasonal",
     "id": "apple_orchard",
-    "active": true
+    "active": false
   },
 
 
@@ -214,7 +214,7 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "velvet_sky",
-    "active": true
+    "active": false
   },
   {
     "name": "Paradise Lost",
@@ -224,7 +224,7 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "paradise_lost",
-    "active": true
+    "active": false
   },
   {
     "name": "Twilight Passion",
@@ -234,7 +234,7 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "twilight_passion",
-    "active": true
+    "active": false
   },
 
 
@@ -296,7 +296,7 @@
     "notices": [1, 2, 7],
     "category": "seasonal",
     "id": "pumpkin_patch",
-    "active": true
+    "active": false
   },
 
 
@@ -339,7 +339,7 @@
     "notices": [1, 5],
     "category": "dirty-lemonade",
     "id": "blue_lagoon",
-    "active": true
+    "active": false
   },
   {
     "name": "Golden Passion",
