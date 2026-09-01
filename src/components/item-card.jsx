@@ -14,12 +14,12 @@ export function ItemCard({name, desc, lq_type, sizes, notices, id}) {
   }, [])
 
   return (
-    <div id={id} className="item">
-      <img src={"/menu/" + id + ".jpg" } alt={"picture of " + name} />
-      <div className="content">
-        <h2>{name}</h2>
-        <p>{desc}</p>
-        <span className="sizes-container">
+    <div id={id} className="menu-item">
+      <img className="menu-item__image" src={"/menu/" + id + ".jpg" } alt={"picture of " + name} />
+      <div className="menu-item__body">
+        <h2 className="menu-item__title">{name}</h2>
+        <p className="menu-item__description">{desc}</p>
+        <span className="size-list">
           {sizes.map((sz, ix) => {
             if (lq_type === 0) {
               return <SizeComponentSoda
@@ -40,7 +40,7 @@ export function ItemCard({name, desc, lq_type, sizes, notices, id}) {
             }
           })}
         </span>
-        <div className="notice-main">
+        <div className="notice-list">
          {notices.map((not, ix) => {
           if (not === null) {
             return

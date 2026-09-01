@@ -15,14 +15,16 @@ export function SizeComponentSoda({size, openTooltip, setOpenTooltip, id}) {
     lg: "Large"
   }
 
+  const sizeModifiers = { sm: 'size-list__item--small', lg: 'size-list__item--large' }
+
   return (
-    <span 
-      className={`size-icon ${size} ${isOpen ? 'active' : ''}`} 
+    <span
+      className={`size-list__item ${sizeModifiers[size] || ''} ${isOpen ? 'size-list__item--active' : ''}`}
       onClick={handleClick}
       id={id}
     >
-      <CupSoda className="icon"/>
-      <strong className={`size-icon-pop ${isOpen ? 'active' : ''}`}>Available In {msgs[size]}</strong>
+      <CupSoda className="size-list__icon"/>
+      <strong className={`popover ${isOpen ? 'popover--open' : ''}`}>Available In {msgs[size]}</strong>
     </span>
   )
 }

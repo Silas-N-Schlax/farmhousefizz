@@ -2,10 +2,10 @@
 
 export function Dropdown({ options = [], onSelect, name, label, required = false }) {
   return (
-    <div className="select-wrap">
+    <div className="contact-form__select">
       <select
         name={name}
-        className="custom-dropdown"
+        className="form-control"
         onChange={(e) => onSelect && onSelect(e.target.value)}
         defaultValue=""
         {...(required ? { required: true } : {})}

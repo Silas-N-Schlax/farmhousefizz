@@ -32,12 +32,12 @@ export function Notices({notice, openTooltip, setOpenTooltip, id}) {
 
   return (
     <span
-      className={`notice-icon ${isOpen ? 'active' : ''}`}
+      className={`notice-list__item ${isOpen ? 'notice-list__item--active' : ''}`}
       onClick={handleClick}
       id={id}
     >
       {getIcon(notice)}
-      <strong className={`notice-icon-pop ${isOpen ? 'active' : ''}`}>{msgs[notice] ? msgs[notice] : 'error...'}</strong>
+      <strong className={`popover ${isOpen ? 'popover--open' : ''}`}>{msgs[notice] ? msgs[notice] : 'error...'}</strong>
     </span>
   )
 }
@@ -45,25 +45,25 @@ export function Notices({notice, openTooltip, setOpenTooltip, id}) {
 function getIcon(notice) {
   switch(notice) {
     case 0:
-      return <CandyOff className="notice sg-off"/>
+      return <CandyOff className="notice-list__icon sg-off"/>
     case 1:
-      return <Sprout className="notice mk-off"/>
+      return <Sprout className="notice-list__icon mk-off"/>
     case 2:
-      return <Leaf className="notice clean"/>
+      return <Leaf className="notice-list__icon clean"/>
     case 3:
-      return <Vegan className="notice vg"/>
+      return <Vegan className="notice-list__icon vg"/>
     case 4:
-      return <WheatOff className="notice gf"/>
+      return <WheatOff className="notice-list__icon gf"/>
     case 5:
-      return <FlaskConical className="notice has-dye"/>
+      return <FlaskConical className="notice-list__icon has-dye"/>
     case 6:
-      return <ShieldCheck className="notice halal"/>
+      return <ShieldCheck className="notice-list__icon halal"/>
     case 7:
-      return <Flower2 className="notice season"/>
+      return <Flower2 className="notice-list__icon season"/>
     case 8:
-      return <IdCardLanyard className="notice id-card" />
+      return <IdCardLanyard className="notice-list__icon id-card" />
     case 9:
-      return <MilkOff className="notice id-card"/>
+      return <MilkOff className="notice-list__icon id-card"/>
     default:
   }
 }

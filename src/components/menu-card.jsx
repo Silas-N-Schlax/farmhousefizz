@@ -15,13 +15,13 @@ export function MenuCard({data}) {
 
   return (
     <>
-      <div className="sign-drinks">
+      <div>
         {Object.entries(groupedItems).map((group, index) => {
           console.log(group)
           return (
-            <div className={group[0]}>
-              <h1 className="category title">{formatCategory(group[0])}</h1>
-              <div className="menu-items">
+            <div className="menu-category">
+              <h1 className="menu-category__banner">{formatCategory(group[0])}</h1>
+              <div className="menu__grid">
                 {group[1].map((item, index) => {
                   if (item.active === false) return;
                   return <ItemCard
@@ -44,7 +44,7 @@ export function MenuCard({data}) {
 }
 
 function formatCategory(category) {
-  if (!category) return "Error - Category Empty"
+  if (!category) return "Error: Category Empty"
   category = category.split("-")
   category.map((word, index) => { category[index] = word.charAt(0).toUpperCase() + word.slice(1) })
   return category.join(" ")
