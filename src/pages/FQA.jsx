@@ -140,7 +140,7 @@ export function FQA() {
         <meta name="description" content="Have questions? Find answers about booking, events, pricing, and how Farmhouse Fizz Soda Bar operates across North Carolina." />
       </Helmet>
       <h1 className='page-title'>Frequently Asked Questions</h1>
-      <div className="faq-cards">
+      <div className="faq">
         {faq.map((item, index) => (<DropdownCards data={item} index={index} />))}
       </div>
     </>
