@@ -1,0 +1,60 @@
+:root {
+  /*&  ----- Farmhouse Fizz Brand Colors (source hexes, for reference only) ----- */
+  --ff-brand-carbon-black: #1e1e1e;
+  --ff-brand-molten-lava: #7a0a0a;
+  --ff-brand-almond-cream: #e5d6c5;
+  --ff-brand-steel-blue: #4a7b9d;
+  --ff-brand-deep-walnut: #5a3e2b;
+
+  /* Primary — Molten Lava */
+  --op-color-primary-h: 0;
+  --op-color-primary-s: 85%;
+  --op-color-primary-l: 26%;
+  --op-color-primary-original: light-dark(var(--ff-brand-molten-lava), hsl(0deg 85% 68%));
+  --op-color-primary-base: light-dark(var(--ff-brand-molten-lava), hsl(0deg 85% 68%));
+
+  /* Neutral — Almond Cream. The generic h/s ladder alone doesn't land on the
+     exact brand hex, so the background/text rungs that are actually visible
+     as page chrome are pinned directly. */
+  --op-color-neutral-h: 32;
+  --op-color-neutral-s: 20%;
+  --op-color-neutral-l: 84%;
+  --op-color-neutral-plus-eight: light-dark(var(--ff-brand-almond-cream), hsl(32deg 22% 13%));
+  --op-color-neutral-on-plus-eight: light-dark(var(--ff-brand-carbon-black), var(--ff-brand-almond-cream));
+  --op-color-neutral-on-plus-eight-alt: light-dark(hsl(24deg 35% 30%), hsl(32deg 25% 74%));
+  --op-color-neutral-plus-six: light-dark(hsl(32deg 20% 76%), hsl(32deg 18% 16%));
+  --op-color-neutral-plus-five: light-dark(hsl(28deg 24% 78%), hsl(28deg 18% 24%));
+  --op-color-neutral-plus-four: light-dark(hsl(32deg 20% 68%), hsl(32deg 18% 20%));
+
+  /* Alert hues, warmed to sit with the palette (Optics defaults otherwise) */
+  --op-color-alerts-info-h: 205;
+  --op-color-alerts-info-s: 36%;
+  --op-color-alerts-warning-h: 38;
+  --op-color-alerts-danger-h: 355;
+  --op-color-alerts-danger-s: 90%;
+  --op-color-alerts-notice-h: 142;
+
+  /* Secondary — Steel Blue (project-prefixed custom scale; Optics has no
+     secondary scale of its own) */
+  --ff-color-secondary-h: 205;
+  --ff-color-secondary-s: 36%;
+  --ff-color-secondary-original: var(--ff-brand-steel-blue);
+  --ff-color-secondary-base: light-dark(var(--ff-brand-steel-blue), hsl(205deg 36% 62%));
+  --ff-color-secondary-on-base: light-dark(#ffffff, var(--ff-brand-carbon-black));
+  --ff-color-secondary-plus-two: light-dark(hsl(205deg 36% 64%), hsl(205deg 36% 32%));
+  --ff-color-secondary-plus-five: light-dark(hsl(205deg 36% 90%), hsl(205deg 20% 20%));
+  --ff-color-secondary-on-plus-five: light-dark(hsl(205deg 36% 22%), hsl(205deg 36% 82%));
+
+  /* Accent — Deep Walnut (project-prefixed custom scale) */
+  --ff-color-accent-h: 24;
+  --ff-color-accent-s: 35%;
+  --ff-color-accent-original: var(--ff-brand-deep-walnut);
+  --ff-color-accent-base: light-dark(var(--ff-brand-deep-walnut), hsl(24deg 35% 62%));
+  --ff-color-accent-on-base: light-dark(#ffffff, var(--ff-brand-carbon-black));
+  --ff-color-accent-plus-five: light-dark(hsl(24deg 35% 90%), hsl(24deg 20% 20%));
+  --ff-color-accent-on-plus-five: light-dark(hsl(24deg 35% 22%), hsl(24deg 30% 82%));
+
+  /* Fonts */
+  --op-font-family: 'Lora', Arial, Helvetica, serif;
+  --op-font-family-alt: 'Special Elite', 'Courier New', Courier, monospace;
+}

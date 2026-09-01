@@ -1,0 +1,20 @@
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--op-space-x-small);
+  margin: 0 15%;
+}
+
+@media (max-width: 1750px) {
+  .card-grid {
+    margin: var(--op-space-large) var(--op-space-2x-large);
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-grid {
+    margin: 0 20%;
+  }
+}

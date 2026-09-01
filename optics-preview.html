@@ -22,9 +22,9 @@
     />
 
     <!-- The real theme file, loaded from disk (relative link, not a copy) so
-         editing src/styleKit/theme/farmhouse-fizz.css and reloading this
+         editing src/stylesheet/theme/farmhouse-fizz.css and reloading this
          page shows the change immediately. -->
-    <link rel="stylesheet" href="./src/styleKit/theme/farmhouse-fizz.css" />
+    <link rel="stylesheet" href="./src/stylesheet/core/theme/farmhouse-fizz-theme-core.css" />
 
     <style>
       /* Preview-page chrome only. Everything brand-related lives in
@@ -272,9 +272,9 @@
       <section id="palette">
         <h2>Brand palette</h2>
         <p class="section-note">
-          The five source hexes from <code>src/styleKit/tokens/colors.css</code>,
-          unchanged. Everything else on this page derives from these via the
-          Optics theme file.
+          The five source hexes from the theme file's
+          <code>--ff-brand-*</code> tokens. Everything else on this page
+          derives from these via the Optics theme file.
         </p>
         <div class="swatch-grid" id="brand-swatches"></div>
       </section>
@@ -331,8 +331,8 @@
         <p class="section-note">
           <code>--op-font-family</code> (Lora) and
           <code>--op-font-family-alt</code> (Special Elite &mdash;
-          referenced by <code>core/globals.css</code>'s <code>.page-title</code>
-          today but never actually loaded anywhere in the app).
+          used by <code>core/base.css</code>'s <code>.page-title</code>
+          and loaded via <code>core/fonts/text_fonts.css</code>).
         </p>
         <div id="type-scale"></div>
         <p style="font-family: var(--op-font-family-alt); font-size: var(--op-font-2x-large); margin-top: var(--op-space-large);">

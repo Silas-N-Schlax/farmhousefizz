@@ -1,0 +1,27 @@
+.menu {
+  max-width: calc(300 * var(--op-size-unit));
+  margin: auto;
+  padding: var(--op-space-medium);
+}
+
+.menu__title {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+
+  p {
+    font-size: var(--op-font-medium);
+  }
+
+  p i {
+    font-size: var(--op-font-small);
+  }
+}
+
+.menu__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--op-space-large);
+}

@@ -1,0 +1,53 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(150 * var(--op-size-unit));
+  margin: 0 auto;
+  padding: var(--op-space-medium);
+  gap: var(--op-space-x-small);
+  overflow: hidden;
+}
+
+.contact-form > * {
+  margin: 0;
+}
+
+.contact-form__row {
+  display: flex;
+  width: 100%;
+  gap: var(--op-space-x-small);
+}
+
+.form-control--half {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.contact-form .form-control.contact-form__honeypot {
+  display: none;
+}
+
+.contact-form__select {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.contact-form .form-control:not([type='radio'], [type='checkbox']):not(:focus-visible) {
+  background-color: var(--op-color-neutral-plus-max);
+}
+
+.contact-form .form-control:optional::placeholder {
+  font-style: italic;
+  color: var(--op-color-on-background-alt);
+}
+
+@media (max-width: 520px) {
+  .contact-form {
+    max-width: 92%;
+    gap: var(--op-space-2x-small);
+  }
+}

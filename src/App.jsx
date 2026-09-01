@@ -1,4 +1,4 @@
-import './styleKit/styles.css'
+import './stylesheet/styles.css'
 import { BrowserRouter as Router , Routes, Route} from 'react-router-dom'
 import { Home } from './pages/home'
 import { NotFound } from './pages/notfound'
