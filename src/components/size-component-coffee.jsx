@@ -1,30 +1,35 @@
+import React from "react"
 import { Coffee } from "lucide-react"
 
 
-export function SizeComponentCoffee({size, openTooltip, setOpenTooltip, id}) {
-  const isOpen = openTooltip === id
+export class SizeComponentCoffee extends React.Component {
+  get isOpen() { return this.props.openTooltip === this.props.id }
 
-  const handleClick = (e) => {
+  handleClick(e) {
     e.stopPropagation()
-    setOpenTooltip(isOpen ? null : id)
+    this.props.setOpenTooltip(this.isOpen ? null : this.props.id)
   }
 
-  const msgs = {
-    sm: "Small",
-    md: "Medium",
-    lg: "Large"
-  }
-  
-  const sizeModifiers = { sm: 'size-list__item--small', md: 'size-list__item--medium', lg: 'size-list__item--large' }
+  render() {
+    const { size, id } = this.props
 
-  return (
-    <span
-      className={`size-list__item ${sizeModifiers[size] || ''} ${isOpen ? 'size-list__item--active' : ''}`}
-      onClick={handleClick}
-      id={id}
-    >
-      <Coffee className="size-list__icon"/>
-      <strong className={`popover ${isOpen ? 'popover--open' : ''}`}>Available In {msgs[size]}</strong>
-    </span>
-  )
+    const msgs = {
+      sm: "Small",
+      md: "Medium",
+      lg: "Large"
+    }
+
+    const sizeModifiers = { sm: 'size-list__item--small', md: 'size-list__item--medium', lg: 'size-list__item--large' }
+
+    return (
+      <span
+        className={`size-list__item ${sizeModifiers[size] || ''} ${this.isOpen ? 'size-list__item--active' : ''}`}
+        onClick={this.handleClick.bind(this)}
+        id={id}
+      >
+        <Coffee className="size-list__icon"/>
+        <strong className={`popover ${this.isOpen ? 'popover--open' : ''}`}>Available In {msgs[size]}</strong>
+      </span>
+    )
+  }
 }

@@ -1,46 +1,52 @@
+import React from 'react'
 import { ItemCard } from './item-card'
 
-export function MenuCard({data}) {
-  const groupedItems = []
-  data.forEach((item) => {
-    if (!item.active) return;
+export class MenuCard extends React.Component {
+  get groupedItems() {
+    const groupedItems = []
+    this.props.data.forEach((item) => {
+      if (!item.active) return;
 
-    const category = item.category || "Other";
+      const category = item.category || "Other";
 
-    if (!groupedItems[category]) {
-      groupedItems[category] = [];
-    }
-    groupedItems[category].push(item);
-  })
+      if (!groupedItems[category]) {
+        groupedItems[category] = [];
+      }
+      groupedItems[category].push(item);
+    })
+    return groupedItems
+  }
 
-  return (
-    <>
-      <div>
-        {Object.entries(groupedItems).map((group, index) => {
-          console.log(group)
-          return (
-            <div className="menu-category">
-              <h1 className="menu-category__banner">{formatCategory(group[0])}</h1>
-              <div className="menu__grid">
-                {group[1].map((item, index) => {
-                  if (item.active === false) return;
-                  return <ItemCard
-                    name={item.name}
-                    desc={item.desc}
-                    lq_type={item.lq_type}
-                    sizes={item.sizes}
-                    notices={item.notices}
-                    id={item.id}
-                    key={item.id}
-                  />
-                })}
+  render() {
+    return (
+      <>
+        <div>
+          {Object.entries(this.groupedItems).map((group, index) => {
+            console.log(group)
+            return (
+              <div className="menu-category">
+                <h1 className="menu-category__banner">{formatCategory(group[0])}</h1>
+                <div className="menu__grid">
+                  {group[1].map((item, index) => {
+                    if (item.active === false) return;
+                    return <ItemCard
+                      name={item.name}
+                      desc={item.desc}
+                      lq_type={item.lq_type}
+                      sizes={item.sizes}
+                      notices={item.notices}
+                      id={item.id}
+                      key={item.id}
+                    />
+                  })}
+                </div>
               </div>
-            </div>
-          )
-        })}
-      </div>
-    </>
-  )
+            )
+          })}
+        </div>
+      </>
+    )
+  }
 }
 
 function formatCategory(category) {
