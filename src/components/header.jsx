@@ -1,42 +1,59 @@
+import React from 'react'
 
+export class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { open: false }
+    this.onKey = this.onKey.bind(this)
+  }
 
-import React, { useState, useEffect } from 'react'
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKey)
+  }
 
-export function Header() {
-  const [open, setOpen] = useState(false)
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKey)
+  }
 
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [])
+  onKey(e) {
+    if (e.key === 'Escape') this.setState({ open: false })
+  }
 
-  const handleLinkClick = () => setOpen(false)
+  toggleOpen() {
+    this.setState({ open: !this.state.open })
+  }
 
-  return (
-    <header className="site-header">
-      <div className="navbar navbar--secondary site-header__inner">
-        <a className="site-header__logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
+  handleLinkClick() {
+    this.setState({ open: false })
+  }
 
-        <button
-          className={`nav-toggle ${open ? 'nav-toggle--open' : ''}`}
-          aria-expanded={open}
-          aria-label="Toggle navigation"
-          onClick={() => setOpen(!open)}
-        >
-          <span className="nav-toggle__bar"></span>
-          <span className="nav-toggle__bar"></span>
-          <span className="nav-toggle__bar"></span>
-        </button>
+  render() {
+    const { open } = this.state
+    return (
+      <header className="site-header">
+        <div className="navbar navbar--secondary site-header__inner">
+          <a className="site-header__logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
 
-        <nav className={`site-nav ${open ? 'site-nav--open' : ''}`}>
-          <a href="/contact-us" className="site-nav__link" onClick={handleLinkClick}>Contact Us</a>
-          <a href="/about-us" className="site-nav__link" onClick={handleLinkClick}>About Us</a>
-          <a href="/catering" className="site-nav__link" onClick={handleLinkClick}>Catering</a>
-          <a href="/menu" className="site-nav__link" onClick={handleLinkClick}>Menu</a>
-          <a href="/fqa" className="site-nav__link" onClick={handleLinkClick}>FAQ</a>
-        </nav>
-      </div>
-    </header>
-  )
+          <button
+            className={`nav-toggle ${open ? 'nav-toggle--open' : ''}`}
+            aria-expanded={open}
+            aria-label="Toggle navigation"
+            onClick={this.toggleOpen.bind(this)}
+          >
+            <span className="nav-toggle__bar"></span>
+            <span className="nav-toggle__bar"></span>
+            <span className="nav-toggle__bar"></span>
+          </button>
+
+          <nav className={`site-nav ${open ? 'site-nav--open' : ''}`}>
+            <a href="/contact-us" className="site-nav__link" onClick={this.handleLinkClick.bind(this)}>Contact Us</a>
+            <a href="/about-us" className="site-nav__link" onClick={this.handleLinkClick.bind(this)}>About Us</a>
+            <a href="/catering" className="site-nav__link" onClick={this.handleLinkClick.bind(this)}>Catering</a>
+            <a href="/menu" className="site-nav__link" onClick={this.handleLinkClick.bind(this)}>Menu</a>
+            <a href="/fqa" className="site-nav__link" onClick={this.handleLinkClick.bind(this)}>FAQ</a>
+          </nav>
+        </div>
+      </header>
+    )
+  }
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import { CandyOff } from "lucide-react"
 import { MilkOff } from "lucide-react"
 import { Leaf } from "lucide-react"
@@ -9,37 +10,41 @@ import { Flower2 } from "lucide-react"
 import { IdCardLanyard } from "lucide-react"
 import { Sprout } from "lucide-react"
 
-export function Notices({notice, openTooltip, setOpenTooltip, id}) {
-  const isOpen = openTooltip === id
+export class Notices extends React.Component {
+  get isOpen() { return this.props.openTooltip === this.props.id }
 
-  const handleClick = (e) => {
+  handleClick(e) {
     e.stopPropagation()
-    setOpenTooltip(isOpen ? null : id)
+    this.props.setOpenTooltip(this.isOpen ? null : this.props.id)
   }
 
-  const msgs = {
-    0: "Can be made with sugar-free substitutes on request",
-    1: "Can be made with dairy-free alternative on request",
-    2: "Clean! Only natural sweeteners, dyes, and flavors!",
-    3: "Vegan",
-    4: "Gluten Free",
-    5: "Contains Artificial Dyes",
-    6: "Halal",
-    7: "Seasonal Item!",
-    8: "18+ or parental consent",
-    9: "No Cream"
-  }
+  render() {
+    const { notice, id } = this.props
 
-  return (
-    <span
-      className={`notice-list__item ${isOpen ? 'notice-list__item--active' : ''}`}
-      onClick={handleClick}
-      id={id}
-    >
-      {getIcon(notice)}
-      <strong className={`popover ${isOpen ? 'popover--open' : ''}`}>{msgs[notice] ? msgs[notice] : 'error...'}</strong>
-    </span>
-  )
+    const msgs = {
+      0: "Can be made with sugar-free substitutes on request",
+      1: "Can be made with dairy-free alternative on request",
+      2: "Clean! Only natural sweeteners, dyes, and flavors!",
+      3: "Vegan",
+      4: "Gluten Free",
+      5: "Contains Artificial Dyes",
+      6: "Halal",
+      7: "Seasonal Item!",
+      8: "18+ or parental consent",
+      9: "No Cream"
+    }
+
+    return (
+      <span
+        className={`notice-list__item ${this.isOpen ? 'notice-list__item--active' : ''}`}
+        onClick={this.handleClick.bind(this)}
+        id={id}
+      >
+        {getIcon(notice)}
+        <strong className={`popover ${this.isOpen ? 'popover--open' : ''}`}>{msgs[notice] ? msgs[notice] : 'error...'}</strong>
+      </span>
+    )
+  }
 }
 
 function getIcon(notice) {
