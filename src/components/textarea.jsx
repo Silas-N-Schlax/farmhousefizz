@@ -2,7 +2,7 @@
 export function Textarea({ placeholder = '', value, onChange, required = false, rows = 4, ...rest }) {
   const props = {
     placeholder,
-    className: 'custom-textarea',
+    className: 'form-control',
     rows,
     ...rest,
   }

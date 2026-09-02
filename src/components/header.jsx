@@ -14,27 +14,27 @@ export function Header() {
   const handleLinkClick = () => setOpen(false)
 
   return (
-    <header>
-      <div className="head">
-        <a className="logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
+    <header className="site-header">
+      <div className="navbar navbar--secondary site-header__inner">
+        <a className="site-header__logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
 
         <button
-          className={`burger ${open ? 'open' : ''}`}
+          className={`nav-toggle ${open ? 'nav-toggle--open' : ''}`}
           aria-expanded={open}
           aria-label="Toggle navigation"
           onClick={() => setOpen(!open)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="nav-toggle__bar"></span>
+          <span className="nav-toggle__bar"></span>
+          <span className="nav-toggle__bar"></span>
         </button>
 
-        <nav className={`navbar ${open ? 'open' : ''}`}>
-          <a href="/contact-us" className="lk" onClick={handleLinkClick}>Contact Us</a>
-          <a href="/about-us" className="lk" onClick={handleLinkClick}>About Us</a>
-          <a href="/catering" className="lk" onClick={handleLinkClick}>Catering</a>
-          <a href="/menu" className="lk" onClick={handleLinkClick}>Menu</a>
-          <a href="/fqa" className="lk" onClick={handleLinkClick}>FAQ</a>
+        <nav className={`site-nav ${open ? 'site-nav--open' : ''}`}>
+          <a href="/contact-us" className="site-nav__link" onClick={handleLinkClick}>Contact Us</a>
+          <a href="/about-us" className="site-nav__link" onClick={handleLinkClick}>About Us</a>
+          <a href="/catering" className="site-nav__link" onClick={handleLinkClick}>Catering</a>
+          <a href="/menu" className="site-nav__link" onClick={handleLinkClick}>Menu</a>
+          <a href="/fqa" className="site-nav__link" onClick={handleLinkClick}>FAQ</a>
         </nav>
       </div>
     </header>

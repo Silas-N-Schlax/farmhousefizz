@@ -11,23 +11,23 @@ export function Home() {
         <title>Farmhouse Fizz - Dirty Sodas & More!</title>
         <meta name="description" content="Handcrafted dirty sodas, italian waters, dirty lemonades, dirty cold brew, and more, served from our mobile soda trailer across central North Carolina. Family built, event ready, and always refreshing." />
       </Helmet>
-      <div className="content">
-        <div className="image-banner">
-          <img src="/banner-image.jpg" alt="" />
-          <div className="blur"></div>
-          <div className="info">
-            <h1 className="title">Farmhouse Fizz Soda Bar</h1>
-            <span className="tags">
-              <p>Dirty Sodas</p> <span className="cr-sm cr-li"></span>
-              <p>Mobile</p> <span className="cr-sm cr-li"></span>
-              <p>Non-Alcoholic</p>
+      <div className="page">
+        <div className="hero">
+          <img className="hero__image" src="/banner-image.jpg" alt="" />
+          <div className="hero__scrim"></div>
+          <div className="hero__content">
+            <h1 className="hero__title">Farmhouse Fizz Soda Bar</h1>
+            <span className="hero__tags">
+              <p className="hero__tag">Dirty Sodas</p> <span className="bullet bullet--light"></span>
+              <p className="hero__tag">Mobile</p> <span className="bullet bullet--light"></span>
+              <p className="hero__tag">Non-Alcoholic</p>
             </span>
           </div>
         </div>
         <div className="section">
-          <div className="sc-hd">
-            <h2>More Then Just Soda</h2>
-            <p>Farmhouse Fizz is a family-run soda bar built on quality drinks, hard work, and doing things the right way. We serve handcrafted dirty sodas at events across North Carolina.</p>
+          <div className="section__header">
+            <h2 className="section__title">More Then Just Soda</h2>
+            <p className="section__text">Farmhouse Fizz is a family-run soda bar built on quality drinks, hard work, and doing things the right way. We serve handcrafted dirty sodas at events across North Carolina.</p>
           </div>
           <Cards height={175} data={
             [
@@ -46,9 +46,9 @@ export function Home() {
             ]
           }></Cards>
         </div>
-        <div className="section bnr lf" style={{backgroundColor: "var(--gb-secondary-color)"}}>
-          <h2>100% Non-Alcoholic & Family-Friendly</h2>
-          <p>All drinks are non-alcoholic and suitable for all ages. From sodas to flavored waters, and more always in the works!</p>
+        <div className="section banner banner--left" style={{backgroundColor: "var(--ff-color-secondary-base)"}}>
+          <h2 className="banner__title">100% Non-Alcoholic & Family-Friendly</h2>
+          <p className="banner__text">All drinks are non-alcoholic and suitable for all ages. From sodas to flavored waters, and more always in the works!</p>
         </div>
         <div className="section">
           <CardHalf height={200} content={
@@ -65,9 +65,9 @@ export function Home() {
           }
           ></CardHalf>
         </div>
-        <div className="section bnr ctr" style={{backgroundColor: "var(--gb-primary-color)"}}>
-          <h2>Ready to Bring the Fizz?</h2>
-          <p>Follow us or reach out to book your event.</p>
+        <div className="section banner banner--center" style={{backgroundColor: "var(--op-color-primary-base)"}}>
+          <h2 className="banner__title">Ready to Bring the Fizz?</h2>
+          <p className="banner__text">Follow us or reach out to book your event.</p>
         </div>
         <div className="section">
           <Cards height={200} data={
@@ -93,9 +93,9 @@ export function Home() {
             ]
           } link={true}></Cards>
         </div>
-        <div className="section bnr ctr" style={{backgroundColor: "var(--deep-walnut)"}}>
-          <h2>Catch the Fizz on the Road</h2>
-          <p>See our upcoming public events, pop-ups, and markets across Central North Carolina on our live calendar.</p>
+        <div className="section banner banner--center" style={{backgroundColor: "var(--ff-color-accent-base)"}}>
+          <h2 className="banner__title">Catch the Fizz on the Road</h2>
+          <p className="banner__text">See our upcoming public events, pop-ups, and markets across Central North Carolina on our live calendar.</p>
         </div>
         <div className="section">
           <Calender/>

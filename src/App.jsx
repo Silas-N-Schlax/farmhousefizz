@@ -1,4 +1,4 @@
-import './styleKit/styles.css'
+import './stylesheet/styles.css'
 import { BrowserRouter as Router , Routes, Route} from 'react-router-dom'
 import { Home } from './pages/home'
 import { NotFound } from './pages/notfound'
@@ -18,9 +18,12 @@ import cateringData from './assets/data/cateringPages.json'
 
 function App() {
   return (
-    <>
-      <Header />
-        <main>
+    <div className="op-page">
+      <div className="op-page__main">
+        <div className="op-page__main-header">
+          <Header />
+        </div>
+        <main className="op-page__main-content">
           <Router>
             <Routes>
               <Route path="/" element={<Home/>} />
@@ -41,8 +44,11 @@ function App() {
             </Routes>
           </Router>
         </main>
-      <Footer />
-    </>
+        <div className="op-page__main-footer">
+          <Footer />
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,0 +1,7 @@
+.navbar {
+  &.navbar--secondary {
+    --_op-navbar-background-color: var(--ff-color-secondary-base);
+    --_op-navbar-text-color: var(--ff-color-secondary-on-base);
+    --_op-navbar-border-color: var(--ff-color-secondary-base);
+  }
+}

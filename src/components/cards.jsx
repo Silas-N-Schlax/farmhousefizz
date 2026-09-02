@@ -9,7 +9,7 @@ export function Cards({height, data = {}, link = false, darker = false}) {
   
   if (link === true) {
     return (
-      <div className="cards">
+      <div className="card-grid">
       {data.map((item, index) => {
         return <Card 
           key={index} 
@@ -26,7 +26,7 @@ export function Cards({height, data = {}, link = false, darker = false}) {
     )
   } else {
     return (
-      <div className="cards">
+      <div className="card-grid">
       {data.map((item, index) => {
         return <Card 
           key={index} 

@@ -1,0 +1,101 @@
+/* Large-scope layout patterns: containers, banners, embeds. */
+
+.page {
+  background-color: var(--op-color-background);
+}
+
+.section {
+  padding: var(--op-space-medium) 0;
+
+  .section__header {
+    max-width: calc(175 * var(--op-size-unit));
+    margin: auto;
+    padding: var(--op-space-x-small);
+    text-align: center;
+  }
+
+  .section__title {
+    font-size: var(--op-font-2x-large);
+    font-weight: var(--op-font-weight-bold);
+  }
+
+  .section__text {
+    font-size: var(--op-font-large);
+  }
+}
+
+@media (max-width: 1399px) {
+  .section {
+    padding: var(--op-space-x-small) 0;
+  }
+}
+
+.bullet {
+  display: inline-block;
+  width: var(--op-space-3x-small);
+  height: var(--op-space-3x-small);
+  margin: 0 var(--op-space-x-small);
+  background-color: var(--op-color-on-background);
+  border-radius: var(--op-radius-circle);
+  vertical-align: middle;
+
+  &::before {
+    display: inline-block;
+    margin: 0 var(--op-space-x-small);
+    color: var(--op-color-neutral-plus-five);
+    content: '•';
+    opacity: var(--op-opacity-half);
+  }
+
+  &.bullet--light {
+    background-color: var(--ff-brand-almond-cream);
+  }
+
+  &.bullet--dark {
+    background-color: var(--ff-color-accent-base);
+  }
+}
+
+.banner {
+  margin: var(--op-space-small) 0;
+  padding: var(--op-space-4x-large);
+  color: var(--ff-brand-almond-cream);
+
+  .banner__title {
+    margin-top: var(--op-space-large);
+    font-size: var(--op-font-2x-large);
+    font-weight: var(--op-font-weight-bold);
+  }
+
+  .banner__text {
+    margin-bottom: var(--op-space-large);
+    font-size: var(--op-font-large);
+  }
+
+  &.banner--center {
+    text-align: center;
+  }
+
+  &.banner--left {
+    padding-left: var(--op-space-2x-large);
+    text-align: left;
+  }
+
+  &.banner--right {
+    padding-right: var(--op-space-2x-large);
+    text-align: right;
+  }
+}
+
+.embed-frame {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .banner.banner--left,
+  .banner.banner--right {
+    padding: var(--op-space-medium);
+    text-align: center;
+  }
+}

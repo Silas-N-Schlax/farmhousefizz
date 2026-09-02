@@ -59,8 +59,7 @@ export function ContactUs() {
       </Helmet>
       <h1 className='page-title'>Contact Us</h1>
       <form ref={formRef} className='contact-form' action="" onSubmit={handleSubmit}>
-        <p className="form-note">Required fields have a subtle accent; optional fields are dimmed.</p>
-        <div className="form-row">
+        <div className="contact-form__row">
           <Input name="firstName" type="text" placeholder="First Name" required={true} half={true} />
           <Input name="lastName" type="text" placeholder="Last Name" half={true} />
         </div>
@@ -80,17 +79,17 @@ export function ContactUs() {
           <>
           <Input name="eventLocation" type="text" placeholder="Event Address (We Only Cater to NC)" required={true} />
           <Input name="eventDate" type="date" required={true} min={new Date().toISOString().split('T')[0]} />
-          <div className="form-row">
+          <div className="contact-form__row">
             <Input name="startTime" type="time" required={true} half={true} step={900} />
             <Input name="endTime" type="time" required={true} half={true} step={900} />
           </div>
-          <Dropdown 
+          <Dropdown
             name="serviceType"
             options={['Set Amount of Drinks', 'Eaters Pay']}
             label="Select A Service Type..."
             required={true}
           />
-          <div className="form-row">
+          <div className="contact-form__row">
             <Input name="guestsMin" type="number" placeholder='Min number of guests' required={true} half={true} min={50} max={10000}></Input>
             <Input name="guestsMax" type="number" placeholder='Max number of guests' required={true} half={true} min={50} max={10000}></Input>
           </div>
@@ -101,23 +100,23 @@ export function ContactUs() {
             required={true}
           />
           <Textarea name="additionalDetails" placeholder="Additional Details" rows={4} />
-          <label className="checkbox-label">
-            <input name="understandQuote" type="checkbox" className="custom-checkbox" required />
-            <span className="checkbox-text">I understand that Farmhouse Fizz Soda Bar is subject to ask more questions before giving a quote.</span>
+          <label className="checkbox">
+            <input name="understandQuote" type="checkbox" className="form-control" required />
+            <span className="checkbox__label">I understand that Farmhouse Fizz Soda Bar is subject to ask more questions before giving a quote.</span>
           </label>
           </>
         ) : null}
         <Input name="honeypot" type="text" placeholder="Honey pot" honeypot={true} />
-        <label className="checkbox-label">
-          <input name="agreeTerms" type="checkbox" className="custom-checkbox" required />
-          <span className="checkbox-text">I agree to the <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</span>
+        <label className="checkbox">
+          <input name="agreeTerms" type="checkbox" className="form-control" required />
+          <span className="checkbox__label">I agree to the <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</span>
         </label>
-        <label className="checkbox-label">
-          <input name="confirmContact" type="checkbox" className="custom-checkbox" required />
-          <span className="checkbox-text">I hereby agree that all contact information is accurate and I will be contacted via the provided email or phone number.</span>
+        <label className="checkbox">
+          <input name="confirmContact" type="checkbox" className="form-control" required />
+          <span className="checkbox__label">I hereby agree that all contact information is accurate and I will be contacted via the provided email or phone number.</span>
         </label>
         <div>
-          <button type="submit" disabled={buttonDisabled}>Submit</button>
+          <button type="submit" className="btn btn--primary" disabled={buttonDisabled}>Submit</button>
           {status && (
             <span style={{ marginLeft: 12 }}>
               {status.loading ? 'Sending…' : status.message}

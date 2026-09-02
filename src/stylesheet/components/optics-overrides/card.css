@@ -1,0 +1,19 @@
+.card {
+  flex: 1 1 calc(100 * var(--op-size-unit));
+  max-width: calc(100 * var(--op-size-unit));
+
+  &.card--muted {
+    background-color: var(--op-color-neutral-plus-max);
+  }
+
+  &.card--link {
+    padding: 0 var(--op-space-medium);
+    border: var(--op-border-width-x-large) solid var(--op-color-primary-base);
+
+    .card__link {
+      margin-top: auto;
+      font-weight: var(--op-font-weight-bold);
+      color: var(--op-color-primary-base);
+    }
+  }
+}

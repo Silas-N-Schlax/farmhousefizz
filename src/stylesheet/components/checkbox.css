@@ -1,0 +1,11 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--op-space-x-small);
+  font-size: var(--op-font-small);
+  color: var(--op-color-on-background);
+
+  a {
+    color: var(--ff-color-secondary-base);
+  }
+}

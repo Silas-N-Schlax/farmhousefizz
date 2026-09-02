@@ -7,20 +7,20 @@ export function DropdownCards({data, index}) {
   
   return (
     <>
-      <div 
-        className="faq-card"
+      <div
+        className="faq__item"
         id={index}
       >
         <button
-          className={`faq-que ${open ? 'active' : ''}`}
+          className={`faq__question ${open ? 'faq__question--open' : ''}`}
           aria-expanded={open}
           aria-label="Toggle faq"
           onClick={() => setOpen(!open)}
         >
           {data.question}
-          <ArrowUp className='arrow' />
+          <ArrowUp className='faq__marker' />
         </button>
-        <div className={`faq-ans ${open ? 'active' : ''}`}>
+        <div className={`faq__answer ${open ? 'faq__answer--open' : ''}`}>
           {data.answer.map((item, index) => (
             <p id={index}>{item}</p>
           ))}

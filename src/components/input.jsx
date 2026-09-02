@@ -1,8 +1,8 @@
 
 
 export function Input({ type = 'text', placeholder = '', value, onChange, required = false, half = false, honeypot = false, ...rest }) {
-  let inputClass = half ? 'custom-input half' : 'custom-input'
-  if (honeypot) inputClass += ' honeypot'
+  let inputClass = half ? 'form-control form-control--half' : 'form-control'
+  if (honeypot) inputClass += ' contact-form__honeypot'
 
   const props = {
     type,

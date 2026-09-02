@@ -1,0 +1,21 @@
+.calendar-embed {
+  justify-content: center;
+}
+
+.calendar-embed--mobile {
+  display: none;
+}
+
+.calendar-embed--desktop {
+  display: flex;
+}
+
+@media (max-width: 765px) {
+  .calendar-embed--mobile {
+    display: flex;
+  }
+
+  .calendar-embed--desktop {
+    display: none;
+  }
+}
