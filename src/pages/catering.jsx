@@ -1,120 +1,126 @@
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { cateringSchema } from '../assets/seo/catering-schema'
 import { Link } from 'react-router-dom'
 import { cateringLinks } from '../assets/seo/catering-links'
 
-export function Catering({ data }) {
-  return (
-    <>
-      <Helmet>
-        <title>
-          {data.metaTitle || "Mobile Beverage Catering Across NC"} | Farmhouse Fizz
-        </title>
-        <script type='application/ld+json'>
-          {JSON.stringify(cateringSchema(data || {}))}
-        </script>
-        {data.metaDesc && (
-          <meta name='description' content={
-            data.metaDesc || 
-            "Farmhouse Fizz provides mobile beverage catering across North Carolina."
-          }></meta>
-        )}
-      </Helmet>
+export class Catering extends React.Component {
+  get data() { return this.props.data }
+
+  render() {
+    const data = this.data
+    return (
       <>
-        <h1 className='page-title'>{data.title || "Mobile Beverage Catering in Raleigh-Durham, NC"}</h1>
-
-        <div className="info-content">
-
-          <h2 className='info-content__heading'>Bring Something Unforgettable</h2>
-          {data.firstSection?.map((item, i) => {
-            return (
-              <p className='info-content__text' key={i}>{item}</p>
-            )
-          })}
-
-          {!data.eventTypeHeader && (
-            <>
-              <h2 className='info-content__heading'>Events We Serve</h2>
-              <p className='info-content__text'>We cater a wide range of private and public events, including weddings and receptions, corporate gatherings, church events, school functions, graduation parties, birthday celebrations, festivals, community events, and private parties.</p>
-              <p className='info-content__text'>If your event brings people together, there is a good chance Farmhouse Fizz Soda Bar can serve it.</p>
-            </>
+        <Helmet>
+          <title>
+            {data.metaTitle || "Mobile Beverage Catering Across NC"} | Farmhouse Fizz
+          </title>
+          <script type='application/ld+json'>
+            {JSON.stringify(cateringSchema(data || {}))}
+          </script>
+          {data.metaDesc && (
+            <meta name='description' content={
+              data.metaDesc ||
+              "Farmhouse Fizz provides mobile beverage catering across North Carolina."
+            }></meta>
           )}
+        </Helmet>
+        <>
+          <h1 className='page-title'>{data.title || "Mobile Beverage Catering in Raleigh-Durham, NC"}</h1>
 
-          {data.eventTypeHeader && (
-            <>
-              <h2 className='info-content__heading'>{data.eventTypeHeader}</h2>
-              {data.eventTypeDetails?.map((item, i) => {
-                return (<p className='info-content__text' key={i}>{item}</p>)
-              })}
-            </>
-          )}
+          <div className="info-content">
 
-         {data.main && (
-           <>
-           <h2 className='info-content__heading'>Catering Options</h2>
-           <p className='info-content__text'>We currently offer flexible service options to fit your event needs.</p>
-           <p className='info-content__text'><strong>Unlimited Service</strong> allows guests to enjoy unlimited drinks during your selected service window for one flat event rate.</p>
-           <p className='info-content__text'><strong>Set Drink Packages</strong> provide a fixed number of drinks for your guests, making them ideal for smaller gatherings or events with a defined budget.</p>
-           <p className='info-content__text'>Each event includes a curated menu designed around your guest experience and service needs.</p>
- 
-           <h2 className='info-content__heading'>What We Provide</h2>
-           <p className='info-content__text'>Every booking includes our fully self-contained beverage trailer or popup setup, professional on-site service staff, handcrafted drinks made fresh to order, full setup and breakdown, and menu planning assistance to ensure your event runs smoothly.</p>
-           <p className='info-content__text'>We handle the details so you can focus on your guests.</p>
+            <h2 className='info-content__heading'>Bring Something Unforgettable</h2>
+            {data.firstSection?.map((item, i) => {
+              return (
+                <p className='info-content__text' key={i}>{item}</p>
+              )
+            })}
 
-            <h2 className='info-content__heading'>Booking & Availability</h2>
-            <p className='info-content__text'>Because many of our ingredients are ordered online, we require at least 14 days notice for most catering bookings.</p>
-            <p className='info-content__text'>Short-notice bookings may be accepted depending on availability, but may be subject to limited menu options and additional fees.</p>
-            <p className='info-content__text'>A 10% non-refundable deposit is required to reserve your event date. Dates are not guaranteed until your deposit has been received.</p>
-            <p className='info-content__text'>Final payment must be made in full prior to your event unless otherwise agreed upon in writing.</p>
-
-            <h2 className='info-content__heading'>Request a Quote</h2>
-            <p className='info-content__text'>Every event is different, and pricing depends on factors such as guest count, service duration, drink selections, event location, and scheduling availability.</p>
-            <p className='info-content__text'>Please use our <a href="./contact-us">contact form</a> to request a custom quote and check availability for your event.</p>
-
-            <h2 className='info-content__heading'>Let’s Fizz Things Up</h2>
-            <p className='info-content__text'>Whether you are planning an intimate gathering or a large-scale celebration, Farmhouse Fizz is ready to bring handcrafted drinks and memorable service to your guests.</p>
-            <p className='info-content__text'>Reach out today to check availability and start planning your event.</p>
-
-            <details>
-              <summary className='info-content__heading'>More Pages on Catering</summary>
-              <ul className='info-content__details-list'>
-                {cateringLinks().map((URL, i) => {
-                  return (
-                    <li key={i}>
-                      <Link to={URL.path}>
-                        {URL.label}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </details>
-          </>
-         )}
-
-         {!data.main && (
-            <>
-            {data.locationFocus && (
+            {!data.eventTypeHeader && (
               <>
-                <h2 className='info-content__heading'>Serving {data.locationName} Events</h2>
-                {data.locationFocus?.map((item, i) => {
+                <h2 className='info-content__heading'>Events We Serve</h2>
+                <p className='info-content__text'>We cater a wide range of private and public events, including weddings and receptions, corporate gatherings, church events, school functions, graduation parties, birthday celebrations, festivals, community events, and private parties.</p>
+                <p className='info-content__text'>If your event brings people together, there is a good chance Farmhouse Fizz Soda Bar can serve it.</p>
+              </>
+            )}
+
+            {data.eventTypeHeader && (
+              <>
+                <h2 className='info-content__heading'>{data.eventTypeHeader}</h2>
+                {data.eventTypeDetails?.map((item, i) => {
                   return (<p className='info-content__text' key={i}>{item}</p>)
                 })}
               </>
             )}
 
-              <h2 className='info-content__heading'>Need More Details?</h2>
-              <p className='info-content__text'>
-                <Link to="/catering" className='cta-link'>{
-                  data.ctaNote?.[0] || 
-                  "View full catering services and details here."
-                }</Link>
-              </p>
-            </>
-         )}
+           {data.main && (
+             <>
+             <h2 className='info-content__heading'>Catering Options</h2>
+             <p className='info-content__text'>We currently offer flexible service options to fit your event needs.</p>
+             <p className='info-content__text'><strong>Unlimited Service</strong> allows guests to enjoy unlimited drinks during your selected service window for one flat event rate.</p>
+             <p className='info-content__text'><strong>Set Drink Packages</strong> provide a fixed number of drinks for your guests, making them ideal for smaller gatherings or events with a defined budget.</p>
+             <p className='info-content__text'>Each event includes a curated menu designed around your guest experience and service needs.</p>
 
-        </div>
+             <h2 className='info-content__heading'>What We Provide</h2>
+             <p className='info-content__text'>Every booking includes our fully self-contained beverage trailer or popup setup, professional on-site service staff, handcrafted drinks made fresh to order, full setup and breakdown, and menu planning assistance to ensure your event runs smoothly.</p>
+             <p className='info-content__text'>We handle the details so you can focus on your guests.</p>
+
+              <h2 className='info-content__heading'>Booking & Availability</h2>
+              <p className='info-content__text'>Because many of our ingredients are ordered online, we require at least 14 days notice for most catering bookings.</p>
+              <p className='info-content__text'>Short-notice bookings may be accepted depending on availability, but may be subject to limited menu options and additional fees.</p>
+              <p className='info-content__text'>A 10% non-refundable deposit is required to reserve your event date. Dates are not guaranteed until your deposit has been received.</p>
+              <p className='info-content__text'>Final payment must be made in full prior to your event unless otherwise agreed upon in writing.</p>
+
+              <h2 className='info-content__heading'>Request a Quote</h2>
+              <p className='info-content__text'>Every event is different, and pricing depends on factors such as guest count, service duration, drink selections, event location, and scheduling availability.</p>
+              <p className='info-content__text'>Please use our <a href="./contact-us">contact form</a> to request a custom quote and check availability for your event.</p>
+
+              <h2 className='info-content__heading'>Let’s Fizz Things Up</h2>
+              <p className='info-content__text'>Whether you are planning an intimate gathering or a large-scale celebration, Farmhouse Fizz is ready to bring handcrafted drinks and memorable service to your guests.</p>
+              <p className='info-content__text'>Reach out today to check availability and start planning your event.</p>
+
+              <details>
+                <summary className='info-content__heading'>More Pages on Catering</summary>
+                <ul className='info-content__details-list'>
+                  {cateringLinks().map((URL, i) => {
+                    return (
+                      <li key={i}>
+                        <Link to={URL.path}>
+                          {URL.label}
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </details>
+            </>
+           )}
+
+           {!data.main && (
+              <>
+              {data.locationFocus && (
+                <>
+                  <h2 className='info-content__heading'>Serving {data.locationName} Events</h2>
+                  {data.locationFocus?.map((item, i) => {
+                    return (<p className='info-content__text' key={i}>{item}</p>)
+                  })}
+                </>
+              )}
+
+                <h2 className='info-content__heading'>Need More Details?</h2>
+                <p className='info-content__text'>
+                  <Link to="/catering" className='cta-link'>{
+                    data.ctaNote?.[0] ||
+                    "View full catering services and details here."
+                  }</Link>
+                </p>
+              </>
+           )}
+
+          </div>
+        </>
       </>
-    </>
-  )
+    )
+  }
 }

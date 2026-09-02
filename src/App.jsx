@@ -1,3 +1,4 @@
+import React from 'react'
 import './stylesheet/styles.css'
 import { BrowserRouter as Router , Routes, Route} from 'react-router-dom'
 import { Home } from './pages/home'
@@ -16,40 +17,42 @@ import { SodaPoll } from './pages/sodaPoll'
 import cateringData from './assets/data/cateringPages.json'
 
 
-function App() {
-  return (
-    <div className="op-page">
-      <div className="op-page__main">
-        <div className="op-page__main-header">
-          <Header />
-        </div>
-        <main className="op-page__main-content">
-          <Router>
-            <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route path="/*" element={<NotFound/>} />
-              <Route path="/about-us" element={<AboutUs/>} />
-              <Route path="/contact-us" element={<ContactUs/>} />
-              {cateringData.map((page, i) => {
-                return (
-                  <Route path={page.path} key={i} element={<Catering data={page} />} />
-                )
-              })}
-              <Route path="/menu" element={<Menu/>} />
-              <Route path="/fqa" element={<FQA/>} />
-              <Route path="/polls/soda-poll" element={<SodaPoll/>} />
-              <Route path="/terms-and-conditions" element={<Terms/>} />
-              <Route path="/privacy-policy" element={<Privacy/>} />
-              <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
-            </Routes>
-          </Router>
-        </main>
-        <div className="op-page__main-footer">
-          <Footer />
+class App extends React.Component {
+  render() {
+    return (
+      <div className="op-page">
+        <div className="op-page__main">
+          <div className="op-page__main-header">
+            <Header />
+          </div>
+          <main className="op-page__main-content">
+            <Router>
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/*" element={<NotFound/>} />
+                <Route path="/about-us" element={<AboutUs/>} />
+                <Route path="/contact-us" element={<ContactUs/>} />
+                {cateringData.map((page, i) => {
+                  return (
+                    <Route path={page.path} key={i} element={<Catering data={page} />} />
+                  )
+                })}
+                <Route path="/menu" element={<Menu/>} />
+                <Route path="/fqa" element={<FQA/>} />
+                <Route path="/polls/soda-poll" element={<SodaPoll/>} />
+                <Route path="/terms-and-conditions" element={<Terms/>} />
+                <Route path="/privacy-policy" element={<Privacy/>} />
+                <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
+              </Routes>
+            </Router>
+          </main>
+          <div className="op-page__main-footer">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default App
