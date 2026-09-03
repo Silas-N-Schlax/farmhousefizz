@@ -22,7 +22,7 @@
   --op-color-neutral-plus-eight: light-dark(var(--ff-brand-almond-cream), hsl(32deg 22% 13%));
   --op-color-neutral-on-plus-eight: light-dark(var(--ff-brand-carbon-black), var(--ff-brand-almond-cream));
   --op-color-neutral-on-plus-eight-alt: light-dark(hsl(24deg 35% 30%), hsl(32deg 25% 74%));
-  --op-color-neutral-plus-six: light-dark(hsl(32deg 20% 76%), hsl(32deg 18% 16%));
+  --op-color-neutral-plus-six: light-dark(hsl(32deg 24% 88%), hsl(32deg 18% 18%));
   --op-color-neutral-plus-five: light-dark(hsl(28deg 24% 78%), hsl(28deg 18% 24%));
   --op-color-neutral-plus-four: light-dark(hsl(32deg 20% 68%), hsl(32deg 18% 20%));
 
@@ -44,6 +44,8 @@
   --ff-color-secondary-plus-two: light-dark(hsl(205deg 36% 64%), hsl(205deg 36% 32%));
   --ff-color-secondary-plus-five: light-dark(hsl(205deg 36% 90%), hsl(205deg 20% 20%));
   --ff-color-secondary-on-plus-five: light-dark(hsl(205deg 36% 22%), hsl(205deg 36% 82%));
+  --ff-color-secondary-minus-two: light-dark(hsl(205deg 36% 25%), hsl(205deg 36% 78%));
+  --ff-color-secondary-on-minus-two: light-dark(#ffffff, var(--ff-brand-carbon-black));
 
   /* Accent — Deep Walnut (project-prefixed custom scale) */
   --ff-color-accent-h: 24;
@@ -57,4 +59,9 @@
   /* Fonts */
   --op-font-family: 'Lora', Arial, Helvetica, serif;
   --op-font-family-alt: 'Special Elite', 'Courier New', Courier, monospace;
+
+  /* Glass-chip overlay for UI sitting directly on photography (hero tags/badge).
+     Needs real alpha, which the scale-only rule reserves for this file. */
+  --ff-overlay-scrim: hsl(22deg 44% 5% / 42%);
+  --ff-overlay-border: hsl(32deg 20% 92% / 50%);
 }

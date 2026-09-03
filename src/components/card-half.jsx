@@ -6,12 +6,12 @@ export class CardHalf extends React.Component {
     return (
       <div className="split-panel" style={{minHeight: height}}>
         <div className="split-panel__side split-panel__side--primary">
-          <h2>{content.left.title}</h2>
-          <p>{content.left.text}</p>
+          <h2 className="split-panel__title">{content.left.title}</h2>
+          <p className="split-panel__text">{content.left.text}</p>
         </div>
         <div className="split-panel__side split-panel__side--secondary">
-          <h2>{content.right.title}</h2>
-          <p>{content.right.text}</p>
+          <h2 className="split-panel__title">{content.right.title}</h2>
+          <p className="split-panel__text">{content.right.text}</p>
         </div>
       </div>
     )
