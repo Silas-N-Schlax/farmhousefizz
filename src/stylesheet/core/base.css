@@ -1,10 +1,25 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 a {
   color: var(--op-color-primary-base);
   text-decoration: none;
 }
 
-a:hover {
+a:not(.btn):hover {
   text-decoration: underline;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: var(--op-space-x-small);
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-x-small);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--op-color-primary-base);
 }
 
 .page-title {
