@@ -2,15 +2,20 @@
   width: 100%;
   max-width: 100%;
   height: calc(21 * var(--op-size-unit));
+  border-top: var(--op-border-width-x-large) solid var(--ff-color-accent-base);
 
   .site-header__inner {
     justify-content: space-between;
     height: 100%;
   }
 
-  .site-header__logo img {
-    height: calc(16 * var(--op-size-unit));
-    width: auto;
+  .site-header__logo {
+    color: inherit;
+    transition: opacity var(--op-transition-input);
+
+    &:hover {
+      opacity: var(--op-opacity-half);
+    }
   }
 }
 
