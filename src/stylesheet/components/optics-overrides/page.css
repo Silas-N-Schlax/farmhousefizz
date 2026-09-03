@@ -16,6 +16,7 @@
     .op-page__main-header {
       position: sticky;
       inset-block-start: 0;
+      z-index: var(--op-z-index-header);
     }
 
     .op-page__main-content {
