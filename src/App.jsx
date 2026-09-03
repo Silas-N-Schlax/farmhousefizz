@@ -20,13 +20,13 @@ import cateringData from './assets/data/cateringPages.json'
 class App extends React.Component {
   render() {
     return (
-      <div className="op-page">
-        <div className="op-page__main">
-          <div className="op-page__main-header">
-            <Header />
-          </div>
-          <main className="op-page__main-content">
-            <Router>
+      <Router>
+        <div className="op-page">
+          <div className="op-page__main">
+            <div className="op-page__main-header">
+              <Header />
+            </div>
+            <main className="op-page__main-content">
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/*" element={<NotFound/>} />
@@ -44,13 +44,13 @@ class App extends React.Component {
                 <Route path="/privacy-policy" element={<Privacy/>} />
                 <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
               </Routes>
-            </Router>
-          </main>
-          <div className="op-page__main-footer">
-            <Footer />
+            </main>
+            <div className="op-page__main-footer">
+              <Footer />
+            </div>
           </div>
         </div>
-      </div>
+      </Router>
     )
   }
 }
