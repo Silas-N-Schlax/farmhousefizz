@@ -19,6 +19,7 @@
 
   .card__body {
     margin: 0;
+    padding: 0;
     color: var(--op-color-neutral-on-plus-eight-alt);
     line-height: var(--op-line-height-base);
   }
@@ -30,11 +31,20 @@
   &.card--link {
     padding: var(--op-space-large) var(--op-space-medium);
     border: var(--op-border-width-x-large) solid var(--op-color-primary-base);
+    transition: var(--op-transition-input);
 
     .card__link {
       margin-top: auto;
       font-weight: var(--op-font-weight-bold);
       color: var(--op-color-primary-base);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover,
+      &:focus-within {
+        box-shadow: var(--op-shadow-large);
+        transform: translateY(calc(-1 * var(--op-space-3x-small)));
+      }
     }
   }
 }
