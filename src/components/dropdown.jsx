@@ -9,24 +9,33 @@ export class Dropdown extends React.Component {
   }
 
   render() {
+    const id = `field-${this.props.name}`
     return (
-      <div className="contact-form__select">
-        <select
-          name={this.props.name}
-          className="form-control"
-          onChange={this.onSelectChange.bind(this)}
-          defaultValue=""
-          {...(this.required ? { required: true } : {})}
-        >
-          <option value="" disabled>
-           {this.props.label || "Select an Option"}
-          </option>
-          {this.options.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
+      <div className="form-field">
+        <label className="form-field__label" htmlFor={id}>
+          {this.props.label}
+          {this.required && <span className="form-field__required" aria-hidden="true"> *</span>}
+        </label>
+        <div className="contact-form__select">
+          <select
+            id={id}
+            name={this.props.name}
+            className="form-control"
+            onChange={this.onSelectChange.bind(this)}
+            defaultValue=""
+            aria-required={this.required}
+            {...(this.required ? { required: true } : {})}
+          >
+            <option value="" disabled>
+             Select an option&hellip;
             </option>
-          ))}
-        </select>
+            {this.options.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     )
   }
