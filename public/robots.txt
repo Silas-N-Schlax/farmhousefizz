@@ -5,3 +5,4 @@ Disallow: /polls/soda-poll
 Disallow: /energy-drink-notice
 Disallow: /dynamic-event-menu-x
 Disallow: /dynamic-event-menu-y
+Sitemap: https://farmhousefizz.com/sitemap.xml
