@@ -56,12 +56,11 @@ export class Header extends React.Component {
           </button>
 
           <nav className={`site-nav ${open ? 'site-nav--open' : ''}`}>
-            <NavLink end to="/" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Home</NavLink>
-            <NavLink to="/catering" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Catering</NavLink>
             <NavLink to="/menu" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Menu</NavLink>
+            <NavLink to="/catering" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Catering</NavLink>
+            <NavLink to="/about-us" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>About Us</NavLink>
             <NavLink to="/fqa" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>FAQ</NavLink>
             <NavLink to="/contact-us" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Contact Us</NavLink>
-            <NavLink to="/about-us" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>About Us</NavLink>
             <NavLink to="/contact-us" className="btn btn--primary btn--small site-nav__cta" onClick={this.handleLinkClick.bind(this)}>Book Us</NavLink>
           </nav>
         </div>
