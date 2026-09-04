@@ -14,9 +14,7 @@ export class ContactUs extends React.Component {
     }
     this.formRef = React.createRef()
 
-    // TODO: replace with your deployed Google Apps Script URL (This is the outdated functional code, the new ones don't send the email for whatever reason)
-    // const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNSjYkZt6BCAhkOUKIDTCPx2vs7Fl-FdwB8UblplOodX5AOvuwDkk-MbK-iXKJwmPY/exec'
-    this.GOOGLE_APPS_SCRIPT_ID = 'AKfycbw3-tnKOo8ezBtWOX2TiZ9nkIkNBWXvcEGO54XRr61ZvTk-aL3fFBN1zxMCFxReoD7n'
+    this.GOOGLE_APPS_SCRIPT_ID = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_ID
   }
 
   onInquiryTypeSelect(value) {
