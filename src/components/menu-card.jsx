@@ -22,10 +22,9 @@ export class MenuCard extends React.Component {
       <>
         <div>
           {Object.entries(this.groupedItems).map((group, index) => {
-            console.log(group)
             return (
-              <div className="menu-category">
-                <h1 className="menu-category__banner">{formatCategory(group[0])}</h1>
+              <div className="menu-category" key={index}>
+                <h2 className="menu-category__tag">{formatCategory(group[0])}</h2>
                 <div className="menu__grid">
                   {group[1].map((item, index) => {
                     if (item.active === false) return;
@@ -35,6 +34,8 @@ export class MenuCard extends React.Component {
                       lq_type={item.lq_type}
                       sizes={item.sizes}
                       notices={item.notices}
+                      price={item.price}
+                      largeUpCharge={item.largeUpCharge}
                       id={item.id}
                       key={item.id}
                     />
