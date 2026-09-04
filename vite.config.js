@@ -19,6 +19,15 @@ let routes = [
 
 let dynamicRoutes = [...routes, ...cateringRoutes]
 
+let excludedRoutes = [
+  "/terms-and-conditions",
+  "/polls/soda-poll",
+  "/privacy-policy",
+  "/energy-drink-notice",
+  "/dynamic-event-menu-x",
+  "/dynamic-event-menu-y"
+]
+
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
@@ -26,12 +35,12 @@ export default defineConfig({
       Sitemap({
       hostname: DOMAIN,
       dynamicRoutes: dynamicRoutes,
-      exclude: [
-        "/terms-and-conditions", 
-        "/polls/soda-poll",
-        "/privacy-policy",
-        "/energy-drink-notice"
-      ]
+      exclude: excludedRoutes,
+      robots: [{
+        userAgent: "*",
+        allow: "/",
+        disallow: excludedRoutes
+      }]
     }),
     ],
 });

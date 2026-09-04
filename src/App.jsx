@@ -7,6 +7,8 @@ import { AboutUs } from './pages/aboutUs'
 import { ContactUs } from './pages/contactUs'
 import { Catering } from './pages/catering'
 import { Menu } from './pages/menu'
+import { EventMenuX } from './pages/eventMenuX'
+import { EventMenuY } from './pages/eventMenuY'
 import { Privacy } from './pages/privacy'
 import { FQA } from './pages/FQA'
 import { EnergyDrinkNotice } from './pages/energyDrinkNotice'
@@ -38,6 +40,8 @@ class App extends React.Component {
                   )
                 })}
                 <Route path="/menu" element={<Menu/>} />
+                <Route path="/dynamic-event-menu-x" element={<EventMenuX/>} />
+                <Route path="/dynamic-event-menu-y" element={<EventMenuY/>} />
                 <Route path="/fqa" element={<FQA/>} />
                 <Route path="/polls/soda-poll" element={<SodaPoll/>} />
                 <Route path="/terms-and-conditions" element={<Terms/>} />
