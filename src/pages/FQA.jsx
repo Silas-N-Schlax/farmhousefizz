@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { DropdownCards } from '../components/dropdown-cards'
+import { ChevronDown } from 'lucide-react'
 
 export class FQA extends React.Component {
   get faq() {
@@ -142,9 +142,22 @@ export class FQA extends React.Component {
           <title>FAQ - Farmhouse Fizz</title>
           <meta name="description" content="Have questions? Find answers about booking, events, pricing, and how Farmhouse Fizz Soda Bar operates across North Carolina." />
         </Helmet>
-        <h1 className='page-title'>Frequently Asked Questions</h1>
+        <div className="page-hero">
+          <span className="eyebrow">{this.faq.length} Questions, Answered</span>
+          <h1 className='page-title'>Frequently Asked Questions</h1>
+        </div>
         <div className="faq">
-          {this.faq.map((item, index) => (<DropdownCards data={item} index={index} />))}
+          {this.faq.map((item, index) => (
+            <details className="accordion" key={index}>
+              <summary>
+                <span className="accordion__label">{item.question}</span>
+                <ChevronDown className="accordion__marker" />
+              </summary>
+              <div className="accordion__content">
+                {item.answer.map((line, i) => (<p key={i}>{line}</p>))}
+              </div>
+            </details>
+          ))}
         </div>
       </>
     )

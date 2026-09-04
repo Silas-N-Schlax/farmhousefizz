@@ -66,7 +66,9 @@ export class ContactUs extends React.Component {
           <title>Contact Us - Farmhouse Fizz</title>
           <meta name="description" content="Get in touch with Farmhouse Fizz to book our soda trailer, ask questions, or find out where we’ll be serving next in North Carolina." />
         </Helmet>
-        <h1 className='page-title'>Contact Us</h1>
+        <div className="page-hero">
+          <h1 className='page-title'>Contact Us</h1>
+        </div>
         <form ref={this.formRef} className='contact-form' action="" onSubmit={this.handleSubmit.bind(this)}>
           <div className="contact-form__row">
             <Input name="firstName" type="text" placeholder="First Name" required={true} half={true} />

@@ -11,12 +11,12 @@ export class Menu extends React.Component {
           <title>Menu - Farmhouse Fizz</title>
           <meta name="description" content="Explore our menu of handcrafted dirty sodas, custom flavors, and classic favorites, made fresh and served from our mobile soda trailer." />
         </Helmet>
-        <div className="menu__title">
-          <h1 className='page-title'>Catering with Farmhouse Fizz</h1>
-          <p>Subject to change and limited availability</p>
+        <div className="page-hero">
+          <h1 className='page-title'>Our Menu</h1>
+          <p className="page-hero__text">Subject to change and limited availability.</p>
         </div>
         <div className="menu">
-          <MenuCard data={menuData} />
+          <MenuCard data={menuData} showPrices={true} />
         </div>
       </>
     )

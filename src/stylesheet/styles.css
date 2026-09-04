@@ -3,9 +3,12 @@
 @import 'core/theme/farmhouse-fizz-theme-core.css';
 @import 'core/base.css';
 @import 'core/layout.css';
+@import 'components/optics-overrides/accordion.css';
+@import 'components/optics-overrides/btn.css';
 @import 'components/optics-overrides/card.css';
 @import 'components/optics-overrides/navbar.css';
 @import 'components/optics-overrides/page.css';
+@import 'components/brand-lockup.css';
 @import 'components/site-header.css';
 @import 'components/site-nav.css';
 @import 'components/nav-toggle.css';
@@ -16,8 +19,7 @@
 @import 'components/card-grid.css';
 @import 'components/split-panel.css';
 @import 'components/hero.css';
-@import 'components/legal-doc.css';
-@import 'components/info-content.css';
+@import 'components/article.css';
 @import 'components/faq.css';
 @import 'components/not-found.css';
 @import 'components/menu.css';
@@ -25,5 +27,4 @@
 @import 'components/menu-item.css';
 @import 'components/size-list.css';
 @import 'components/notice-list.css';
-@import 'components/popover.css';
 @import 'components/calendar-embed.css';

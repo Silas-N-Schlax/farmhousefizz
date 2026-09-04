@@ -14,20 +14,26 @@ export class Home extends React.Component {
         </Helmet>
         <div className="page">
           <div className="hero">
-            <img className="hero__image" src="/banner-image.jpg" alt="" />
-            <div className="hero__scrim"></div>
+            <div className="hero__media">
+              <img className="hero__image" src="/banner-image.jpg" alt="" />
+            </div>
             <div className="hero__content">
+              <div className="hero__badge">
+                <img className="hero__badge-mark" src="/logo.png" alt="" />
+                <span className="hero__badge-text">Mobile Soda Bar &middot; Central NC</span>
+              </div>
               <h1 className="hero__title">Farmhouse Fizz Soda Bar</h1>
               <span className="hero__tags">
-                <p className="hero__tag">Dirty Sodas</p> <span className="bullet bullet--light"></span>
-                <p className="hero__tag">Mobile</p> <span className="bullet bullet--light"></span>
+                <p className="hero__tag">Dirty Sodas</p>
+                <p className="hero__tag">Mobile</p>
                 <p className="hero__tag">Non-Alcoholic</p>
               </span>
             </div>
           </div>
           <div className="section">
             <div className="section__header">
-              <h2 className="section__title">More Then Just Soda</h2>
+              <span className="eyebrow">Family Built &middot; Est. 2025</span>
+              <h2 className="section__title">More Than Just Soda</h2>
               <p className="section__text">Farmhouse Fizz is a family-run soda bar built on quality drinks, hard work, and doing things the right way. We serve handcrafted dirty sodas at events across North Carolina.</p>
             </div>
             <Cards height={175} data={
@@ -47,7 +53,7 @@ export class Home extends React.Component {
               ]
             }></Cards>
           </div>
-          <div className="section banner banner--left" style={{backgroundColor: "var(--ff-color-secondary-base)"}}>
+          <div className="section banner banner--left banner--secondary">
             <h2 className="banner__title">100% Non-Alcoholic & Family-Friendly</h2>
             <p className="banner__text">All drinks are non-alcoholic and suitable for all ages. From sodas to flavored waters, and more always in the works!</p>
           </div>
@@ -66,7 +72,7 @@ export class Home extends React.Component {
             }
             ></CardHalf>
           </div>
-          <div className="section banner banner--center" style={{backgroundColor: "var(--op-color-primary-base)"}}>
+          <div className="section banner banner--center banner--primary">
             <h2 className="banner__title">Ready to Bring the Fizz?</h2>
             <p className="banner__text">Follow us or reach out to book your event.</p>
           </div>
@@ -94,7 +100,7 @@ export class Home extends React.Component {
               ]
             } link={true}></Cards>
           </div>
-          <div className="section banner banner--center" style={{backgroundColor: "var(--ff-color-accent-base)"}}>
+          <div className="section banner banner--center banner--accent">
             <h2 className="banner__title">Catch the Fizz on the Road</h2>
             <p className="banner__text">See our upcoming public events, pop-ups, and markets across Central North Carolina on our live calendar.</p>
           </div>

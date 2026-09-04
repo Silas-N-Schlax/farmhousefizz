@@ -1,0 +1,38 @@
+/* Reusable wordmark: an image mark plus a two-line name/tagline stack.
+   Used inside the header's .site-header__logo and standalone in the footer. */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--op-space-x-small);
+
+  .brand-lockup__mark {
+    height: calc(16 * var(--op-size-unit));
+    width: auto;
+    border-radius: var(--op-radius-circle);
+    box-shadow: 0 0 0 var(--op-border-width-large) var(--ff-overlay-border);
+  }
+
+  .brand-lockup__text {
+    display: none;
+    flex-direction: column;
+    line-height: var(--op-line-height-dense);
+  }
+
+  .brand-lockup__name {
+    font-family: var(--op-font-family-alt);
+    font-size: var(--op-font-small);
+  }
+
+  .brand-lockup__tag {
+    font-size: var(--op-font-2x-small);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
+
+/* --op-breakpoint-x-small */
+@media (min-width: 512px) {
+  .brand-lockup .brand-lockup__text {
+    display: flex;
+  }
+}

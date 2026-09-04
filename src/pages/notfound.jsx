@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
 export class NotFound extends React.Component {
   render() {
@@ -11,9 +12,10 @@ export class NotFound extends React.Component {
         </Helmet>
         <div className="not-found">
           <div className="not-found__card">
-            <h1>404: Page Not Found</h1>
-            <p>Oops. This page fizzled out. Head back to Farmhouse Fizz to find our menu, events, and handcrafted dirty sodas.</p>
-            <a style={{textDecoration: "none", color: "var(--op-color-primary-base)"}} href="/">Home</a>
+            <span className="not-found__code">404</span>
+            <h1 className="not-found__title">Page Not Found</h1>
+            <p className="not-found__text">Oops. This page fizzled out. Head back to Farmhouse Fizz to find our menu, events, and handcrafted dirty sodas.</p>
+            <Link to="/" className="btn btn--primary btn--medium">Back Home</Link>
           </div>
         </div>
       </>

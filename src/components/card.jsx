@@ -7,7 +7,7 @@ export class Card extends React.Component {
       return (
         <div
           classId={key}
-          className={darker ? "card card--padded card--shadow-small card--link card--muted" : "card card--padded card--shadow-small card--link"}
+          className={darker ? "card card--padded card--shadow-large card--link card--muted" : "card card--padded card--shadow-large card--link"}
           style={{minHeight: height}}
         >
           <h2 className="card__title">{title}</h2>
@@ -19,7 +19,7 @@ export class Card extends React.Component {
       return (
         <div
           classId={key}
-          className={darker ? "card card--padded card--shadow-small card--muted" : "card card--padded card--shadow-small"}
+          className={darker ? "card card--padded card--shadow-large card--muted" : "card card--padded card--shadow-large"}
           style={{minHeight: height}}
         >
           <h2 className="card__title">{title}</h2>
