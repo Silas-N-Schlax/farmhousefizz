@@ -15,7 +15,7 @@
 
   .site-header__logo {
     color: inherit;
-    transition: opacity var(--op-transition-input);
+    transition: var(--op-transition-input);
 
     &:hover {
       opacity: var(--op-opacity-half);
