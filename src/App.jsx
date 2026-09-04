@@ -28,7 +28,7 @@ class App extends React.Component {
             <div className="op-page__main-header">
               <Header />
             </div>
-            <main className="op-page__main-content">
+            <main id="main-content" className="op-page__main-content">
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/about-us" element={<AboutUs/>} />

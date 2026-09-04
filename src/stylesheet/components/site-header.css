@@ -20,6 +20,27 @@
     &:hover {
       opacity: var(--op-opacity-half);
     }
+
+    &:focus-visible {
+      outline: var(--op-border-width-large) solid var(--ff-brand-almond-cream);
+      outline-offset: 2px;
+    }
+  }
+
+  .site-header__skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--op-space-medium);
+    z-index: var(--op-z-index-dialog);
+    padding: var(--op-space-x-small) var(--op-space-medium);
+    background-color: var(--op-color-neutral-plus-max);
+    color: var(--op-color-on-background);
+    font-weight: var(--op-font-weight-semi-bold);
+    border-radius: var(--op-radius-medium);
+
+    &:focus-visible {
+      top: var(--op-space-x-small);
+    }
   }
 }
 

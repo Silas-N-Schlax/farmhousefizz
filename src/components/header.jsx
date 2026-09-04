@@ -32,6 +32,7 @@ export class Header extends React.Component {
     const { open } = this.state
     return (
       <header className="site-header">
+        <a className="site-header__skip-link" href="#main-content">Skip to content</a>
         <div className="navbar navbar--secondary site-header__inner">
           <a className="site-header__logo" href="/">
             <span className="brand-lockup">
