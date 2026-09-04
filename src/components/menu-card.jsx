@@ -8,7 +8,7 @@ export class MenuCard extends React.Component {
   get groupedItems() {
     const groupedItems = {}
     this.props.data.forEach((item) => {
-      const overridden = this.itemOverrides.includes(item.name)
+      const overridden = this.itemOverrides.includes(item.id)
       if (!item.active && !overridden) return;
 
       const category = item.category || "Other"
