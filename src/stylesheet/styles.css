@@ -3,6 +3,7 @@
 @import 'core/theme/farmhouse-fizz-theme-core.css';
 @import 'core/base.css';
 @import 'core/layout.css';
+@import 'components/optics-overrides/accordion.css';
 @import 'components/optics-overrides/btn.css';
 @import 'components/optics-overrides/card.css';
 @import 'components/optics-overrides/navbar.css';
