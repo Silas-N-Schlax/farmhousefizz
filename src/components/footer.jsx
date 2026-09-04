@@ -23,11 +23,11 @@ export class Footer extends React.Component {
             </a>
             <p className="site-footer__tagline">Handcrafted dirty sodas, mobile across Central North Carolina.</p>
             <span className="social-links">
-              <a className="social-links__link" target={"_blank"} href="https://www.instagram.com/farmhousefizz/"><img alt="Instagram link" height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
-              <a className="social-links__link" target={"_blank"} href="https://www.facebook.com/profile.php?id=61584818212570"><img alt="Facebook link" height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
-              <a className="social-links__link" target={"_blank"} href="https://www.linkedin.com/company/farmhouse-fizz-soda-bar/"><Building size={height} style={{color: "currentColor"}} /></a>
-              <a className="social-links__link" target={"_blank"} href="https://streetfoodfinder.com/farmhousefizz"><img alt="StreetFoodFinder link" height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
-              <a className="social-links__link" target={"_blank"} href="https://g.page/r/CShnusOMQkBTEAE/review"><Star size={height} style={{color: "currentColor"}} /></a>
+              <a className="social-links__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/farmhousefizz/"><img alt="" height={height} width={width} src={ 'https://cdn.simpleicons.org/instagram/' + color } /></a>
+              <a className="social-links__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61584818212570"><img alt="" height={height} width={width} src={ 'https://cdn.simpleicons.org/facebook/' + color } /></a>
+              <a className="social-links__link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/farmhouse-fizz-soda-bar/"><Building size={height} style={{color: "currentColor"}} /></a>
+              <a className="social-links__link" aria-label="StreetFoodFinder" target="_blank" rel="noopener noreferrer" href="https://streetfoodfinder.com/farmhousefizz"><img alt="" height={height} width={width} src={ 'https://cdn.simpleicons.org/openstreetmap/' + color } /></a>
+              <a className="social-links__link" aria-label="Google reviews" target="_blank" rel="noopener noreferrer" href="https://g.page/r/CShnusOMQkBTEAE/review"><Star size={height} style={{color: "currentColor"}} /></a>
             </span>
           </div>
 

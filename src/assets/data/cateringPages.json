@@ -46,6 +46,7 @@
       "We proudly serve the greater Raleigh area and surrounding communities with unique, customizable beverage menus."
     ],
     "locationName": "Raleigh",
+    "isLocation": true,
     "locationFocus": [
       "Serving events throughout Raleigh including Downtown Raleigh, North Hills, Brier Creek, and surrounding neighborhoods.",
       "Our mobile setup works for both indoor venues and outdoor event spaces across the city."
@@ -73,6 +74,7 @@
       "Every event is fully customized to match your specific guest experience and style."
     ],
     "locationName": "Durham",
+    "isLocation": true,
     "locationFocus": [
       "Serving Downtown Durham, Southpoint, RTP, Duke University area, and surrounding neighborhoods.",
       "Ideal for both indoor venues and outdoor events across Durham."
@@ -100,6 +102,7 @@
       "Our mobile trailer brings a unique and memorable drink experience to your Cary event."
     ],
     "locationName": "Cary",
+    "isLocation": true,
     "locationFocus": [
       "Serving Downtown Cary, West Cary, and RTP-adjacent areas.",
       "Flexible for residential and corporate venues."
@@ -127,6 +130,7 @@
       "Perfect for both intimate gatherings and large-scale Orange County events."
     ],
     "locationName": "Chapel Hill",
+    "isLocation": true,
     "locationFocus": [
       "Serving UNC Chapel Hill, downtown Chapel Hill, and surrounding Orange County.",
       "Ideal for campus and outdoor venues."
@@ -154,6 +158,7 @@
       "Every setup is tailored to your event style and guest experience."
     ],
     "locationName": "Wake Forest",
+    "isLocation": true,
     "locationFocus": [
       "Serving Wake Forest neighborhoods and surrounding Franklin County.",
       "Works for both backyard and venue-based events."
@@ -184,6 +189,7 @@
       "Wedding beverage catering designed to elevate your reception, cocktail hour, and celebration with unique options like dirty sodas and organic dirty lemonades."
     ],
     "locationName": "Weddings",
+    "isLocation": false,
     "locationFocus": [
       "Serving wedding venues across North Carolina including barns, estates, churches, and outdoor venues.",
       "Flexible setup for indoor and outdoor weddings."
@@ -213,6 +219,7 @@
       "Professional mobile beverage catering for corporate events and office gatherings across the Triangle."
     ],
     "locationName": "Corporate",
+    "isLocation": false,
     "locationFocus": [
       "Serving corporate offices across Raleigh, Durham, RTP, and surrounding business districts.",
       "Ideal for indoor or parking-lot setups."
@@ -236,6 +243,7 @@
       "Treat your guests to something different with our Italian waters, dirty sodas, and organic dirty lemonades."
     ],
     "locationName": "Private Events",
+    "isLocation": false,
     "locationFocus": [
       "Serving homes, venues, and private properties across North Carolina."
     ],
@@ -258,6 +266,7 @@
       "A minimum event size applies for party bookings to ensure the best possible experience."
     ],
     "locationName": "Parties",
+    "isLocation": false,
     "locationFocus": [
       "Serving birthday parties, graduations, and private celebrations statewide."
     ],
@@ -280,6 +289,7 @@
       "We serve staff appreciation events, fundraisers, and campus celebrations with a variety of dirty sodas and organic dirty lemonades."
     ],
     "locationName": "Schools",
+    "isLocation": false,
     "locationFocus": [
       "Serving schools, districts, and campus events across North Carolina."
     ],
@@ -302,6 +312,7 @@
       "In addition to our famous sodas, we offer organic dirty lemonade, tea, and coffee-based options depending on your event needs."
     ],
     "locationName": "Dirty Soda",
+    "isLocation": false,
     "locationFocus": [
       "Serving all major North Carolina event regions."
     ],
@@ -324,6 +335,7 @@
       "Try a signature creation like the Winter Sunset: organic lemonade, yuzu pineapple, and cream. We also offer additional beverage options for full event customization."
     ],
     "locationName": "Lemonade",
+    "isLocation": false,
     "locationFocus": [
       "Serving events statewide across North Carolina."
     ],
@@ -347,6 +359,7 @@
       "Try the Fireside Brew: cold brew, chocolate syrup, toasted marshmallow, and coconut cream. We also offer organic dirty lemonades, teas, and sodas."
     ],
     "locationName": "Dirty Cold Brew",
+    "isLocation": false,
     "locationFocus": [
       "Serving statewide events across North Carolina."
     ],
@@ -368,6 +381,7 @@
       "Our mobile soda bar brings a full beverage trailer experience to your event, serving up dirty sodas, organic dirty lemonades, and more."
     ],
     "locationName": "Mobile Soda Bar",
+    "isLocation": false,
     "locationFocus": [
       "Serving all major North Carolina regions."
     ],
@@ -390,6 +404,7 @@
       "The trailer is fully equipped with an internal potable water system along with both internal and external power capabilities, allowing us to serve dirty sodas and organic dirty lemonades anywhere."
     ],
     "locationName": "Mobile Trailer",
+    "isLocation": false,
     "locationFocus": [
       "Serving events across North Carolina."
     ],
@@ -411,6 +426,7 @@
       "Farmhouse Fizz provides flexible event drink catering across North Carolina, featuring a rotating menu of dirty sodas and organic dirty lemonades."
     ],
     "locationName": "Event Drinks",
+    "isLocation": false,
     "locationFocus": [
       "Serving all event types statewide."
     ],
@@ -432,6 +448,7 @@
       "Farmhouse Fizz offers corporate coffee catering across North Carolina. We serve custom dirty cold brew creations like the Sunrise Brew (cold brew and organic lemonade with coconut cream) and the Fireside Brew (chocolate syrup, toasted marshmallow, and coconut cream)."
     ],
     "locationName": "Corporate Coffee",
+    "isLocation": false,
     "locationFocus": [
       "Serving corporate offices statewide. We offer unique cold brew experiences featuring flavors like toasted marshmallow, chocolate, and coconut cream."
     ],

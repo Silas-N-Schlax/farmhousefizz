@@ -18,12 +18,25 @@ export class SodaPoll extends React.Component {
 
         <div className="embed-card">
           <div className="embed-card__chrome">
-            <span className="embed-card__dot"></span>
-            <span className="embed-card__dot"></span>
-            <span className="embed-card__dot"></span>
+            <span className="embed-card__label">Google Form</span>
+            <a
+              className="embed-card__external"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScThzWyGxWcOiXeR-cwvaDxOL3L5--JaY5LjoK0c8hvIGHVAg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in a new tab ↗
+            </a>
           </div>
           <div className="embed-frame">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScThzWyGxWcOiXeR-cwvaDxOL3L5--JaY5LjoK0c8hvIGHVAg/viewform?embedded=true" width="640" height="1403" frameBorder="0" marginheight="0" marginwidth="0">Loading&hellip;</iframe>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScThzWyGxWcOiXeR-cwvaDxOL3L5--JaY5LjoK0c8hvIGHVAg/viewform?embedded=true"
+              title="Farmhouse Fizz soda poll"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            >
+              Loading&hellip;
+            </iframe>
           </div>
         </div>
       </>

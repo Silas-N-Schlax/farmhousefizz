@@ -6,32 +6,35 @@ export class MenuCard extends React.Component {
   get itemOverrides() { return this.props.itemOverrides || [] }
 
   get groupedItems() {
-    const groupedItems = []
+    const groupedItems = {}
     this.props.data.forEach((item) => {
-      const overridden = this.itemOverrides.includes(item.name)
+      const overridden = this.itemOverrides.includes(item.id)
       if (!item.active && !overridden) return;
 
-      const category = item.category || "Other";
+      const category = item.category || "Other"
 
       if (!groupedItems[category]) {
-        groupedItems[category] = [];
+        groupedItems[category] = []
       }
-      groupedItems[category].push(item);
+      groupedItems[category].push(item)
     })
     return groupedItems
   }
 
   render() {
+    const categories = Object.entries(this.groupedItems)
+
     return (
       <>
         <div>
-          {Object.entries(this.groupedItems).map((group, index) => {
+          {categories.map(([category, items]) => {
+            const slug = categorySlug(category)
             return (
-              <div className="menu-category" key={index}>
-                <h2 className="menu-category__tag">{formatCategory(group[0])}</h2>
-                <div className="menu__grid">
-                  {group[1].map((item, index) => {
-                    return <ItemCard
+              <div className="menu-category" id={slug} key={slug}>
+                <h2 className="menu-category__tag" id={`${slug}-tag`}>{formatCategory(category)}</h2>
+                <div className="menu__grid" aria-labelledby={`${slug}-tag`}>
+                  {items.map((item) => (
+                    <ItemCard
                       name={item.name}
                       desc={item.desc}
                       sizes={item.sizes}
@@ -42,7 +45,7 @@ export class MenuCard extends React.Component {
                       id={item.id}
                       key={item.id}
                     />
-                  })}
+                  ))}
                 </div>
               </div>
             )
@@ -53,9 +56,14 @@ export class MenuCard extends React.Component {
   }
 }
 
+export function categorySlug(category) {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+}
+
 function formatCategory(category) {
   if (!category) return "Error: Category Empty"
-  category = category.split("-")
-  category.map((word, index) => { category[index] = word.charAt(0).toUpperCase() + word.slice(1) })
-  return category.join(" ")
+  return category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
 }

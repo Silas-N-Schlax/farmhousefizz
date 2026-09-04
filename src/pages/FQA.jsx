@@ -145,6 +145,7 @@ export class FQA extends React.Component {
         <div className="page-hero">
           <span className="eyebrow">{this.faq.length} Questions, Answered</span>
           <h1 className='page-title'>Frequently Asked Questions</h1>
+          <p className="page-hero__text">Booking, pricing, allergies, and what a dirty soda actually is.</p>
         </div>
         <div className="faq">
           {this.faq.map((item, index) => (

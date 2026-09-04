@@ -40,16 +40,18 @@
 }
 
 .article h2 {
-  margin-top: var(--op-space-small);
-  font-family: var(--op-font-family);
-  font-size: var(--op-font-x-large);
+  margin-top: var(--op-space-2x-large);
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-2x-large);
   font-weight: var(--op-font-weight-bold);
+  letter-spacing: -0.02em;
   color: var(--op-color-on-background);
+  scroll-margin-top: calc(var(--ff-header-height) + var(--op-space-medium));
 }
 
 .article p {
   margin: 0;
-  font-size: var(--op-font-medium);
+  font-size: var(--op-font-large);
   line-height: var(--op-line-height-loose);
   color: var(--op-color-neutral-on-plus-eight-alt);
 }

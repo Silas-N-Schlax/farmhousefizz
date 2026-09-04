@@ -7,7 +7,7 @@
   .size-list__item {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: var(--op-space-3x-small);
     padding: var(--op-space-3x-small) var(--op-space-x-small);
     font-family: var(--op-font-family-alt);
     font-size: var(--op-font-2x-small);
@@ -16,10 +16,10 @@
     background-color: var(--ff-color-secondary-plus-five);
     border-radius: var(--op-radius-medium);
     cursor: default;
-    transition: transform 0.15s ease;
+  }
 
-    &:hover {
-      transform: translateY(-1px);
-    }
+  .size-list__item-price {
+    font-weight: var(--op-font-weight-semi-bold);
+    font-variant-numeric: tabular-nums;
   }
 }

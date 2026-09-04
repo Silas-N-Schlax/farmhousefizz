@@ -1,11 +1,13 @@
 .btn {
-  transition: background-color var(--op-transition-input), color var(--op-transition-input), box-shadow var(--op-transition-input), transform var(--op-transition-input);
+  transition: var(--op-transition-input);
 
-  &:hover {
-    transform: translateY(calc(-1 * var(--op-space-3x-small)));
-  }
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(calc(-1 * var(--op-space-3x-small)));
+    }
 
-  &:active {
-    transform: translateY(0);
+    &:active {
+      transform: translateY(0);
+    }
   }
 }
