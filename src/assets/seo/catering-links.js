@@ -1,12 +1,10 @@
 import cateringData from '../data/cateringPages.json'
 
 export function cateringLinks() {
-  let links = []
-  cateringData.map((page) => {
-    if (page.path !=  '/catering' && page.path) { links.push({
-      path: page.path || '/catering',
+  return cateringData
+    .filter((page) => page.path && page.path !== '/catering')
+    .map((page) => ({
+      path: page.path,
       label: page.metaTitle || "North Carolina"
-    })}
-  })
-  return links
+    }))
 }
