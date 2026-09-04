@@ -1,10 +1,12 @@
 import React from 'react'
 import { EventMenu } from './eventMenu'
 
-const ITEM_OVERRIDES = []
+const TITLE = "Event Menu"
+const NOTE = "Order at the tent • Cash, card & tap accepted"
+const ITEM_OVERRIDES = ['sweet_cola_inferno']
 
 export class EventMenuY extends React.Component {
   render() {
-    return <EventMenu title="Event Menu" itemOverrides={ITEM_OVERRIDES} />
+    return <EventMenu title={TITLE} note={NOTE} itemOverrides={ITEM_OVERRIDES} />
   }
 }

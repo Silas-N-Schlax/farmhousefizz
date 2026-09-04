@@ -6,3 +6,13 @@
   margin: 0 auto;
   padding: var(--op-space-2x-large) var(--op-space-large) var(--op-space-3x-large);
 }
+
+@media (max-width: 620px) {
+  .faq .accordion summary {
+    padding: var(--op-space-small) var(--op-space-medium);
+  }
+
+  .faq .accordion .accordion__label {
+    font-size: var(--op-font-medium);
+  }
+}

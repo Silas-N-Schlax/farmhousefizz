@@ -15,7 +15,7 @@ export class Home extends React.Component {
         <div className="page">
           <div className="hero">
             <div className="hero__media">
-              <img className="hero__image" src="/banner-image.jpg" alt="" />
+              <img className="hero__image" src="/banner-image.jpg" alt="" width={2227} height={1354} fetchPriority="high" />
             </div>
             <div className="hero__content">
               <div className="hero__badge">
@@ -23,11 +23,11 @@ export class Home extends React.Component {
                 <span className="hero__badge-text">Mobile Soda Bar &middot; Central NC</span>
               </div>
               <h1 className="hero__title">Farmhouse Fizz Soda Bar</h1>
-              <span className="hero__tags">
-                <p className="hero__tag">Dirty Sodas</p>
-                <p className="hero__tag">Mobile</p>
-                <p className="hero__tag">Non-Alcoholic</p>
-              </span>
+              <ul className="hero__tags">
+                <li className="hero__tag">Dirty Sodas</li>
+                <li className="hero__tag">Mobile</li>
+                <li className="hero__tag">Non-Alcoholic</li>
+              </ul>
             </div>
           </div>
           <div className="section">

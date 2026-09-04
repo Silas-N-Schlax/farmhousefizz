@@ -1,6 +1,6 @@
 import React from 'react'
 import './stylesheet/styles.css'
-import { BrowserRouter as Router , Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router , Routes, Route, useLocation} from 'react-router-dom'
 import { Home } from './pages/home'
 import { NotFound } from './pages/notfound'
 import { AboutUs } from './pages/aboutUs'
@@ -19,19 +19,27 @@ import { SodaPoll } from './pages/sodaPoll'
 import cateringData from './assets/data/cateringPages.json'
 
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 class App extends React.Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <div className="op-page">
           <div className="op-page__main">
             <div className="op-page__main-header">
               <Header />
             </div>
-            <main className="op-page__main-content">
+            <main id="main-content" className="op-page__main-content">
               <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/*" element={<NotFound/>} />
                 <Route path="/about-us" element={<AboutUs/>} />
                 <Route path="/contact-us" element={<ContactUs/>} />
                 {cateringData.map((page, i) => {
@@ -47,6 +55,7 @@ class App extends React.Component {
                 <Route path="/terms-and-conditions" element={<Terms/>} />
                 <Route path="/privacy-policy" element={<Privacy/>} />
                 <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
+                <Route path="*" element={<NotFound/>} />
               </Routes>
             </main>
             <div className="op-page__main-footer">

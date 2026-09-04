@@ -2,6 +2,9 @@
   margin-top: var(--op-space-3x-large);
 
   .menu-category__tag {
+    position: sticky;
+    top: calc(var(--ff-header-height) + var(--op-space-small));
+    z-index: 1;
     display: inline-flex;
     align-items: center;
     margin: 0 0 var(--op-space-large);

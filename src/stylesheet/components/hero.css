@@ -75,6 +75,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--ff-brand-almond-cream);
+    text-shadow: 0 1px 6px hsl(22deg 44% 5% / 70%);
   }
 
   .hero__title {
@@ -83,13 +84,16 @@
     line-height: var(--op-line-height-dense);
     max-width: 15ch;
     color: var(--ff-brand-almond-cream);
-    text-shadow: var(--op-shadow-large);
+    text-shadow: 0 2px 12px hsl(22deg 44% 5% / 60%);
   }
 
   .hero__tags {
     display: flex;
     flex-wrap: wrap;
     gap: var(--op-space-x-small);
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   .hero__tag {

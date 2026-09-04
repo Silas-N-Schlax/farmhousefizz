@@ -5,11 +5,16 @@
 
   summary {
     padding: var(--op-space-medium) var(--op-space-large);
-    transition: background-color var(--op-transition-input);
+    transition: var(--op-transition-input);
 
-    &:hover,
+    &:hover {
+      background-color: var(--op-color-neutral-plus-five);
+    }
+
     &:focus-visible {
       background-color: var(--op-color-neutral-plus-five);
+      outline: var(--op-border-width-large) solid var(--op-color-primary-base);
+      outline-offset: -2px;
     }
 
     .accordion__label {
@@ -22,6 +27,15 @@
     .accordion__marker {
       color: var(--ff-color-accent-base);
     }
+  }
+
+  &[open] summary .accordion__marker {
+    rotate: 0.5turn;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --op-transition-accordion: none;
+    --op-transition-accordion-content: none;
   }
 
   .accordion__content {

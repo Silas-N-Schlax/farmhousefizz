@@ -1,15 +1,15 @@
 import React from "react"
 
-const LABELS = { sm: "Small", rg: "Regular", md: "Medium" }
+const LABELS = { sm: "Small", rg: "Regular", md: "Medium", lg: "Large" }
 
 export class SizeComponent extends React.Component {
   render() {
-    const { size, largeUpCharge, showPrice } = this.props
-    const label = size === 'lg' ? `Large${showPrice ? ` +${largeUpCharge}` : ''}` : LABELS[size]
+    const { size, price, showPrice } = this.props
 
     return (
       <span className="size-list__item">
-        {label}
+        {LABELS[size] || size}
+        {showPrice && <span className="size-list__item-price">{price}</span>}
       </span>
     )
   }

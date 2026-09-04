@@ -78,7 +78,7 @@
     padding: var(--op-space-3x-small) var(--op-space-x-small);
     color: inherit;
     border-radius: var(--op-radius-small);
-    transition: transform var(--op-transition-input);
+    transition: var(--op-transition-input);
 
     &:hover {
       text-decoration: underline;

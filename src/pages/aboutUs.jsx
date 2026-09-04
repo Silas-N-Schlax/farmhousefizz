@@ -10,12 +10,13 @@ export class AboutUs extends React.Component {
           <meta name="description" content="Learn how Farmhouse Fizz Soda Bar began as a family dream and grew into a mobile dirty soda trailer serving central North Carolina events." />
         </Helmet>
 
-        <div className="page-hero">
+        <header className="page-hero">
           <span className="eyebrow">Our Story</span>
           <h1 className='page-title'>Who is Farmhouse Fizz?</h1>
-        </div>
+          <p className="page-hero__text">A family-run soda trailer, built from scratch, bringing dirty sodas to Central North Carolina.</p>
+        </header>
 
-        <div className="article">
+        <article className="article">
 
           <h2>Who we are</h2>
           <p className="lede">Farmhouse Fizz Soda Bar began as a simple dream, an idea rooted in the desire to build something meaningful together as a family. In late 2025, John (father) and Silas (son) Schlax began turning that vision into reality, laying the foundation for what would soon become Farmhouse Fizz.</p>
@@ -34,14 +35,24 @@ export class AboutUs extends React.Component {
           <p>Guests order directly from our menu at the service window, where a team member is always ready to help guide them through our customization process. Just give us a little patience if we are busy. Every drink is made to order, because guessing what you want would end poorly for everyone.</p>
 
           <h2>Where You&rsquo;ll Find Us</h2>
-          <p>We move, it is kind of our thing. To keep up with us, follow Farmhouse Fizz on Instagram, Facebook, and or StreetFoodFinder.</p>
+          <p>
+            We move, it is kind of our thing. To keep up with us, follow Farmhouse Fizz on{' '}
+            <a href="https://www.instagram.com/farmhousefizz/" target="_blank" rel="noopener noreferrer">Instagram</a>,{' '}
+            <a href="https://www.facebook.com/profile.php?id=61584818212570" target="_blank" rel="noopener noreferrer">Facebook</a>, and/or{' '}
+            <a href="https://streetfoodfinder.com/farmhousefizz" target="_blank" rel="noopener noreferrer">StreetFoodFinder</a>.
+          </p>
           <p>You will find us at a wide variety of public events like fairs and festivals, as well as private catered events including weddings, corporate gatherings, parties, and more.</p>
 
           <h2>Ready to Fizz Things Up?</h2>
           <p>Whether you are planning an event, hosting a gathering, or just trying to track down your next favorite drink, we would love to serve you. Follow us on social media to see where we will be next, or reach out to book Farmhouse Fizz for your upcoming event.</p>
           <p>We will bring the trailer, the drinks, and the good vibes. You bring the people.</p>
 
-        </div>
+          <div className="cta-inline">
+            <a className="btn btn--primary btn--medium" href="/contact-us">Book Your Event</a>
+            <a className="btn btn--secondary btn--medium" href="/menu">See the Menu</a>
+          </div>
+
+        </article>
       </>
     )
   }

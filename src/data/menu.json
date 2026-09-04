@@ -6,6 +6,8 @@
     "notices": [1, 0, 1],
     "category": "dirty-soda",
     "id": "test_drink_1",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
 
@@ -17,6 +19,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "ruby_riot",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -26,6 +30,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "solar_flare",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -35,6 +41,8 @@
     "notices": [1],
     "category": "dirty-soda",
     "id": "electric_charm",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -44,6 +52,8 @@
     "notices": [1, 0, 5],
     "category": "dirty-soda",
     "id": "coconut_tide",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -51,9 +61,11 @@
     "desc": "Sprite • Lemon • Raspberry • Vanilla Cream",
     "sizes": ["rg", "lg"],
     "notices": [1, 5, 7],
-    "category": "seasonal",
+    "category": "dirty-soda",
     "id": "lemon_mist",
-    "active": false
+    "price": "7.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Shirley Temple",
@@ -62,7 +74,9 @@
     "notices": [1, 5, 9],
     "category": "dirty-soda",
     "id": "shirley_temple",
-    "active": false
+    "price": "7.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Shirley Delight",
@@ -71,7 +85,9 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "shirley_delight",
-    "active": false
+    "price": "7.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Cherry Island Punch",
@@ -80,6 +96,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "cherry_island_punch",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -89,6 +107,8 @@
     "notices": [1, 0, 5],
     "category": "dirty-soda",
     "id": "razzle_cola",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -98,6 +118,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "dr_c_cherry",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -107,6 +129,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "dr_fizzberry",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -116,6 +140,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "berry_truffle",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
 
@@ -126,6 +152,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "creamy_root",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -135,6 +163,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "blissful_butterbeer",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -144,6 +174,8 @@
     "notices": [1, 5],
     "category": "dirty-soda",
     "id": "caramel_smores",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -151,8 +183,21 @@
     "desc": "Ginger Ale • Apple • Vanilla Cream",
     "sizes": ["rg", "lg"],
     "notices": [1, 7],
-    "category": "seasonal",
+    "category": "dirty-soda",
     "id": "apple_orchard",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
+    "active": true
+  },
+  {
+    "name": "Sweet Cola Inferno",
+    "desc": "Coke • Mike's Hot Honey • Vanilla Cream",
+    "sizes": ["rg", "lg"],
+    "notices": [1, 7],
+    "category": "dirty-soda",
+    "id": "sweet_cola_inferno",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
 
@@ -166,6 +211,8 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "peach_paradise",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -175,6 +222,8 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "strawberry_bliss",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -184,6 +233,8 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "midnight_bloom",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -193,7 +244,9 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "velvet_sky",
-    "active": false
+    "price": "8.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Paradise Lost",
@@ -202,7 +255,9 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "paradise_lost",
-    "active": false
+    "price": "8.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Twilight Passion",
@@ -211,7 +266,9 @@
     "notices": [1, 2],
     "category": "italian-water",
     "id": "twilight_passion",
-    "active": false
+    "price": "8.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
 
 
@@ -222,6 +279,8 @@
     "notices": [1, 2],
     "category": "dirty-coffee",
     "id": "sunrise_brew",
+    "price": "9.00",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -231,6 +290,8 @@
     "notices": [1, 2],
     "category": "dirty-coffee",
     "id": "berry_bean",
+    "price": "9.00",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -240,6 +301,8 @@
     "notices": [1, 5],
     "category": "dirty-coffee",
     "id": "caramelaholic",
+    "price": "9.00",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -249,6 +312,8 @@
     "notices": [1, 0, 2],
     "category": "dirty-coffee",
     "id": "simply_sweet",
+    "price": "9.00",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -258,6 +323,8 @@
     "notices": [1, 2],
     "category": "dirty-coffee",
     "id": "fireside_brew",
+    "price": "9.00",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -265,9 +332,11 @@
     "desc": "Cold Brew • Pumpkin Spice • Sweet Cream",
     "sizes": ["rg", "lg"],
     "notices": [1, 2, 7],
-    "category": "seasonal",
+    "category": "dirty-coffee",
     "id": "pumpkin_patch",
-    "active": false
+    "price": "9.0",
+    "largeUpCharge": "1.00",
+    "active": true
   },
 
 
@@ -279,6 +348,8 @@
     "notices": [1, 2],
     "category": "dirty-lemonade",
     "id": "winter_sunset",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -288,6 +359,8 @@
     "notices": [1, 2],
     "category": "dirty-lemonade",
     "id": "sunburst",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -297,6 +370,8 @@
     "notices": [1, 2],
     "category": "dirty-lemonade",
     "id": "violet_horizon",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
   {
@@ -306,7 +381,9 @@
     "notices": [1, 5],
     "category": "dirty-lemonade",
     "id": "blue_lagoon",
-    "active": false
+    "price": "8.50",
+    "largeUpCharge": "1.00",
+    "active": true
   },
   {
     "name": "Golden Passion",
@@ -315,6 +392,8 @@
     "notices": [1, 5],
     "category": "dirty-lemonade",
     "id": "golden_passion",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
 
@@ -326,6 +405,8 @@
     "notices": [1, 2],
     "category": "dirty-tea-&-Lemonade",
     "id": "summer_split_tea",
+    "price": "8.50",
+    "largeUpCharge": "1.00",
     "active": true
   },
 
@@ -338,6 +419,8 @@
     "notices": [7],
     "category": "seasonal",
     "id": "classic_hot_chocolate",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -347,6 +430,8 @@
     "notices": [7],
     "category": "seasonal",
     "id": "your_way_cocoa",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -356,6 +441,8 @@
     "notices": [1, 8],
     "category": "dirty-energy-drink",
     "id": "peach_panic",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -365,6 +452,8 @@
     "notices": [1, 8],
     "category": "dirty-energy-drink",
     "id": "berry_meltdown",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   },
   {
@@ -374,6 +463,8 @@
     "notices": [1, 8],
     "category": "dirty-energy-drink",
     "id": "citrus_overload",
+    "price": "7.50",
+    "largeUpCharge": "1.00",
     "active": false
   }
 ]

@@ -4,24 +4,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--op-space-large);
-  margin: 0 15%;
-}
-
-@media (max-width: 1750px) {
-  .card-grid {
-    margin: var(--op-space-large) var(--op-space-2x-large);
-  }
-}
-
-@media (max-width: 1100px) {
-  .card-grid {
-    margin: 0 20%;
-  }
+  max-width: calc(300 * var(--op-size-unit));
+  margin: 0 auto;
+  padding-inline: var(--op-space-2x-large);
 }
 
 @media (max-width: 700px) {
   .card-grid {
     gap: var(--op-space-medium);
-    margin: 0 var(--op-space-medium);
+    padding-inline: var(--op-space-medium);
   }
 }
