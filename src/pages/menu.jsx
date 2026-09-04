@@ -16,7 +16,7 @@ export class Menu extends React.Component {
           <p className="page-hero__text">Subject to change and limited availability.</p>
         </div>
         <div className="menu">
-          <MenuCard data={menuData} showPrices={true} />
+          <MenuCard data={menuData} showPrices={false} />
         </div>
       </>
     )
