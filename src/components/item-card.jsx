@@ -7,7 +7,7 @@ const DEFAULT_LARGE_UP_CHARGE = "$1.00"
 
 export class ItemCard extends React.Component {
   render() {
-    const { name, desc, sizes, notices, id, price, largeUpCharge } = this.props
+    const { name, desc, sizes, notices, id, price, largeUpCharge, showPrice } = this.props
     const displayPrice = price || DEFAULT_PRICE
     const displayLargeUpCharge = largeUpCharge || DEFAULT_LARGE_UP_CHARGE
 
@@ -17,13 +17,13 @@ export class ItemCard extends React.Component {
         <div className="menu-item__body">
           <div className="menu-item__header">
             <h3 className="menu-item__title">{name}</h3>
-            <span className="menu-item__price">{displayPrice}</span>
+            {showPrice && <span className="menu-item__price">{displayPrice}</span>}
           </div>
           <p className="menu-item__description">{desc}</p>
           <div className="menu-item__meta">
             <span className="size-list">
               {sizes.map((sz, ix) => (
-                <SizeComponent size={sz} largeUpCharge={displayLargeUpCharge} key={ix} />
+                <SizeComponent size={sz} largeUpCharge={displayLargeUpCharge} showPrice={showPrice} key={ix} />
               ))}
             </span>
             <div className="notice-list">

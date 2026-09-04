@@ -2,10 +2,14 @@ import React from 'react'
 import { ItemCard } from './item-card'
 
 export class MenuCard extends React.Component {
+  get showPrices() { return this.props.showPrices === true }
+  get itemOverrides() { return this.props.itemOverrides || [] }
+
   get groupedItems() {
     const groupedItems = []
     this.props.data.forEach((item) => {
-      if (!item.active) return;
+      const overridden = this.itemOverrides.includes(item.name)
+      if (!item.active && !overridden) return;
 
       const category = item.category || "Other";
 
@@ -27,7 +31,6 @@ export class MenuCard extends React.Component {
                 <h2 className="menu-category__tag">{formatCategory(group[0])}</h2>
                 <div className="menu__grid">
                   {group[1].map((item, index) => {
-                    if (item.active === false) return;
                     return <ItemCard
                       name={item.name}
                       desc={item.desc}
@@ -35,6 +38,7 @@ export class MenuCard extends React.Component {
                       notices={item.notices}
                       price={item.price}
                       largeUpCharge={item.largeUpCharge}
+                      showPrice={this.showPrices}
                       id={item.id}
                       key={item.id}
                     />
