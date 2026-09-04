@@ -1,14 +1,13 @@
 import React from 'react'
 import { Notices } from './notices'
-import { SizeComponentSoda } from "./size-component-soda"
-import { SizeComponentCoffee } from "./size-component-coffee"
+import { SizeComponent } from "./size-component"
 
 const DEFAULT_PRICE = "$7.50"
 const DEFAULT_LARGE_UP_CHARGE = "$1.00"
 
 export class ItemCard extends React.Component {
   render() {
-    const { name, desc, lq_type, sizes, notices, id, price, largeUpCharge } = this.props
+    const { name, desc, sizes, notices, id, price, largeUpCharge } = this.props
     const displayPrice = price || DEFAULT_PRICE
     const displayLargeUpCharge = largeUpCharge || DEFAULT_LARGE_UP_CHARGE
 
@@ -23,13 +22,9 @@ export class ItemCard extends React.Component {
           <p className="menu-item__description">{desc}</p>
           <div className="menu-item__meta">
             <span className="size-list">
-              {sizes.map((sz, ix) => {
-                if (lq_type === 0) {
-                  return <SizeComponentSoda size={sz} largeUpCharge={displayLargeUpCharge} key={ix} />
-                } else {
-                  return <SizeComponentCoffee size={sz} largeUpCharge={displayLargeUpCharge} key={ix} />
-                }
-              })}
+              {sizes.map((sz, ix) => (
+                <SizeComponent size={sz} largeUpCharge={displayLargeUpCharge} key={ix} />
+              ))}
             </span>
             <div className="notice-list">
              {notices.map((not, ix) => {

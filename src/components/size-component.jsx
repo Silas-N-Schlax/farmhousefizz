@@ -1,8 +1,8 @@
 import React from "react"
 
-const LABELS = { sm: "Small", md: "Medium" }
+const LABELS = { sm: "Small", rg: "Regular", md: "Medium" }
 
-export class SizeComponentCoffee extends React.Component {
+export class SizeComponent extends React.Component {
   render() {
     const { size, largeUpCharge } = this.props
     const label = size === 'lg' ? `Large +${largeUpCharge}` : LABELS[size]

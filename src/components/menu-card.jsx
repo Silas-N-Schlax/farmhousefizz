@@ -31,7 +31,6 @@ export class MenuCard extends React.Component {
                     return <ItemCard
                       name={item.name}
                       desc={item.desc}
-                      lq_type={item.lq_type}
                       sizes={item.sizes}
                       notices={item.notices}
                       price={item.price}
