@@ -9,7 +9,7 @@ export class Calender extends React.Component {
           id="sidebar_iframe"
           className="calendar-embed__frame"
           frameBorder="0"
-          width="75%"
+          width="100%"
           height="410"
           src="https://streetfoodfinder.com/embed/farmhousefizz/calendar/small?d=90&amp;u=farmhousefizz&amp;background=7a0a0a&amp;height=410&amp;bodybg=e5d6c5&amp;bodybar=e5d6c5&amp;color=1e1e1e&amp;headercolor=e5d6c5&amp;bordercolor=7a0a0a">
         </iframe>
