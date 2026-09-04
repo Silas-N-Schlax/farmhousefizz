@@ -1,6 +1,6 @@
 import React from 'react'
 import './stylesheet/styles.css'
-import { BrowserRouter as Router , Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router , Routes, Route, useLocation} from 'react-router-dom'
 import { Home } from './pages/home'
 import { NotFound } from './pages/notfound'
 import { AboutUs } from './pages/aboutUs'
@@ -19,10 +19,19 @@ import { SodaPoll } from './pages/sodaPoll'
 import cateringData from './assets/data/cateringPages.json'
 
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 class App extends React.Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <div className="op-page">
           <div className="op-page__main">
             <div className="op-page__main-header">
