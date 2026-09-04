@@ -1,0 +1,145 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(150 * var(--op-size-unit));
+  margin: 0 auto;
+  padding: var(--op-space-large) var(--op-space-medium);
+  gap: var(--op-space-medium);
+}
+
+.contact-form > * {
+  margin: 0;
+}
+
+.contact-form__row {
+  display: flex;
+  width: 100%;
+  gap: var(--op-space-medium);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-3x-small);
+  width: 100%;
+}
+
+.form-field--half {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.form-field__label {
+  font-size: var(--op-font-small);
+  font-weight: var(--op-font-weight-semi-bold);
+  color: var(--op-color-on-background);
+}
+
+.form-field__required {
+  color: var(--op-color-primary-base);
+}
+
+.form-control--half {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.contact-form .form-control.contact-form__honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.contact-form__select {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.contact-form .form-control {
+  min-block-size: calc(11 * var(--op-size-unit));
+  font-size: max(16px, var(--op-font-small));
+}
+
+.contact-form .form-control:not([type='radio'], [type='checkbox']):not(:focus-visible) {
+  background-color: var(--op-color-neutral-plus-max);
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--op-color-on-background-alt);
+}
+
+.contact-form .form-control:focus-visible:not([readonly]) {
+  background-color: var(--ff-color-secondary-plus-five);
+  box-shadow:
+    var(--op-input-inner-focus) var(--ff-color-secondary-plus-two),
+    var(--op-input-outer-focus) var(--ff-color-secondary-plus-five);
+  color: var(--ff-color-secondary-on-plus-five);
+}
+
+.contact-form .form-control:user-invalid:not(:focus-visible) {
+  box-shadow: var(--op-border-all) var(--op-color-alerts-danger-base);
+}
+
+@media (forced-colors: active) {
+  .contact-form .form-control:focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+.contact-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--op-space-medium);
+  margin: 0;
+  padding: var(--op-space-medium);
+  border: var(--op-border-width) solid var(--op-color-border);
+  border-radius: var(--op-radius-large);
+}
+
+.contact-form__legend {
+  padding-inline: var(--op-space-x-small);
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-medium);
+  color: var(--op-color-on-background);
+}
+
+.contact-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--op-space-small);
+}
+
+.contact-form__status {
+  font-size: var(--op-font-small);
+}
+
+.contact-form__status--ok {
+  color: var(--op-color-alerts-success-base, var(--op-color-on-background));
+}
+
+.contact-form__status--error {
+  color: var(--op-color-alerts-danger-base);
+}
+
+@media (max-width: 520px) {
+  .contact-form {
+    max-width: 92%;
+    gap: var(--op-space-small);
+  }
+
+  .contact-form__row {
+    flex-direction: column;
+  }
+
+  .contact-form button[type='submit'] {
+    width: 100%;
+  }
+}

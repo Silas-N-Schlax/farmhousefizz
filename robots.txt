@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /terms-and-conditions
-Disallow: /privacy-policy
-Disallow: /polls/soda-poll
-Disallow: /energy-drink-notice

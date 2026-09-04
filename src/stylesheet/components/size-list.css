@@ -1,0 +1,25 @@
+.size-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--op-space-3x-small);
+
+  .size-list__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--op-space-3x-small);
+    padding: var(--op-space-3x-small) var(--op-space-x-small);
+    font-family: var(--op-font-family-alt);
+    font-size: var(--op-font-2x-small);
+    letter-spacing: 0.04em;
+    color: var(--ff-color-secondary-on-plus-five);
+    background-color: var(--ff-color-secondary-plus-five);
+    border-radius: var(--op-radius-medium);
+    cursor: default;
+  }
+
+  .size-list__item-price {
+    font-weight: var(--op-font-weight-semi-bold);
+    font-variant-numeric: tabular-nums;
+  }
+}

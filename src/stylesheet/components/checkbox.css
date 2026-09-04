@@ -1,0 +1,17 @@
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--op-space-x-small);
+  font-size: var(--op-font-small);
+  color: var(--op-color-on-background);
+
+  input[type='checkbox'] {
+    flex-shrink: 0;
+    margin-top: 0.15em;
+  }
+
+  a {
+    color: var(--ff-color-secondary-minus-two);
+    text-decoration: underline;
+  }
+}

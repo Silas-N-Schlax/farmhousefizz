@@ -1,0 +1,31 @@
+/* Optics' .op-page is a fixed-viewport dashboard shell (grid rows sized to
+   one screen, independently-scrolling panels). This site is a normal long
+   scrolling marketing page, so the grid mechanics are turned off here and
+   replaced with plain document flow - only the semantic block/element names
+   and the :root:has(.op-page) overflow reset (see optics.css) are kept.
+   Nesting depth matches Optics' own .op-page .op-page__main .op-page__main-*
+   selectors so these overrides actually win on specificity. */
+.op-page {
+  display: block;
+  min-block-size: auto;
+
+  .op-page__main {
+    display: block;
+    min-block-size: auto;
+
+    .op-page__main-header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--op-z-index-header);
+    }
+
+    .op-page__main-content {
+      max-inline-size: none;
+      padding: 0;
+    }
+
+    .op-page__main-footer {
+      position: static;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--op-color-primary-base);
+  text-decoration: none;
+}
+
+a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: var(--op-space-x-small);
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-x-small);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--op-color-primary-base);
+}
+
+.page-title {
+  margin-top: var(--op-space-small);
+  padding: 0;
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-6x-large);
+  text-align: center;
+}
+
+@media (max-width: 765px) {
+  .page-title {
+    padding: 0 var(--op-space-small);
+    font-size: var(--op-font-4x-large);
+  }
+}
+
+/* Runtime wrappers injected by third-party PWA tooling (see index.html's
+   MutationObserver) can introduce extra wrappers that affect layout. Collapse
+   them visually so they don't add spacing; this is a defense against
+   third-party-injected markup, not app markup. */
+pwa,
+pwa-container,
+pwa-sync,
+[class*='pwa-'] {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  transform: none !important;
+}
+
+[class*='pwa-container'],
+.pwa-container,
+.pwa-root {
+  display: contents !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@supports not (display: contents) {
+  [class*='pwa-container'],
+  .pwa-container,
+  .pwa-root {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}

@@ -1,0 +1,13 @@
+.btn {
+  transition: var(--op-transition-input);
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(calc(-1 * var(--op-space-3x-small)));
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

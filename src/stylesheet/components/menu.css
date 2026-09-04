@@ -1,0 +1,22 @@
+.menu {
+  max-width: calc(300 * var(--op-size-unit));
+  margin: auto;
+  padding: var(--op-space-large) var(--op-space-medium) var(--op-space-3x-large);
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(60 * var(--op-size-unit)), 1fr));
+  gap: var(--op-space-large);
+}
+
+@media (max-width: 600px) {
+  .menu {
+    padding-left: var(--op-space-large);
+    padding-right: var(--op-space-large);
+  }
+
+  .menu__grid {
+    gap: var(--op-space-medium);
+  }
+}

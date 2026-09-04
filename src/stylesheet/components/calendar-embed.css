@@ -1,0 +1,35 @@
+.calendar-embed {
+  justify-content: center;
+
+  .calendar-embed__frame {
+    max-width: 100%;
+  }
+}
+
+.calendar-embed--mobile {
+  display: none;
+
+  .calendar-embed__frame {
+    margin-bottom: calc(3.75 * var(--op-size-unit));
+    border: var(--op-border-width-large) solid var(--op-color-primary-base);
+    border-radius: var(--op-radius-medium);
+  }
+}
+
+.calendar-embed--desktop {
+  display: flex;
+
+  .calendar-embed__frame {
+    max-width: calc(625 * var(--op-size-unit));
+  }
+}
+
+@media (max-width: 765px) {
+  .calendar-embed--mobile {
+    display: flex;
+  }
+
+  .calendar-embed--desktop {
+    display: none;
+  }
+}

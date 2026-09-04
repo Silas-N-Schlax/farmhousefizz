@@ -1,42 +1,70 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
+export class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { open: false }
+    this.onKey = this.onKey.bind(this)
+  }
 
-import React, { useState, useEffect } from 'react'
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKey)
+  }
 
-export function Header() {
-  const [open, setOpen] = useState(false)
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKey)
+  }
 
-  useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [])
+  onKey(e) {
+    if (e.key === 'Escape') this.setState({ open: false })
+  }
 
-  const handleLinkClick = () => setOpen(false)
+  toggleOpen() {
+    this.setState({ open: !this.state.open })
+  }
 
-  return (
-    <header>
-      <div className="head">
-        <a className="logo" href="/"><img src="/logo.png" alt="Farmhouse Fizz Logo" /></a>
+  handleLinkClick() {
+    this.setState({ open: false })
+  }
 
-        <button
-          className={`burger ${open ? 'open' : ''}`}
-          aria-expanded={open}
-          aria-label="Toggle navigation"
-          onClick={() => setOpen(!open)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  render() {
+    const { open } = this.state
+    return (
+      <header className="site-header">
+        <a className="site-header__skip-link" href="#main-content">Skip to content</a>
+        <div className="navbar navbar--secondary site-header__inner">
+          <a className="site-header__logo" href="/">
+            <span className="brand-lockup">
+              <img className="brand-lockup__mark" src="/logo.png" alt="Farmhouse Fizz Logo" />
+              <span className="brand-lockup__text">
+                <span className="brand-lockup__name">Farmhouse Fizz</span>
+                <span className="brand-lockup__tag">Soda Bar</span>
+              </span>
+            </span>
+          </a>
 
-        <nav className={`navbar ${open ? 'open' : ''}`}>
-          <a href="/contact-us" className="lk" onClick={handleLinkClick}>Contact Us</a>
-          <a href="/about-us" className="lk" onClick={handleLinkClick}>About Us</a>
-          <a href="/catering" className="lk" onClick={handleLinkClick}>Catering</a>
-          <a href="/menu" className="lk" onClick={handleLinkClick}>Menu</a>
-          <a href="/fqa" className="lk" onClick={handleLinkClick}>FAQ</a>
-        </nav>
-      </div>
-    </header>
-  )
+          <button
+            className={`nav-toggle ${open ? 'nav-toggle--open' : ''}`}
+            aria-expanded={open}
+            aria-label="Toggle navigation"
+            onClick={this.toggleOpen.bind(this)}
+          >
+            <span className="nav-toggle__bar"></span>
+            <span className="nav-toggle__bar"></span>
+            <span className="nav-toggle__bar"></span>
+          </button>
+
+          <nav className={`site-nav ${open ? 'site-nav--open' : ''}`}>
+            <NavLink to="/menu" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Menu</NavLink>
+            <NavLink to="/catering" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Catering</NavLink>
+            <NavLink to="/about-us" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>About Us</NavLink>
+            <NavLink to="/fqa" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>FAQ</NavLink>
+            <NavLink to="/contact-us" className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`} onClick={this.handleLinkClick.bind(this)}>Contact Us</NavLink>
+            <NavLink to="/contact-us" className="btn btn--primary btn--small site-nav__cta" onClick={this.handleLinkClick.bind(this)}>Book Us</NavLink>
+          </nav>
+        </div>
+      </header>
+    )
+  }
 }

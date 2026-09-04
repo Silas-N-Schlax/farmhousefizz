@@ -1,51 +1,69 @@
+import React from 'react'
 import { ItemCard } from './item-card'
 
-export function MenuCard({data}) {
-  const groupedItems = []
-  data.forEach((item) => {
-    if (!item.active) return;
+export class MenuCard extends React.Component {
+  get showPrices() { return this.props.showPrices === true }
+  get itemOverrides() { return this.props.itemOverrides || [] }
 
-    const category = item.category || "Other";
+  get groupedItems() {
+    const groupedItems = {}
+    this.props.data.forEach((item) => {
+      const overridden = this.itemOverrides.includes(item.id)
+      if (!item.active && !overridden) return;
 
-    if (!groupedItems[category]) {
-      groupedItems[category] = [];
-    }
-    groupedItems[category].push(item);
-  })
+      const category = item.category || "Other"
 
-  return (
-    <>
-      <div className="sign-drinks">
-        {Object.entries(groupedItems).map((group, index) => {
-          console.log(group)
-          return (
-            <div className={group[0]}>
-              <h1 className="category title">{formatCategory(group[0])}</h1>
-              <div className="menu-items">
-                {group[1].map((item, index) => {
-                  if (item.active === false) return;
-                  return <ItemCard
-                    name={item.name}
-                    desc={item.desc}
-                    lq_type={item.lq_type}
-                    sizes={item.sizes}
-                    notices={item.notices}
-                    id={item.id}
-                    key={item.id}
-                  />
-                })}
+      if (!groupedItems[category]) {
+        groupedItems[category] = []
+      }
+      groupedItems[category].push(item)
+    })
+    return groupedItems
+  }
+
+  render() {
+    const categories = Object.entries(this.groupedItems)
+
+    return (
+      <>
+        <div>
+          {categories.map(([category, items]) => {
+            const slug = categorySlug(category)
+            return (
+              <div className="menu-category" id={slug} key={slug}>
+                <h2 className="menu-category__tag" id={`${slug}-tag`}>{formatCategory(category)}</h2>
+                <div className="menu__grid" aria-labelledby={`${slug}-tag`}>
+                  {items.map((item) => (
+                    <ItemCard
+                      name={item.name}
+                      desc={item.desc}
+                      sizes={item.sizes}
+                      notices={item.notices}
+                      price={item.price}
+                      largeUpCharge={item.largeUpCharge}
+                      showPrice={this.showPrices}
+                      id={item.id}
+                      key={item.id}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          )
-        })}
-      </div>
-    </>
-  )
+            )
+          })}
+        </div>
+      </>
+    )
+  }
+}
+
+export function categorySlug(category) {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 }
 
 function formatCategory(category) {
-  if (!category) return "Error - Category Empty"
-  category = category.split("-")
-  category.map((word, index) => { category[index] = word.charAt(0).toUpperCase() + word.slice(1) })
-  return category.join(" ")
+  if (!category) return "Error: Category Empty"
+  return category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
 }

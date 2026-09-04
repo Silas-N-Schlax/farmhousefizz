@@ -1,0 +1,17 @@
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--op-space-large);
+  max-width: calc(300 * var(--op-size-unit));
+  margin: 0 auto;
+  padding-inline: var(--op-space-2x-large);
+}
+
+@media (max-width: 700px) {
+  .card-grid {
+    gap: var(--op-space-medium);
+    padding-inline: var(--op-space-medium);
+  }
+}
