@@ -31,7 +31,6 @@ class App extends React.Component {
             <main className="op-page__main-content">
               <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/*" element={<NotFound/>} />
                 <Route path="/about-us" element={<AboutUs/>} />
                 <Route path="/contact-us" element={<ContactUs/>} />
                 {cateringData.map((page, i) => {
@@ -47,6 +46,7 @@ class App extends React.Component {
                 <Route path="/terms-and-conditions" element={<Terms/>} />
                 <Route path="/privacy-policy" element={<Privacy/>} />
                 <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>
+                <Route path="*" element={<NotFound/>} />
               </Routes>
             </main>
             <div className="op-page__main-footer">
