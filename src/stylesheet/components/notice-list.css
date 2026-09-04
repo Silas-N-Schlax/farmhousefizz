@@ -16,10 +16,5 @@
     background-color: var(--ff-color-accent-plus-five);
     border-radius: var(--op-radius-medium);
     cursor: default;
-    transition: transform 0.15s ease;
-
-    &:hover {
-      transform: translateY(-1px);
-    }
   }
 }

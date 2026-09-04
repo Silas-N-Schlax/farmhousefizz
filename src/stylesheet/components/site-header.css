@@ -1,7 +1,11 @@
+:root {
+  --ff-header-height: calc(21 * var(--op-size-unit));
+}
+
 .site-header {
   width: 100%;
   max-width: 100%;
-  height: calc(21 * var(--op-size-unit));
+  height: var(--ff-header-height);
   border-top: var(--op-border-width-x-large) solid var(--ff-color-accent-base);
 
   .site-header__inner {

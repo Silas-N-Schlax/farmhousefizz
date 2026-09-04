@@ -45,7 +45,7 @@
 @media (max-width: 768px) {
   .site-nav {
     position: fixed;
-    top: calc(21 * var(--op-size-unit));
+    top: var(--ff-header-height);
     left: 0;
     right: 0;
     display: none;
