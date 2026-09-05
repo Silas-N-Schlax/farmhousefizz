@@ -5,7 +5,7 @@ import menuData from '../data/menu.json'
 
 export class EventMenu extends React.Component {
   render() {
-    const { title, note, itemOverrides } = this.props
+    const { title, note, itemOverrides, surcharge } = this.props
     return (
       <>
         <Helmet>
@@ -17,7 +17,7 @@ export class EventMenu extends React.Component {
           <p className="page-hero__text">{note}</p>
         </div>
         <div className="menu">
-          <MenuCard data={menuData} showPrices={true} itemOverrides={itemOverrides} />
+          <MenuCard data={menuData} showPrices={true} itemOverrides={itemOverrides} surcharge={surcharge} />
         </div>
       </>
     )

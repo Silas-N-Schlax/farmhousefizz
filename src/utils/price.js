@@ -11,12 +11,13 @@ export function formatPrice(value) {
   return `$${value.toFixed(2)}`
 }
 
-export function resolvePrices(price, largeUpCharge) {
+export function resolvePrices(price, largeUpCharge, surcharge) {
   const base = parsePrice(price) ?? DEFAULT_PRICE
   const upCharge = parsePrice(largeUpCharge) ?? DEFAULT_LARGE_UP_CHARGE
+  const extra = Number(surcharge) || 0
 
   return {
-    base: formatPrice(base),
-    large: formatPrice(base + upCharge),
+    base: formatPrice(base + extra),
+    large: formatPrice(base + upCharge + extra),
   }
 }

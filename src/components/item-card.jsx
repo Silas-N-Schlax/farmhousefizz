@@ -11,8 +11,8 @@ export class ItemCard extends React.Component {
   }
 
   render() {
-    const { name, desc, sizes, notices, id, price, largeUpCharge, showPrice } = this.props
-    const { base, large } = resolvePrices(price, largeUpCharge)
+    const { name, desc, sizes, notices, id, price, largeUpCharge, showPrice, surcharge } = this.props
+    const { base, large } = resolvePrices(price, largeUpCharge, surcharge)
 
     return (
       <div id={id} className="menu-item">

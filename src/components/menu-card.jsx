@@ -4,6 +4,7 @@ import { ItemCard } from './item-card'
 export class MenuCard extends React.Component {
   get showPrices() { return this.props.showPrices === true }
   get itemOverrides() { return this.props.itemOverrides || [] }
+  get surcharge() { return Number(this.props.surcharge) || 0 }
 
   get groupedItems() {
     const groupedItems = {}
@@ -42,6 +43,7 @@ export class MenuCard extends React.Component {
                       price={item.price}
                       largeUpCharge={item.largeUpCharge}
                       showPrice={this.showPrices}
+                      surcharge={this.surcharge}
                       id={item.id}
                       key={item.id}
                     />
