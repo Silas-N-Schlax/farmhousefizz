@@ -4,15 +4,19 @@ import { ItemCard } from './item-card'
 export class MenuCard extends React.Component {
   get showPrices() { return this.props.showPrices === true }
   get itemOverrides() { return this.props.itemOverrides || [] }
+  get categoryOverrides() { return this.props.categoryOverrides || [] }
   get surcharge() { return Number(this.props.surcharge) || 0 }
 
   get groupedItems() {
     const groupedItems = {}
     this.props.data.forEach((item) => {
-      const overridden = this.itemOverrides.includes(item.id)
-      if (!item.active && !overridden) return;
-
       const category = item.category || "Other"
+
+      const categoryActive = this.categoryOverrides.includes(category) ? false : true
+      if (!categoryActive) return;
+
+      const itemActive = this.itemOverrides.includes(item.id) ? !item.active : item.active
+      if (!itemActive) return;
 
       if (!groupedItems[category]) {
         groupedItems[category] = []
