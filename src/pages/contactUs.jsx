@@ -46,10 +46,11 @@ export class ContactUs extends React.Component {
       }
 
       this.setState({ status: { ok: true, message: `Submitted — thank you! We'll get back to you within 3 business days. Check your spam folder if you don't see a reply.` } })
+      sendDiscordNot()
       this.formRef.current.reset()
       this.setState({ selectedOption: '' })
     } catch {
-      this.setState({ status: { ok: false, message: 'Something went wrong sending your message. Please try again or email us directly.' } })
+      this.setState({ status: { ok: false, message: 'Something went wrong sending your message. Please try again or email us directly at silas@farmhousefizz.com.' } })
     } finally {
       this.setState({ buttonDisabled: false })
     }
@@ -144,5 +145,22 @@ export class ContactUs extends React.Component {
         </form>
       </>
     )
+  }
+}
+
+async function sendDiscordNot() {
+  const webhook = import.meta.env.VITE_DISCORD_WEBHOOK_URL
+  if (!webhook) return
+
+  const discordId = import.meta.env.VITE_DISCORD_ID
+  const content = `${discordId ? `<@${discordId}> ` : ''}There is a new submission, check your email!!`
+  try {
+    await fetch(webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content }),
+    })
+  } catch (error) {
+    console.log(error)
   }
 }
