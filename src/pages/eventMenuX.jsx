@@ -4,8 +4,8 @@ import { EventMenu } from './eventMenu'
 const TITLE = "Event Menu"
 const NOTE = "Order at the trailer • Cash, card & tap accepted"
 const ITEM_OVERRIDES = []
-const CATEGORY_OVERRIDES = ['dirty-lemonade']
-const SUR_CHARGE = 0.25
+const CATEGORY_OVERRIDES = []
+const SUR_CHARGE = 0
 
 export class EventMenuX extends React.Component {
   render() {
