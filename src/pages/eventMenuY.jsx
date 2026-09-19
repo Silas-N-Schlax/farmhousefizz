@@ -3,7 +3,7 @@ import { EventMenu } from './eventMenu'
 
 const TITLE = "Event Menu"
 const NOTE = "Order at the tent • Cash, card & tap accepted"
-const ITEM_OVERRIDES = ['sweet_cola_inferno']
+const ITEM_OVERRIDES = ['bywater_butter_brew']
 const CATEGORY_OVERRIDES = []
 const SUR_CHARGE = 0
 
