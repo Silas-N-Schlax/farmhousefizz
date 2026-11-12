@@ -419,8 +419,8 @@
     "notices": [7],
     "category": "seasonal",
     "id": "classic_hot_chocolate",
-    "price": "7.50",
-    "largeUpCharge": "1.00",
+    "price": "7.00",
+    "largeUpCharge": "0.50",
     "active": false
   },
   {
@@ -433,6 +433,28 @@
     "price": "7.50",
     "largeUpCharge": "1.00",
     "active": false
+  },
+  {
+    "name": "Hot Chocolate",
+    "desc": "Whole Hot Chocolate • Dark Chocolate~",
+    "sizes": ["sm", "lg"],
+    "notices": [7],
+    "category": "seasonal",
+    "id": "hot_chocolate",
+    "price": "0.00",
+    "largeUpCharge": "0.00",
+    "active": true
+  },
+  {
+    "name": "Apple Cider",
+    "desc": "Hot Apple Cider",
+    "sizes": ["sm", "lg"],
+    "notices": [7],
+    "category": "seasonal",
+    "id": "apple_cider",
+    "price": "7.00",
+    "largeUpCharge": "0.50",
+    "active": true
   },
   {
     "name": "Peach Panic",
@@ -466,5 +488,49 @@
     "price": "7.50",
     "largeUpCharge": "1.00",
     "active": false
+  },
+  {
+    "name": "Cookies & Cream",
+    "desc": "Gluten Free Mini Pancakes • Whipped Cream • Crushed Gluten Free Oreos",
+    "sizes": [],
+    "notices": [],
+    "category": "desserts",
+    "id": "cookies_and_cream",
+    "price": "0.00",
+    "largeUpCharge": "8.00",
+    "active": true
+  },
+  {
+    "name": "Cinnamon Swirl",
+    "desc": "Gluten Free Mini Pancakes • Cinnamon • Real Maple Syrup",
+    "sizes": [],
+    "notices": [],
+    "category": "desserts",
+    "id": "cinnamon_swirl",
+    "price": "0.00",
+    "largeUpCharge": "8.00",
+    "active": true
+  },
+  {
+    "name": "Cherry Pie",
+    "desc": "Gluten Free Mini Pancakes • Cherry Pie Filling • Whipped Cream • Chocolate Syrup",
+    "sizes": [],
+    "notices": [],
+    "category": "desserts",
+    "id": "cherry_pie",
+    "price": "0.00",
+    "largeUpCharge": "8.00",
+    "active": true
+  },
+  {
+    "name": "S'mores",
+    "desc": "Gluten Free Mini Pancakes • Marshmallows • Chocolate Chips • Chocolate Syrup",
+    "sizes": [],
+    "notices": [],
+    "category": "desserts",
+    "id": "smores",
+    "price": "0.00",
+    "largeUpCharge": "8.00",
+    "active": true
   }
 ]
