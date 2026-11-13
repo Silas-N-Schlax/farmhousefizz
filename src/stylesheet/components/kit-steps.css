@@ -1,0 +1,498 @@
+.kit-steps {
+  max-width: calc(300 * var(--op-size-unit));
+  margin: 0 auto;
+  padding: var(--op-space-x-large) var(--op-space-2x-large) var(--op-space-3x-large);
+}
+
+.kit-steps__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--op-space-large);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kit-step {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background-color: var(--op-color-neutral-plus-max);
+  border: var(--op-border-width) solid var(--op-color-border);
+  border-radius: var(--op-radius-2x-large);
+}
+
+.kit-step__art {
+  display: flex;
+  justify-content: center;
+  padding: var(--op-space-large) var(--op-space-medium) var(--op-space-small);
+  background-color: var(--op-color-neutral-plus-six);
+  border-bottom: var(--op-border-width) solid var(--op-color-border);
+}
+
+.kit-step__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+  padding: var(--op-space-medium) var(--op-space-large) var(--op-space-large);
+}
+
+.kit-step__number {
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-x-small);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--op-color-primary-base);
+}
+
+.kit-step__title {
+  margin: 0;
+  font-family: var(--op-font-family-alt);
+  font-size: var(--op-font-x-large);
+  line-height: var(--op-line-height-dense);
+  letter-spacing: -0.02em;
+  color: var(--op-color-on-background);
+}
+
+.kit-step__text {
+  max-width: 42ch;
+  margin: 0;
+  font-size: var(--op-font-medium);
+  line-height: var(--op-line-height-loose);
+  color: var(--op-color-neutral-on-plus-eight-alt);
+}
+
+/* The last card takes the whole row so the grid never leaves an empty slot,
+   and reads as the finale: art on one side, words on the other. */
+.kit-step--finale {
+  flex-direction: row;
+  grid-column: 1 / -1;
+  border-color: var(--op-color-primary-base);
+
+  .kit-step__art {
+    flex: 0 0 42%;
+    align-items: center;
+    padding: var(--op-space-large) var(--op-space-x-large);
+    background-color: var(--ff-color-accent-plus-five);
+    border-right: var(--op-border-width) solid var(--op-color-border);
+    border-bottom: none;
+  }
+
+  .kit-step__body {
+    justify-content: center;
+    padding: var(--op-space-x-large) var(--op-space-2x-large);
+  }
+
+  .kit-step__title {
+    font-size: var(--op-font-2x-large);
+  }
+}
+
+.kit-steps__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--op-space-medium);
+  margin-top: var(--op-space-2x-large);
+}
+
+/* ----- Illustrations ----- */
+
+.kit-art {
+  width: 100%;
+  max-width: calc(56 * var(--op-size-unit));
+  height: auto;
+  overflow: visible;
+}
+
+.kit-step--finale .kit-art {
+  max-width: calc(64 * var(--op-size-unit));
+}
+
+.kit-art__shadow {
+  fill: var(--ff-kit-shadow);
+}
+
+.kit-art__cup-back {
+  fill: var(--ff-kit-cup-fill);
+}
+
+.kit-art__cup {
+  fill: none;
+  stroke: var(--ff-kit-outline);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.kit-art__rim {
+  fill: var(--ff-kit-cup-rim);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 2.5;
+}
+
+.kit-art__lid {
+  fill: var(--ff-kit-cup-fill);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.kit-art__lid-shine {
+  fill: none;
+  stroke: var(--ff-kit-shine);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.kit-art__straw {
+  fill: var(--op-color-primary-base);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  rotate: 8deg;
+}
+
+.kit-art__sticker circle {
+  fill: var(--ff-brand-almond-cream);
+}
+
+.kit-art__syrup,
+.kit-art__portion-fill--syrup,
+.kit-art__stream--syrup {
+  fill: var(--ff-kit-syrup);
+  stroke: var(--ff-kit-syrup);
+}
+
+.kit-art__soda,
+.kit-art__stream--soda {
+  fill: var(--ff-kit-soda);
+  stroke: var(--ff-kit-soda);
+}
+
+.kit-art__cream path,
+.kit-art__portion-fill--cream,
+.kit-art__stream--cream {
+  fill: var(--ff-kit-cream);
+  stroke: var(--ff-kit-cream);
+}
+
+.kit-art__syrup,
+.kit-art__soda,
+.kit-art__portion-fill {
+  stroke: none;
+}
+
+.kit-art__portion-fill {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+.kit-art__cream-drip {
+  fill: none !important;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 0.85;
+}
+
+.kit-art__mixed {
+  fill: var(--ff-kit-mixed);
+}
+
+.kit-art__foam circle {
+  fill: var(--ff-kit-cream);
+  opacity: 0.9;
+}
+
+.kit-art__ice rect {
+  fill: var(--ff-kit-ice);
+  stroke: var(--ff-kit-ice-edge);
+  stroke-width: 2;
+}
+
+.kit-art__bubbles circle {
+  fill: var(--ff-kit-shine);
+  animation: kit-bubble 2.6s ease-in infinite;
+}
+
+.kit-art__portion {
+  fill: var(--ff-kit-cup-fill);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.kit-art__stream {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 10 6;
+  animation: kit-pour 0.6s linear infinite;
+}
+
+.kit-art__can {
+  fill: var(--ff-color-secondary-base);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 2.5;
+}
+
+.kit-art__can-band {
+  fill: var(--ff-brand-almond-cream);
+}
+
+.kit-art__can-top {
+  fill: var(--op-color-neutral-plus-five);
+  stroke: var(--ff-kit-outline);
+  stroke-width: 2;
+}
+
+.kit-art__note {
+  font-family: var(--op-font-family-alt);
+  font-size: 15px;
+  fill: var(--op-color-primary-base);
+  text-anchor: middle;
+}
+
+.kit-art__motion {
+  fill: none;
+  stroke: var(--op-color-primary-base);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4 6;
+  opacity: 0.7;
+}
+
+.kit-art__sparkle {
+  fill: var(--ff-kit-sparkle);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: kit-twinkle 2s ease-in-out infinite;
+}
+
+.kit-art__heart {
+  fill: var(--op-color-primary-base);
+  animation: kit-float 2.4s ease-in-out infinite;
+}
+
+/* ----- Step motion -----
+   Each scene loops on its own clock and holds its finished state for the
+   last stretch of every cycle before starting over. */
+
+/* 1. Unpack: the pieces lift out of the cup, then hover. */
+.kit-art__unpack {
+  animation: kit-unpack 6s ease-in-out infinite;
+}
+
+.kit-art__unpack--second {
+  animation-delay: 0.35s;
+}
+
+.kit-art__unpack--third {
+  animation-delay: 0.7s;
+}
+
+/* 2. Ice: cubes fall from above and land, bottom ones first. */
+.kit-art__ice--drop rect {
+  animation: kit-ice-drop 5.5s ease-in infinite;
+}
+
+/* 3. Syrup: the stream runs while the level rises and the little cup empties. */
+.kit-art__stream--syrup {
+  animation: kit-pour 0.6s linear infinite, kit-stream-syrup 6s linear infinite;
+}
+
+.kit-art__syrup--pour {
+  animation: kit-syrup-rise 6s ease-out infinite;
+}
+
+.kit-art__portion-fill--syrup.kit-art__portion-fill--pouring {
+  animation: kit-portion-empty 6s linear infinite;
+}
+
+/* 4. Soda: a slow, careful pour in a few small gos, stopping between them. */
+.kit-art__stream--soda {
+  animation: kit-pour 0.6s linear infinite, kit-stream-soda 12s linear infinite;
+}
+
+.kit-art__soda-layer--pour {
+  animation: kit-soda-rise 12s linear infinite;
+}
+
+/* 5. Cream: lands on top, then drips down into the soda. */
+.kit-art__stream--cream {
+  animation: kit-pour 0.6s linear infinite, kit-stream-cream 7s linear infinite;
+}
+
+.kit-art__cream--pour .kit-art__cream-top {
+  animation: kit-cream-land 7s ease-out infinite;
+}
+
+.kit-art__cream--pour .kit-art__cream-drip {
+  animation: kit-cream-drip 7s ease-in-out infinite;
+}
+
+.kit-art__portion-fill--cream.kit-art__portion-fill--pouring {
+  animation: kit-portion-empty 7s linear infinite;
+}
+
+/* 6. Stir: the straw works the drink while the layers blend into one color. */
+.kit-art__straw--stir {
+  animation: kit-stir 8s ease-in-out infinite;
+}
+
+.kit-art__mixed--blend {
+  animation: kit-blend 8s ease-in-out infinite;
+}
+
+@keyframes kit-pour {
+  to { stroke-dashoffset: -16; }
+}
+
+@keyframes kit-bubble {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(var(--bubble-rise)); opacity: 0; }
+}
+
+@keyframes kit-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -5px; }
+}
+
+@keyframes kit-twinkle {
+  0%, 100% { scale: 0.7; opacity: 0.5; }
+  50% { scale: 1.1; opacity: 1; }
+}
+
+@keyframes kit-unpack {
+  0% { translate: 0 80px; opacity: 0; }
+  12% { opacity: 1; }
+  35% { translate: 0 0; }
+  55% { translate: 0 -6px; }
+  75%, 100% { translate: 0 0; opacity: 1; }
+}
+
+@keyframes kit-ice-drop {
+  0% { translate: 0 -150px; opacity: 0; }
+  6% { opacity: 1; }
+  26% { translate: 0 0; animation-timing-function: ease-out; }
+  30% { translate: 0 -5px; animation-timing-function: ease-in; }
+  34%, 100% { translate: 0 0; opacity: 1; }
+}
+
+@keyframes kit-stream-syrup {
+  0% { opacity: 0; }
+  6%, 64% { opacity: 1; }
+  72%, 100% { opacity: 0; }
+}
+
+@keyframes kit-syrup-rise {
+  0%, 8% { translate: 0 42px; }
+  66%, 100% { translate: 0 0; }
+}
+
+@keyframes kit-portion-empty {
+  0%, 8% { scale: 1 1; }
+  66%, 100% { scale: 1 0.08; }
+}
+
+@keyframes kit-stream-soda {
+  0% { opacity: 0; }
+  4%, 22% { opacity: 1; }
+  26%, 30% { opacity: 0; }
+  34%, 50% { opacity: 1; }
+  54%, 58% { opacity: 0; }
+  62%, 74% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+
+@keyframes kit-soda-rise {
+  0%, 4% { translate: 0 118px; }
+  22%, 34% { translate: 0 84px; }
+  50%, 62% { translate: 0 42px; }
+  76%, 100% { translate: 0 0; }
+}
+
+@keyframes kit-stream-cream {
+  0% { opacity: 0; }
+  5%, 42% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes kit-cream-land {
+  0%, 4% { translate: 0 -48px; }
+  40%, 100% { translate: 0 0; }
+}
+
+@keyframes kit-cream-drip {
+  0%, 42% { stroke-dashoffset: 1; }
+  78%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes kit-stir {
+  0%, 100% { rotate: 8deg; translate: 0 0; }
+  8% { rotate: -14deg; translate: -6px 0; }
+  16% { rotate: 14deg; translate: 6px 0; }
+  24% { rotate: -14deg; translate: -6px 0; }
+  32% { rotate: 14deg; translate: 6px 0; }
+  40% { rotate: -14deg; translate: -6px 0; }
+  48% { rotate: 14deg; translate: 6px 0; }
+  56% { rotate: -12deg; translate: -5px 0; }
+  66%, 100% { rotate: 8deg; translate: 0 0; }
+}
+
+@keyframes kit-blend {
+  0%, 6% { opacity: 0; }
+  62%, 100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-art * {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .kit-steps__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .kit-steps {
+    padding: var(--op-space-large) var(--op-space-medium) var(--op-space-2x-large);
+  }
+
+  .kit-steps__list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--op-space-medium);
+  }
+
+  .kit-step--finale {
+    flex-direction: column;
+
+    .kit-step__art {
+      flex: none;
+      padding: var(--op-space-large) var(--op-space-medium) var(--op-space-small);
+      border-right: none;
+      border-bottom: var(--op-border-width) solid var(--op-color-border);
+    }
+
+    .kit-step__body {
+      padding: var(--op-space-medium) var(--op-space-large) var(--op-space-large);
+    }
+
+    .kit-step__title {
+      font-size: var(--op-font-x-large);
+    }
+  }
+
+  .kit-step--finale .kit-art {
+    max-width: calc(56 * var(--op-size-unit));
+  }
+}
