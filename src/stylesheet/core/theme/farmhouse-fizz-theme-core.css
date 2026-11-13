@@ -64,4 +64,19 @@
      Needs real alpha, which the scale-only rule reserves for this file. */
   --ff-overlay-scrim: hsl(22deg 44% 5% / 42%);
   --ff-overlay-border: hsl(32deg 20% 92% / 50%);
+
+  /* Dirty soda kit illustrations. The cup is clear plastic, so its fill,
+     shine, and ice need real alpha too. */
+  --ff-kit-outline: light-dark(hsl(24deg 30% 28%), hsl(32deg 25% 78%));
+  --ff-kit-cup-fill: light-dark(hsl(0deg 0% 100% / 55%), hsl(0deg 0% 100% / 8%));
+  --ff-kit-cup-rim: light-dark(hsl(0deg 0% 100% / 85%), hsl(0deg 0% 100% / 18%));
+  --ff-kit-shine: hsl(0deg 0% 100% / 75%);
+  --ff-kit-shadow: light-dark(hsl(24deg 30% 20% / 14%), hsl(0deg 0% 0% / 35%));
+  --ff-kit-ice: hsl(200deg 60% 97% / 60%);
+  --ff-kit-ice-edge: light-dark(hsl(205deg 40% 66%), hsl(205deg 40% 72%));
+  --ff-kit-syrup: light-dark(hsl(2deg 72% 42%), hsl(2deg 70% 55%));
+  --ff-kit-soda: light-dark(hsl(46deg 92% 58%), hsl(46deg 80% 52%));
+  --ff-kit-cream: light-dark(hsl(36deg 60% 95%), hsl(36deg 45% 88%));
+  --ff-kit-mixed: light-dark(hsl(22deg 72% 56%), hsl(22deg 62% 48%));
+  --ff-kit-sparkle: light-dark(hsl(42deg 90% 52%), hsl(42deg 90% 62%));
 }

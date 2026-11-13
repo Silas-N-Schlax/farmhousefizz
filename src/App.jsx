@@ -16,6 +16,7 @@ import { Terms } from './pages/terms'
 import { Header } from './components/header'
 import { Footer } from './components/footer'
 import { SodaPoll } from './pages/sodaPoll'
+import { SodaKit } from './pages/sodaKit'
 import cateringData from './assets/data/cateringPages.json'
 
 
@@ -52,6 +53,7 @@ class App extends React.Component {
                 <Route path="/dynamic-event-menu-y" element={<EventMenuY/>} />
                 <Route path="/fqa" element={<FQA/>} />
                 <Route path="/polls/soda-poll" element={<SodaPoll/>} />
+                <Route path="/dirty-soda-kit" element={<SodaKit/>} />
                 <Route path="/terms-and-conditions" element={<Terms/>} />
                 <Route path="/privacy-policy" element={<Privacy/>} />
                 <Route path="/energy-drink-notice" element={<EnergyDrinkNotice/>}/>

@@ -15,6 +15,7 @@ let routes = [
   "/catering",
   "/menu",
   "/questions-and-answers",
+  "/dirty-soda-kit",
 ]
 
 let dynamicRoutes = [...routes, ...cateringRoutes]
